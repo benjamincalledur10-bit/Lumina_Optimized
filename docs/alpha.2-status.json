@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0-alpha.2",
+  "static_validation": {
+    "mrpack_count": 16,
+    "result": "PASS",
+    "composition_and_dependency_tests": 9,
+    "tests_result": "PASS",
+    "sodium_patch_apply_check": "PASS",
+    "alpha.1_assets": "intactos; hashes originales conservados"
+  },
+  "minecraft_tests": {
+    "launcher_import": "PENDIENTE",
+    "startup_and_mixins": "PENDIENTE",
+    "effective_configuration": "PENDIENTE",
+    "visual_parity": "PENDIENTE",
+    "stability": "PENDIENTE",
+    "fps_memory_chunks": "PENDIENTE"
+  },
+  "own_optimization": {
+    "state": "hipótesis con parche activable; no distribuido en los paquetes",
+    "compiled": false,
+    "measured": false
+  },
+  "measurements": []
+}

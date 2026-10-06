@@ -1,0 +1,30 @@
+[
+  {
+    "project": "sodium",
+    "commit": "03198cb36ab831c99694403d18e4cf4a1726df72",
+    "file": "common/src/main/java/net/caffeinemc/mods/sodium/client/render/chunk/RenderSectionManager.java",
+    "url": "https://github.com/CaffeineMC/sodium/blob/03198cb36ab831c99694403d18e4cf4a1726df72/common/src/main/java/net/caffeinemc/mods/sodium/client/render/chunk/RenderSectionManager.java",
+    "sha256": "3fdf98e94590b9ad3eb59cade6ef58f9b4e29a1764d60b02248743798aea11f1"
+  },
+  {
+    "project": "entityculling",
+    "commit": "ae786c8921de5ea52c06481dfa47180e42bbd54d",
+    "file": "EntityCulling-Versionless/src/main/java/dev/tr7zw/entityculling/versionless/Config.java",
+    "url": "https://github.com/tr7zw/EntityCulling/blob/ae786c8921de5ea52c06481dfa47180e42bbd54d/EntityCulling-Versionless/src/main/java/dev/tr7zw/entityculling/versionless/Config.java",
+    "sha256": "ffa47a65513b0a8f9d5ce31f92ab467605e0ebe5af8a5ced2b8c811f0b56077d"
+  },
+  {
+    "project": "moreculling",
+    "commit": "23e0f29f0f6b146916bd293a79e8fafcbba596af",
+    "file": "common/src/main/java/ca/fxco/moreculling/config/MoreCullingConfig.java",
+    "url": "https://github.com/fxmorin/moreculling/blob/23e0f29f0f6b146916bd293a79e8fafcbba596af/common/src/main/java/ca/fxco/moreculling/config/MoreCullingConfig.java",
+    "sha256": "d1ae4b409b35841398104a6cfb386d7e8b837b6bcf5461e2ef543a699f229df9"
+  },
+  {
+    "project": "bbe",
+    "commit": "7ecbd75b8f893f7b9912c76fa3eab142a9264bfd",
+    "file": "common/src/main/java/betterblockentities/client/gui/config/builder/ConfigBuilder.java",
+    "url": "https://github.com/ceeden/betterblockentities/blob/7ecbd75b8f893f7b9912c76fa3eab142a9264bfd/common/src/main/java/betterblockentities/client/gui/config/builder/ConfigBuilder.java",
+    "sha256": "b8ea7b630128cec5878a622bd1fa745444ddaf596ac02fb8c4d0c573b05eb4b6"
+  }
+]

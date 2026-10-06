@@ -1,5 +1,9 @@
 # Protocolo reproducible (pendiente de ejecutar)
 
+Este protocolo conserva la referencia de alpha.1. Alpha.2 añade los perfiles
+aislados y acumulativos de [alpha.2.md](alpha.2.md), sin cambiar los ajustes de
+comparación. No existen mediciones previas: [estado histórico](history/alpha.1/measurements.json).
+
 ## Instancias
 
 Crear cuatro instancias nuevas, sin reutilizar cachés/configs de otros packs:

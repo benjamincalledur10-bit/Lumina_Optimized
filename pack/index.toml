@@ -1,6 +1,38 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/BBEConfig.json"
+hash = "ce7fe1da7424a6719cd602a26d619a481ca204131f78c12f89fd61bd0c9bc6e6"
+
+[[files]]
+file = "config/entityculling.json"
+hash = "37c6a93e8437b64a4c28de3fea64fb3e443f3e881823eaf94af6b7a87c375717"
+
+[[files]]
+file = "config/moreculling.json"
+hash = "63b05c09c565766df2323c48ec131a0b04521ab134fc9905cdfce88c7ccc6b23"
+
+[[files]]
+file = "mods/better-block-entities.pw.toml"
+hash = "dea7facdd022bd7babc26b06e77ab0bbf2072d2381e954419c9222f5e0af24ee"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "4892e58859161dc14789108ea0d0beedb53bc2081ee560b4a3af6ca9c481a068"
+metafile = true
+
+[[files]]
+file = "mods/entityculling.pw.toml"
+hash = "077ff001f411c0533f6adaf60d7d377a35594014bed43aebd30b0baa4cba5dc5"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "780bf3518e4856ad311e3d8d382c171f65b620012710d1a2f065cb7199d8aaf2"
+metafile = true
+
+[[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "f7ea9c8081b1fcba1ce86f0df41d7d85cb27f421c8515361bbbf5991c53880d1"
 metafile = true
@@ -13,6 +45,11 @@ metafile = true
 [[files]]
 file = "mods/lithium.pw.toml"
 hash = "8bb260be5a9c44ac398b7c8bc6cbfc05dfae013bef1d5c1bf984b7b6ac18425e"
+metafile = true
+
+[[files]]
+file = "mods/moreculling.pw.toml"
+hash = "e6ecddabab75599c07c5da4f2130164ed180444aa6eca1d932efa2dba3f3ce93"
 metafile = true
 
 [[files]]

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "enableSodiumMenu": true,
+  "signTextCulling": false,
+  "rainCulling": false,
+  "useBlockStateCulling": false,
+  "useCustomItemFrameRenderer": true,
+  "itemFrameMapCulling": true,
+  "useItemFrameLOD": false,
+  "useItemFrame3FaceCulling": false,
+  "paintingCulling": true,
+  "leavesCullingMode": "DEFAULT",
+  "includeMangroveRoots": false,
+  "endGatewayCulling": false,
+  "useOnModdedBlocksByDefault": false
+}

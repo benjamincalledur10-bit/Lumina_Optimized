@@ -1,0 +1,6 @@
+{
+  "version": "0.1.0-alpha.1",
+  "status": "not_measured",
+  "runs": [],
+  "note": "No se realizaron mediciones de FPS, memoria o chunks en alpha.1. Se conserva la evidencia estática original; no se inventan resultados."
+}

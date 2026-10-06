@@ -1,0 +1,56 @@
+{
+  "bbe.config.storage.main": [
+    {
+      "option": "optimize.master",
+      "value": false
+    },
+    {
+      "option": "optimize.banner",
+      "value": false
+    },
+    {
+      "option": "optimize.sign",
+      "value": false
+    },
+    {
+      "option": "animation.chest",
+      "value": true
+    },
+    {
+      "option": "animation.shulker",
+      "value": true
+    },
+    {
+      "option": "animation.bell",
+      "value": true
+    },
+    {
+      "option": "animation.decoratedpot",
+      "value": true
+    },
+    {
+      "option": "misc.shademode",
+      "value": 1
+    },
+    {
+      "option": "misc.banner_graphics",
+      "value": 1
+    },
+    {
+      "option": "misc.christmas_chest",
+      "value": true
+    },
+    {
+      "option": "misc.sign_text",
+      "value": true
+    },
+    {
+      "option": "misc.sign_text_culling",
+      "value": false
+    },
+    {
+      "option": "misc.update_scheduler",
+      "value": 0
+    }
+  ]
+}

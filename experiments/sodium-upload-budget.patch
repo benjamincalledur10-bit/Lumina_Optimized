@@ -1,0 +1,13 @@
+--- a/common/src/main/java/net/caffeinemc/mods/sodium/client/render/chunk/RenderSectionManager.java
++++ b/common/src/main/java/net/caffeinemc/mods/sodium/client/render/chunk/RenderSectionManager.java
+@@ -64,7 +64,9 @@
+     private static final float NEARBY_SORT_DISTANCE = Mth.square(25.0f);
+ 
+     private static final float FRAME_DURATION_UPLOAD_FRACTION = 0.3f;
+-    private static final long MIN_UPLOAD_DURATION_BUDGET = 10_000_000L; // 2ms
++    // Experimental floor; disabled preserves the upstream 10 ms scheduling budget.
++    private static final long MIN_UPLOAD_DURATION_BUDGET =
++            Boolean.getBoolean("lumina.experimentalUploadBudget") ? 2_000_000L : 10_000_000L;
+ 
+     private final ChunkBuilder builder;
+ 
