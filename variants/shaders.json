@@ -1,0 +1,5 @@
+{
+  "name": "Lumina Optimized Shaders",
+  "description": "Lumina Optimized con Iris; shaders desactivados por defecto y sin shader packs incluidos.",
+  "add": ["iris.pw.toml"]
+}

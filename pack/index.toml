@@ -1,0 +1,21 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "f7ea9c8081b1fcba1ce86f0df41d7d85cb27f421c8515361bbbf5991c53880d1"
+metafile = true
+
+[[files]]
+file = "mods/immediatelyfast.pw.toml"
+hash = "797ecc44d6ab92e4457a26e1f108988083eb58a3aefe0a9be58b3bd7ea370675"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "8bb260be5a9c44ac398b7c8bc6cbfc05dfae013bef1d5c1bf984b7b6ac18425e"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "3344183588d34595e6d8efafae79341dbb177837af427c722d4b5cd0bfa83e55"
+metafile = true
