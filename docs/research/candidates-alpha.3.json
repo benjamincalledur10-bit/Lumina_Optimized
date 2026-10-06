@@ -1,0 +1,323 @@
+{
+  "scope": "Metadatos de publicaciones exactas; revisión estática sin ejecución de Minecraft",
+  "publications": {
+    "badoptimizations": {
+      "version_id": "Sp0ctspw",
+      "version_number": "2.4.1",
+      "project_id": "g96Z4WVZ",
+      "publication": "https://modrinth.com/mod/badoptimizations/version/Sp0ctspw",
+      "published": "2026-09-16T00:15:53.996224Z",
+      "game_versions": [
+        "26.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "id": "teCO4mOJ",
+          "hashes": {
+            "sha512": "048a0979807afb96bae7801b7445746c985081bb55fab9b80b286036234a9869cc84f83c40ab77a2600b7e06ad44178ee17935b706b751c9b38f87ebc6e180f8",
+            "sha1": "4cc25ce6217326ff14169f5358921773297e9475"
+          },
+          "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/Sp0ctspw/BadOptimizations-2.4.1-26.3-fabric.jar",
+          "filename": "BadOptimizations-2.4.1-26.3-fabric.jar",
+          "primary": true,
+          "size": 60760,
+          "file_type": null
+        }
+      ]
+    },
+    "structure-layout-optimizer": {
+      "version_id": "crWm7jXS",
+      "version_number": "1.1.4+26.3-fabric",
+      "project_id": "ayPU0OHc",
+      "publication": "https://modrinth.com/mod/structure-layout-optimizer/version/crWm7jXS",
+      "published": "2026-09-16T01:17:40.733568Z",
+      "game_versions": [
+        "26.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "M1953qlQ",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "files": [
+        {
+          "id": "fqc53vle",
+          "hashes": {
+            "sha512": "41294726277c99dd6b27fe04ec77ed360349652d1390b6efa00cf255f8230e26c130a6e297b2f23464cf4bd4be9a14d7032a317fada18bae74146955d4ac9caa",
+            "sha1": "ce6a03a927297a5441dfa239bf2d6d804931530a"
+          },
+          "url": "https://cdn.modrinth.com/data/ayPU0OHc/versions/crWm7jXS/structure_layout_optimizer-1.1.4%2B26.3-fabric.jar",
+          "filename": "structure_layout_optimizer-1.1.4+26.3-fabric.jar",
+          "primary": true,
+          "size": 69717,
+          "file_type": null
+        }
+      ]
+    },
+    "resourceful-config": {
+      "version_id": "IFB0XCI9",
+      "version_number": "6.0.1",
+      "project_id": "M1953qlQ",
+      "publication": "https://modrinth.com/mod/resourceful-config/version/IFB0XCI9",
+      "published": "2026-09-19T23:04:22.287348Z",
+      "game_versions": [
+        "26.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "id": "k4mqrXB7",
+          "hashes": {
+            "sha1": "55c3c414ee21bf2aeb381df612bc61e864c3dfd5",
+            "sha512": "35d9e21c6a5680448380731bfaf6678654f255b34a96230766a204fc7b711c737c78707c886bec529f4e7c532f190b2c48875c221b8440afd69afba6bb5bf9a8"
+          },
+          "url": "https://cdn.modrinth.com/data/M1953qlQ/versions/IFB0XCI9/ResourcefulConfig-6.0.1.jar",
+          "filename": "ResourcefulConfig-6.0.1.jar",
+          "primary": true,
+          "size": 444083,
+          "file_type": null
+        }
+      ]
+    },
+    "zfastnoise": {
+      "version_id": "cCGI5KLE",
+      "version_number": "1.1.1+26.3",
+      "project_id": "OnlVIpq5",
+      "publication": "https://modrinth.com/mod/zfastnoise/version/cCGI5KLE",
+      "published": "2026-10-01T11:30:14.851918Z",
+      "game_versions": [
+        "26.3"
+      ],
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "sml2FMaA",
+          "file_name": null,
+          "dependency_type": "incompatible"
+        },
+        {
+          "version_id": null,
+          "project_id": "KOHu7RCS",
+          "file_name": null,
+          "dependency_type": "incompatible"
+        },
+        {
+          "version_id": null,
+          "project_id": "vnpqfrJN",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "FRSaEVFk",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "4qmvXRB9",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "files": [
+        {
+          "id": "Gwih8xgM",
+          "hashes": {
+            "sha512": "81e9e2063fac33293b14701b7c72b922febda5eaf5c7c631ab9f588c96ba835df7dfd14dcac6763f414e83366c72445fdfae4d74ba7f7a9b73707446a264c87f",
+            "sha1": "f440a683630858b8d4d69a170eae4428e0e5af51"
+          },
+          "url": "https://cdn.modrinth.com/data/OnlVIpq5/versions/cCGI5KLE/zfastnoise-1.1.1%2B26.3.jar",
+          "filename": "zfastnoise-1.1.1+26.3.jar",
+          "primary": true,
+          "size": 45699,
+          "file_type": null
+        },
+        {
+          "id": "vEmbyTP4",
+          "hashes": {
+            "sha512": "770890fcceaad3a4e182be30ac7beda29199a2811d8e923f548c1ed34371956ebe547b6e360f2055a0a2483a94722860aca5da078fb1d4abed266aab9ceaba62",
+            "sha1": "7632f3de93fed58e0389da55624acf44826561e2"
+          },
+          "url": "https://cdn.modrinth.com/data/OnlVIpq5/versions/cCGI5KLE/zfastnoise-1.1.1%2B26.3-sources.jar",
+          "filename": "zfastnoise-1.1.1+26.3-sources.jar",
+          "primary": false,
+          "size": 23332,
+          "file_type": "sources-jar"
+        },
+        {
+          "id": "Yfs3KM3X",
+          "hashes": {
+            "sha1": "e0ab29f51c064ca89d0f09e10d423153500ece32",
+            "sha512": "ba77b42f297b9e54a79b02c2f97e9cb79a3227274c8921f11b5de10b46f25f88ceb4a6033b66cef4f37327415c3377ac61d9fd237303d1e02127cb6f05ee5368"
+          },
+          "url": "https://cdn.modrinth.com/data/OnlVIpq5/versions/cCGI5KLE/zfastnoise-ocl-1.0.0-beta.1%2B26.3-sources.jar",
+          "filename": "zfastnoise-ocl-1.0.0-beta.1+26.3-sources.jar",
+          "primary": false,
+          "size": 5015,
+          "file_type": "sources-jar"
+        }
+      ]
+    },
+    "zconfig": {
+      "version_id": "tsgt79sG",
+      "version_number": "1.0.0+26.x",
+      "project_id": "4qmvXRB9",
+      "publication": "https://modrinth.com/mod/zconfig/version/tsgt79sG",
+      "published": "2026-08-03T14:24:03.721934Z",
+      "game_versions": [
+        "26.1-snapshot-1",
+        "26.1-snapshot-2",
+        "26.1-snapshot-3",
+        "26.1-snapshot-4",
+        "26.1-snapshot-5",
+        "26.1-snapshot-6",
+        "26.1-snapshot-7",
+        "26.1-snapshot-8",
+        "26.1-snapshot-9",
+        "26.1-snapshot-10",
+        "26.1-snapshot-11",
+        "26.1-pre-1",
+        "26.1-pre-2",
+        "26.1-pre-3",
+        "26.1-rc-1",
+        "26.1-rc-2",
+        "26.1-rc-3",
+        "26.1",
+        "26.1.1-rc-1",
+        "26.1.1",
+        "26w14a",
+        "26.2-snapshot-1",
+        "26.1.2-rc-1",
+        "26.1.2",
+        "26.2-snapshot-2",
+        "26.2-snapshot-3",
+        "26.2-snapshot-4",
+        "26.2-snapshot-5",
+        "26.2-snapshot-6",
+        "26.2-snapshot-7",
+        "26.2-snapshot-8",
+        "26.2-pre-1",
+        "26.2-pre-2",
+        "26.2-pre-3",
+        "26.2-pre-4",
+        "26.2-pre-5",
+        "26.2-pre-6",
+        "26.2-rc-1",
+        "26.2-rc-2",
+        "26.2",
+        "26.3-snapshot-1",
+        "26.3-snapshot-2",
+        "26.3-snapshot-3",
+        "26.3-snapshot-4",
+        "26.3-snapshot-5",
+        "26.3-snapshot-6",
+        "26.3-snapshot-7",
+        "26.3-snapshot-8",
+        "26.3-snapshot-9",
+        "26.3-snapshot-10",
+        "26.3-pre-1",
+        "26.3-pre-2",
+        "26.3-pre-3",
+        "26.3-rc-1",
+        "26.3-rc-2",
+        "26.3-rc-3",
+        "26.3",
+        "26.4-snapshot-1"
+      ],
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "id": "FkXDGcfj",
+          "hashes": {
+            "sha512": "baf87ac023fd0297f531897f0dcdcac3b0b35960683090adb3350a2281a211c5134a5373730a10628300caf5711b912705f16b33a1d1a73a3a86f346bcd7c6f5",
+            "sha1": "91dab4f25559cf79d493177fbe0a50c4083a27cb"
+          },
+          "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/tsgt79sG/zconfig-1.0.0%2B26.x.jar",
+          "filename": "zconfig-1.0.0+26.x.jar",
+          "primary": true,
+          "size": 405423,
+          "file_type": null
+        },
+        {
+          "id": "Ez8xgEmO",
+          "hashes": {
+            "sha512": "a63c6b1692307df32a075dbc6834e3511149646a2c6885418cd0ad2fd1ce21e5f9eafd0647c469e3191473988a01d926dc3bb6820d67982a27c83607ae950510",
+            "sha1": "5a192ffd7e2bf2affbca248ee63c7a6ae0015c55"
+          },
+          "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/tsgt79sG/zconfig-1.0.0%2B26.x-sources.jar",
+          "filename": "zconfig-1.0.0+26.x-sources.jar",
+          "primary": false,
+          "size": 8494,
+          "file_type": "sources-jar"
+        }
+      ]
+    },
+    "gnetum": {
+      "version_id": "F4CsYAnb",
+      "version_number": "4.6.3+26.3-fabric",
+      "project_id": "7MoE34WK",
+      "publication": "https://modrinth.com/mod/gnetum/version/F4CsYAnb",
+      "published": "2026-10-05T23:43:39.383862Z",
+      "game_versions": [
+        "26.3"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "files": [
+        {
+          "id": "oDthNHDS",
+          "hashes": {
+            "sha512": "8c26bfc3bdb1d1a46106849a3770f2c028ad415acabf49db3ae37f1e5b21313aaef03c51d46215a80a6706cffc5409a2963e6429b57f3bfbb689ce3181c10a67",
+            "sha1": "d6237dced5a4a92a295872d3077ebc786d394471"
+          },
+          "url": "https://cdn.modrinth.com/data/7MoE34WK/versions/F4CsYAnb/Gnetum-4.6.3%2B26.3-fabric.jar",
+          "filename": "Gnetum-4.6.3+26.3-fabric.jar",
+          "primary": true,
+          "size": 97772,
+          "file_type": null
+        }
+      ]
+    }
+  },
+  "gnetum_source_commit": "307d4ba0d262b91cdbcd3909bb4269251311ea3c",
+  "slo_source_commit_reviewed": "186df62e2f06d0bdfea3dce2528162c9dd275fa6",
+  "config_schema_evidence": "Clases publicadas inspeccionadas con javap; configuración SLO y ruta JSONC verificadas por scripts/verify.py",
+  "performance_measurements": []
+}

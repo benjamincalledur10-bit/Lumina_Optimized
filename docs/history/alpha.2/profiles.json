@@ -1,0 +1,153 @@
+{
+  "baseline": {
+    "name": "Lumina Optimized Baseline",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "entityculling.pw.toml",
+      "moreculling.pw.toml",
+      "better-block-entities.pw.toml",
+      "fabric-api.pw.toml",
+      "cloth-config.pw.toml"
+    ],
+    "add": []
+  },
+  "dependencies": {
+    "name": "Lumina Optimized Dependencies",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "entityculling.pw.toml",
+      "moreculling.pw.toml",
+      "better-block-entities.pw.toml"
+    ],
+    "add": []
+  },
+  "dependencies-shaders": {
+    "name": "Lumina Optimized Dependencies-Shaders",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "entityculling.pw.toml",
+      "moreculling.pw.toml",
+      "better-block-entities.pw.toml"
+    ],
+    "add": [
+      "iris.pw.toml"
+    ]
+  },
+  "entity": {
+    "name": "Lumina Optimized Entity",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "moreculling.pw.toml",
+      "better-block-entities.pw.toml"
+    ],
+    "add": []
+  },
+  "entity-shaders": {
+    "name": "Lumina Optimized Entity-Shaders",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "moreculling.pw.toml",
+      "better-block-entities.pw.toml"
+    ],
+    "add": [
+      "iris.pw.toml"
+    ]
+  },
+  "more": {
+    "name": "Lumina Optimized More",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "entityculling.pw.toml",
+      "better-block-entities.pw.toml"
+    ],
+    "add": []
+  },
+  "more-shaders": {
+    "name": "Lumina Optimized More-Shaders",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "entityculling.pw.toml",
+      "better-block-entities.pw.toml"
+    ],
+    "add": [
+      "iris.pw.toml"
+    ]
+  },
+  "bbe": {
+    "name": "Lumina Optimized Bbe",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
+    "remove": [
+      "entityculling.pw.toml",
+      "moreculling.pw.toml"
+    ],
+    "add": [],
+    "bbe_enabled": true
+  },
+  "bbe-shaders": {
+    "name": "Lumina Optimized Bbe-Shaders",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
+    "remove": [
+      "entityculling.pw.toml",
+      "moreculling.pw.toml"
+    ],
+    "add": [
+      "iris.pw.toml"
+    ],
+    "bbe_enabled": true
+  },
+  "entity-more": {
+    "name": "Lumina Optimized Entity-More",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [
+      "better-block-entities.pw.toml"
+    ],
+    "add": []
+  },
+  "core": {
+    "name": "Lumina Optimized",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [],
+    "add": []
+  },
+  "shaders": {
+    "name": "Lumina Optimized Shaders",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [],
+    "add": [
+      "iris.pw.toml"
+    ]
+  },
+  "core-bbe-enabled": {
+    "name": "Lumina Optimized Core-Bbe-Enabled",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
+    "remove": [],
+    "add": [],
+    "bbe_enabled": true
+  },
+  "shaders-bbe-enabled": {
+    "name": "Lumina Optimized Shaders-Bbe-Enabled",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
+    "remove": [],
+    "add": [
+      "iris.pw.toml"
+    ],
+    "bbe_enabled": true
+  },
+  "c2me": {
+    "name": "Lumina Optimized C2Me",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [],
+    "add": [
+      "c2me-fabric.pw.toml"
+    ]
+  },
+  "c2me-shaders": {
+    "name": "Lumina Optimized C2Me-Shaders",
+    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
+    "remove": [],
+    "add": [
+      "iris.pw.toml",
+      "c2me-fabric.pw.toml"
+    ]
+  }
+}

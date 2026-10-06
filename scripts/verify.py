@@ -22,7 +22,7 @@ def fetch(url):
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / hashlib.sha256(url.encode()).hexdigest()
     if not path.exists():
-        request = urllib.request.Request(url, headers={'User-Agent': 'Lumina-Optimized/0.1.0-alpha.2'})
+        request = urllib.request.Request(url, headers={'User-Agent': 'Lumina-Optimized/0.1.0-alpha.3'})
         with urllib.request.urlopen(request, timeout=60) as response:
             path.write_bytes(response.read())
     return path.read_bytes()
@@ -124,6 +124,17 @@ def validate_configs():
         disassembly = subprocess.run(['javap','-p','-c','-classpath',str(jar),cls], check=True, capture_output=True, text=True).stdout
         for key in keys:
             require(key in disassembly, 'Opción ausente en JAR: '+key)
+    slo = json.loads((ROOT/'variants/structure_layout_optimizer.jsonc').read_text())
+    require(slo == {'deduplicateShuffledTemplatePoolElementList': False}, 'Deduplicación SLO debe permanecer desactivada')
+    for filename, cls, expected in [
+        ('structure-layout-optimizer','telepathicgrunt.structure_layout_optimizer.SloConfig', ['deduplicateShuffledTemplatePoolElementList', 'structure_layout_optimizer']),
+        ('resourceful-config','com.teamresourceful.resourcefulconfig.common.loader.ParsedConfig', ['.jsonc', 'getConfigPath']),
+        ('resourceful-config','com.teamresourceful.resourcefulconfig.common.loader.Loader', ['loadConfig', 'JsonObject.get'])]:
+        mod = tomllib.loads((ROOT/'variants'/(filename+'.pw.toml')).read_text())
+        jar = ROOT/'.build/validator'/(filename+'.jar')
+        jar.write_bytes(fetch(mod['download']['url']))
+        code = subprocess.run(['javap','-p','-c','-v','-classpath',str(jar),cls],check=True,capture_output=True,text=True).stdout
+        require(all(key in code for key in expected), 'Esquema/ruta SLO no verificado: '+cls)
     c2me_mod = tomllib.loads((ROOT/'variants/c2me-fabric.pw.toml').read_text())
     with zipfile.ZipFile(io.BytesIO(fetch(c2me_mod['download']['url']))) as container:
         for part, cls, expected_strings in [
@@ -136,6 +147,16 @@ def validate_configs():
             jar.write_bytes(container.read(nested))
             code = subprocess.run(['javap','-p','-c','-classpath',str(jar),cls],check=True,capture_output=True,text=True).stdout
             require(all(s in code for s in expected_strings),'Claves C2ME ausentes: '+part)
+
+def validate_modrinth_dependencies(projects):
+    for version in projects.values():
+        for dep in version['dependencies']:
+            target = projects.get(dep['project_id'])
+            matches = target is not None and (not dep['version_id'] or target['id'] == dep['version_id'])
+            if dep['dependency_type'] == 'required':
+                require(matches, 'Dependencia Modrinth incorrecta: ' + str(dep))
+            elif dep['dependency_type'] == 'incompatible':
+                require(not matches, 'Incompatibilidad Modrinth: ' + str(dep))
 
 def main():
     require(shutil.which('java') and shutil.which('javac') and shutil.which('javap'), 'Validar requiere un JDK 17+; Minecraft requiere Java 25')
@@ -179,10 +200,7 @@ def main():
                 inventory.extend(source[4])
             available, chosen, alternatives = resolve(inventory, engine)
             projects = {source[3]['project_id']:source[3] for source in selected.values()}
-            for version in projects.values():
-                for dep in version['dependencies']:
-                    if dep['dependency_type'] == 'required':
-                        require(dep['project_id'] in projects and (not dep['version_id'] or projects[dep['project_id']]['id'] == dep['version_id']), 'Dependencia Modrinth incorrecta')
+            validate_modrinth_dependencies(projects)
             expected_configs = configs(profile)
             path = ROOT / 'dist' / f'Lumina-Optimized-{pack_version()}-{name}.mrpack'
             with zipfile.ZipFile(path) as archive:
@@ -223,20 +241,23 @@ def main():
             for name in bundle.namelist():
                 require(bundle.read(name)==(ROOT/'dist'/name).read_bytes(), 'Bundle desactualizado')
         history_assets = {}
-        for line in (ROOT/'docs/history/alpha.1/SHA256SUMS').read_text().splitlines():
-            expected, filename = line.split('  ',1)
-            original = ROOT/'dist'/filename
-            if original.exists():
-                require(hashlib.sha256(original.read_bytes()).hexdigest()==expected, 'Alpha.1 modificada')
-                history_assets[filename] = 'hash verificado; intacto'
-            else:
-                history_assets[filename] = 'no presente localmente; hash histórico conservado'
+        for release in ('alpha.1','alpha.2'):
+            history_assets[release] = {}
+            for line in (ROOT/'docs/history'/release/'SHA256SUMS').read_text().splitlines():
+                expected, filename = line.split('  ',1)
+                original = ROOT/'dist'/filename
+                if original.exists():
+                    require(hashlib.sha256(original.read_bytes()).hexdigest()==expected, release+' modificada')
+                    history_assets[release][filename] = 'hash verificado; intacto'
+                else:
+                    history_assets[release][filename] = 'no presente localmente; hash histórico conservado'
         report = {'scope':'Validación estática con VersionPredicate de Fabric 0.19.5; selección del candidato más reciente de cada módulo anidado. No ejecuta el resolvedor completo, mixins, launcher, Minecraft ni benchmarks.',
                   'version':pack_version(), 'loader_sha256':hashlib.sha256(loader).hexdigest(),
-                  'alpha.1_assets':history_assets,
+                  'historical_assets':history_assets,
+                  'minecraft_tests':{'import':'pending','startup':'pending','stability':'pending','performance':'pending'},
                   'jar_metadata':{p.name:sources[p][4] for p in all_descriptors}, 'variants':reports}
         (ROOT/'docs/validation.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-        print(f'OK: {len(reports)} paquetes, JAR anidados, predicados Fabric, configs, hashes y alpha.1 preservada')
+        print(f'OK: {len(reports)} paquetes, JAR anidados, predicados Fabric, configs, hashes y alpha.1/alpha.2 preservadas')
     finally:
         engine.close()
 

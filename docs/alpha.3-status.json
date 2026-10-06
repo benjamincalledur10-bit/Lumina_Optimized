@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0-alpha.3",
+  "branch": "modpackdev",
+  "initial_head": "35ddfc4",
+  "base": "alpha.2 core-bbe-enabled",
+  "new_candidate_measurements": [],
+  "alpha2_measurements": "user_reported; raw data not supplied",
+  "static_validation": "passed",
+  "composition_resolution_tests": 13,
+  "exported_profiles": 17,
+  "runtime_jdk_for_static_inspection": "Temurin 21.0.9",
+  "minecraft_required_java": "25",
+  "real_game_tests": {
+    "import": "pending",
+    "startup": "pending",
+    "visual_parity": "pending",
+    "worldgen_parity": "pending",
+    "gnetum_immediatelyfast": "pending",
+    "c2me_zconfig": "pending",
+    "stability": "pending",
+    "performance": "pending"
+  },
+  "scope": "Estado de validación de alpha.3; la publicación GitHub se documenta en docs/releases/v0.1.0-alpha.3.md."
+}

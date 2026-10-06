@@ -40,6 +40,8 @@ def configs(profile):
         result[path] = (json.dumps(config, indent=2) + "\n").encode()
     if "c2me-fabric.pw.toml" in present:
         result["config/c2me.toml"] = (ROOT / "variants/c2me.toml").read_bytes()
+    if "structure-layout-optimizer.pw.toml" in present:
+        result["config/structure_layout_optimizer.jsonc"] = (ROOT / "variants/structure_layout_optimizer.jsonc").read_bytes()
     return result
 
 def pack_version():

@@ -1,153 +1,179 @@
 {
   "baseline": {
-    "name": "Lumina Optimized Baseline",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "entityculling.pw.toml",
-      "moreculling.pw.toml",
-      "better-block-entities.pw.toml",
-      "fabric-api.pw.toml",
-      "cloth-config.pw.toml"
+    "name": "Lumina Optimized baseline",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "bad": {
+    "name": "Lumina Optimized bad",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "badoptimizations.pw.toml"
     ],
-    "add": []
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "resourceful-control": {
+    "name": "Lumina Optimized resourceful-control",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "resourceful-config.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "structure": {
+    "name": "Lumina Optimized structure",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "resourceful-config.pw.toml",
+      "structure-layout-optimizer.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "zconfig-control": {
+    "name": "Lumina Optimized zconfig-control",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "zconfig.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "fastnoise": {
+    "name": "Lumina Optimized fastnoise",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "zconfig.pw.toml",
+      "zfastnoise.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
   },
   "dependencies": {
-    "name": "Lumina Optimized Dependencies",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "entityculling.pw.toml",
-      "moreculling.pw.toml",
-      "better-block-entities.pw.toml"
-    ],
-    "add": []
-  },
-  "dependencies-shaders": {
-    "name": "Lumina Optimized Dependencies-Shaders",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "entityculling.pw.toml",
-      "moreculling.pw.toml",
-      "better-block-entities.pw.toml"
-    ],
+    "name": "Lumina Optimized dependencies",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
     "add": [
-      "iris.pw.toml"
-    ]
-  },
-  "entity": {
-    "name": "Lumina Optimized Entity",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "moreculling.pw.toml",
-      "better-block-entities.pw.toml"
+      "resourceful-config.pw.toml",
+      "zconfig.pw.toml"
     ],
-    "add": []
-  },
-  "entity-shaders": {
-    "name": "Lumina Optimized Entity-Shaders",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "moreculling.pw.toml",
-      "better-block-entities.pw.toml"
-    ],
-    "add": [
-      "iris.pw.toml"
-    ]
-  },
-  "more": {
-    "name": "Lumina Optimized More",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "entityculling.pw.toml",
-      "better-block-entities.pw.toml"
-    ],
-    "add": []
-  },
-  "more-shaders": {
-    "name": "Lumina Optimized More-Shaders",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "entityculling.pw.toml",
-      "better-block-entities.pw.toml"
-    ],
-    "add": [
-      "iris.pw.toml"
-    ]
-  },
-  "bbe": {
-    "name": "Lumina Optimized Bbe",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
-    "remove": [
-      "entityculling.pw.toml",
-      "moreculling.pw.toml"
-    ],
-    "add": [],
+    "remove": [],
     "bbe_enabled": true
-  },
-  "bbe-shaders": {
-    "name": "Lumina Optimized Bbe-Shaders",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
-    "remove": [
-      "entityculling.pw.toml",
-      "moreculling.pw.toml"
-    ],
-    "add": [
-      "iris.pw.toml"
-    ],
-    "bbe_enabled": true
-  },
-  "entity-more": {
-    "name": "Lumina Optimized Entity-More",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [
-      "better-block-entities.pw.toml"
-    ],
-    "add": []
   },
   "core": {
-    "name": "Lumina Optimized",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [],
-    "add": []
-  },
-  "shaders": {
-    "name": "Lumina Optimized Shaders",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [],
+    "name": "Lumina Optimized core",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
     "add": [
-      "iris.pw.toml"
-    ]
-  },
-  "core-bbe-enabled": {
-    "name": "Lumina Optimized Core-Bbe-Enabled",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml"
+    ],
     "remove": [],
-    "add": [],
     "bbe_enabled": true
   },
-  "shaders-bbe-enabled": {
-    "name": "Lumina Optimized Shaders-Bbe-Enabled",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE activo experimental.",
+  "shaders": {
+    "name": "Lumina Optimized shaders",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "iris.pw.toml"
+    ],
     "remove": [],
+    "bbe_enabled": true
+  },
+  "baseline-shaders": {
+    "name": "Lumina Optimized baseline-shaders",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
     "add": [
       "iris.pw.toml"
     ],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "baseline-noif": {
+    "name": "Lumina Optimized baseline-noif",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [],
+    "remove": [
+      "immediatelyfast.pw.toml"
+    ],
+    "bbe_enabled": true
+  },
+  "gnetum": {
+    "name": "Lumina Optimized gnetum",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "gnetum.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "gnetum-noif": {
+    "name": "Lumina Optimized gnetum-noif",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "gnetum.pw.toml"
+    ],
+    "remove": [
+      "immediatelyfast.pw.toml"
+    ],
+    "bbe_enabled": true
+  },
+  "gnetum-shaders": {
+    "name": "Lumina Optimized gnetum-shaders",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "gnetum.pw.toml",
+      "iris.pw.toml"
+    ],
+    "remove": [],
     "bbe_enabled": true
   },
   "c2me": {
-    "name": "Lumina Optimized C2Me",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [],
+    "name": "Lumina Optimized c2me",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
     "add": [
       "c2me-fabric.pw.toml"
-    ]
+    ],
+    "remove": [],
+    "bbe_enabled": true
+  },
+  "c2me-all": {
+    "name": "Lumina Optimized c2me-all",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "c2me-fabric.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
   },
   "c2me-shaders": {
-    "name": "Lumina Optimized C2Me-Shaders",
-    "description": "Alpha.2 de prueba; sin benchmarks. BBE desactivado cuando est\u00e1 incluido.",
-    "remove": [],
+    "name": "Lumina Optimized c2me-shaders",
+    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
     "add": [
-      "iris.pw.toml",
-      "c2me-fabric.pw.toml"
-    ]
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "c2me-fabric.pw.toml",
+      "iris.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true
   }
 }

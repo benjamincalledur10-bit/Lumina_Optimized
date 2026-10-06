@@ -1,23 +1,19 @@
 # Lumina Optimized
 
-**0.1.0-alpha.2**, paquetes locales de prueba en `modpackdev`.
-Minecraft Java **26.3**, Java **25 de 64 bits**, Fabric Loader **0.19.5**.
-No hay mediciones de rendimiento ni pruebas de arranque realizadas.
+**0.1.0-alpha.3** · Minecraft **26.3** · Java **25 de 64 bits** · Fabric Loader **0.19.5**.
+Candidatos de prueba; todavía no hay mediciones de estos candidatos ni pruebas de arranque realizadas aquí.
 
-## Instalar
+## Instalar y elegir
 
-Importa un `.mrpack` de `dist/` en una instancia nueva de Modrinth App o Prism
-Launcher. Selecciona Java 25 nativo para la arquitectura del equipo (ARM64 en
-Apple Silicon). Comprueba su versión efectiva en el launcher.
+Importa **un `.mrpack`** de `dist/` en una instancia nueva de Modrinth App o Prism Launcher. Selecciona Java 25 nativo (ARM64 en Apple Silicon). El ZIP de ensayos se extrae primero; no se importa directamente.
 
-- `Lumina-Optimized-0.1.0-alpha.2-core.mrpack`: base con Entity Culling y More Culling configurados de forma conservadora. BBE incluido, **desactivado** para conservar la referencia visual.
-- `...-shaders.mrpack`: misma base + Iris, sin shader packs ni shaders activados por defecto.
-- `...-c2me.mrpack` y `...-c2me-shaders.mrpack`: Core/Shaders + C2ME experimental para carga/exploración.
-- `...-test-packages.zip`: los **16 perfiles**, incluidos controles, cada incorporación aislada y BBE activado experimentalmente. Extrae e importa un `.mrpack`, no el ZIP completo.
+- `...-baseline.mrpack`: alpha.2 con **BBE activado**, referencia de tus últimas mediciones.
+- `...-bad.mrpack`, `...-structure.mrpack`, `...-fastnoise.mrpack`: esa base con cada candidato y sus dependencias.
+- `...-core.mrpack`: los tres candidatos juntos. `...-shaders.mrpack`: mismo conjunto + Iris; sin shader packs incluidos.
+- `...-gnetum.mrpack`: ensayo separado del HUD. Puede **reducir su frecuencia de actualización**. Su interacción con ImmediatelyFast en 26.3 está pendiente de probar.
+- `...-c2me.mrpack`: referencia + C2ME experimental; `...-c2me-all.mrpack` y `...-c2me-shaders.mrpack`: combinación experimental.
 
-Mantén resolución, calidad visual, distancias y ajustes del mundo iguales a la
-referencia. No se incluye `options.txt` ni ajustes de Sodium que los cambien.
-Para comparar BBE activo, revisa primero las limitaciones visuales indicadas abajo.
+Los **17 perfiles**, incluidos controles de bibliotecas y Gnetum sin ImmediatelyFast, están descritos en [alpha.3.md](docs/alpha.3.md). Archivos: `dist/Lumina-Optimized-0.1.0-alpha.3-<perfil>.mrpack`.
 
 ## Versiones fijadas
 
@@ -27,59 +23,37 @@ Para comparar BBE activo, revisa primero las limitaciones visuales indicadas aba
 | Lithium | 0.26.2+mc26.3 |
 | FerriteCore | 9.0.0-fabric |
 | ImmediatelyFast | 1.17.1+26.3 |
-| Entity Culling | 1.11.2 |
-| More Culling | 1.9.0 |
+| Entity Culling / More Culling | 1.11.2 / 1.9.0 |
 | Better Block Entities | 1.3.9+mc26.3 |
-| Fabric API | 0.161.0+26.3 |
-| Cloth Config | 26.3.159+fabric |
-| Iris, variante Shaders | 1.11.7+mc26.3 |
-| C2ME, solo ensayos | 0.4.2-alpha.0.89+26.3 |
+| Fabric API / Cloth Config | 0.161.0+26.3 / 26.3.159+fabric |
+| BadOptimizations | 2.4.1 |
+| Structure Layout Optimizer / Resourceful Config | 1.1.4+26.3-fabric / 6.0.1 |
+| Fast Noise / ZConfig | 1.1.1+26.3 / 1.0.0+26.x |
+| Iris, opcional | 1.11.7+mc26.3 |
+| Gnetum, solo ensayo | 4.6.3+26.3-fabric |
+| C2ME, experimental | 0.4.2-alpha.0.89+26.3 |
 
-IDs, URLs, hashes SHA-512, lado de instalación y `pin = true` están en los
-metadatos packwiz. Se verifican también JAR anidados. Dynamic FPS sigue fuera.
+Las configuraciones anteriores se conservan; todos los perfiles nuevos derivan BBE activo cambiando solamente `optimize.master`. SLO fija `deduplicateShuffledTemplatePoolElementList=false`. No se distribuyen `options.txt` ni cambios de resolución, distancias, animaciones o calidad visual. Gnetum introduce un cambio temporal del HUD, por eso está separado. [Opciones y justificación](docs/configuration-alpha.3.md).
 
 ## Construir y validar
 
-Necesitas Python **3.11+**, packwiz y conexión a Internet. Para validar, un JDK
-**17+** con `java`, `javac` y `javap`; para jugar y compilar Sodium, Java **25**.
-El commit de packwiz se fija en `scripts/toolchain.json`.
+Python 3.11+, packwiz y conexión a Internet. Validación con JDK 17+ (`java`, `javac`, `javap`); **jugar requiere Java 25**. Packwiz se fija en `scripts/toolchain.json`.
 
 ```sh
 go install github.com/packwiz/packwiz@ef87d964f8cbd52b3b13ea42453ef322290e2b9e
 python3 scripts/build.py --packwiz /ruta/al/binario/packwiz
-python3 scripts/verify.py
 python3 scripts/test_static.py
+python3 scripts/verify.py
 ```
 
-`pack/` es la única base. `variants/profiles.json` elimina/añade mods y activa
-BBE únicamente para ensayos. Los archivos temporales se generan en `.build/`.
-`dist/SHA256SUMS-0.1.0-alpha.2` cubre todos los `.mrpack` nuevos; alpha.1 se conserva.
-Los bins, staging y paquetes se excluyen de Git.
+`pack/` conserva la base alpha.2. `variants/profiles.json` añade candidatos desde metadatos packwiz fijados, sin mantener copias independientes. Core y Shaders se generan de esa misma fuente. `dist/SHA256SUMS-0.1.0-alpha.3` contiene los hashes de los 17 `.mrpack`; `.build/`, herramientas y exportaciones no se versionan en Git. Ejecuta la construcción completa antes de validar.
 
-La validación genera [validation.json](docs/validation.json). Usa el parser de
-versiones de Fabric Loader 0.19.5 y comprueba candidatos anidados, configuraciones,
-índices, descargas y exportaciones. **No ejecuta el resolvedor completo de Fabric,
-los mixins ni Minecraft.** Un ZIP válido no demuestra arranque o mejores FPS.
+[validation.json](docs/validation.json) comprueba índices, publicaciones, descargas, hashes, requisitos transitivos, conflictos declarados, configs y exportaciones. Usa los predicados reales de Loader 0.19.5; **no ejecuta su resolvedor completo, mixins, bibliotecas nativas ni Minecraft**. Pasar estas comprobaciones no demuestra estabilidad ni mejores FPS.
 
-## Decisiones y limitaciones
+## Qué falta probar
 
-- Entity Culling conserva `safeMode` y desactiva tick culling para mantener animaciones. More Culling desactiva LOD, culling de tres caras y modos agresivos.
-- BBE puede ampliar visibilidad y alterar el tratamiento de animaciones/texto. Se incluye apagado en Core/Shaders; los perfiles `bbe`, `bbe-shaders`, `core-bbe-enabled` y `shaders-bbe-enabled` permiten evaluarlo activo con advertencia de paridad visual pendiente.
-- C2ME es alpha. Mantener distancias iguales; registrar el estado de su módulo `notickvd`. El `.mrpack` no impone argumentos JVM.
-- macOS, Windows y Linux son objetivos, aún sin certificación de arranque, estabilidad o shaders. No añadir OptiFine/OptiFabric, Canvas, VulkanMod ni otros renderizadores alternativos.
-- No se promete mejora de rendimiento. Alpha.1 tampoco tuvo mediciones: su historial declara esa ausencia explícitamente.
-- La mejora propia de presupuesto de uploads es **un parche de investigación**, no un mod incluido. Requiere compilar el fork para que su flag JVM funcione.
+Importación, arranque y logs en macOS/Windows/Linux; paridad visual y generación del mundo; estabilidad sostenida; rendimiento A/B según [benchmarks.md](docs/benchmarks.md). Mantén los ajustes efectivos de tus mediciones anteriores. Fast Noise declara incompatibilidad con Moonrise y AntiXray; no los añadas. C2ME es alpha; revisar también bibliotecas NightConfig compartidas con ZConfig.
 
-Detalles: [matriz y compatibilidad](docs/alpha.2.md),
-[opciones y justificación](docs/configuration-alpha.2.md),
-[pruebas reproducibles](docs/benchmarks.md),
-[hipótesis propia y parche](docs/research/sodium-upload-budget.md),
-[historial alpha.1](docs/history/alpha.1/measurements.json).
+El usuario informa mediciones de alpha.2 con BBE activo, pero sus cifras y ajustes no fueron entregados al repositorio: [registro conservado](docs/history/alpha.2/measurements.json). No hay resultados nuevos inventados. La [hipótesis Sodium](docs/research/sodium-upload-budget.md) sigue siendo un parche de investigación, no está incluida en los paquetes. Dynamic FPS sigue fuera.
 
-## Fuentes
-
-Las publicaciones exactas y el código fijado están enlazados en los documentos.
-[Fabric para 26.3](https://fabricmc.net/2026/09/15/263.html),
-[requisito Java 25](https://www.minecraft.net/en-us/article/minecraft-java-edition-26-1),
-[exportación packwiz](https://packwiz.infra.link/tutorials/hosting/modrinth/),
-[formato `.mrpack`](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack).
+Publicaciones exactas, requisitos y evidencia: [alpha.3](docs/alpha.3.md), [dependencias](docs/dependencies.md). Historial alpha.1 y alpha.2 conservado en `docs/history/`.

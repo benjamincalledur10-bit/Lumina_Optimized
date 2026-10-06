@@ -5,54 +5,65 @@ from pathlib import Path
 import subprocess
 import unittest
 from profiles import ROOT, configs, descriptors, profiles
-from verify import FabricVersions, LOADER_URL, fetch, resolve
+from verify import FabricVersions, LOADER_URL, fetch, resolve, validate_modrinth_dependencies
 
 def record(mod_id, version, depends=None):
     return {'id':mod_id, 'version':version, 'origin':mod_id+'.jar', 'depends':depends or {},
             'breaks':{}, 'conflicts':{}, 'provides':[]}
 
 class CompositionTests(unittest.TestCase):
-    def test_isolated_mods_change_only_one_descriptor(self):
+    def test_candidates_are_isolated(self):
         matrix = profiles()
-        for name, mod in [('entity','entityculling'),('more','moreculling'),('bbe','better-block-entities')]:
-            for suffix in ('','-shaders'):
-                control = {p.name for p in descriptors(matrix['dependencies'+suffix])}
-                trial = {p.name for p in descriptors(matrix[name+suffix])}
-                self.assertEqual(trial-control, {mod+'.pw.toml'})
-                self.assertEqual(control-trial, set())
-
-    def test_bbe_activation_changes_one_option(self):
-        matrix = profiles()
-        for control, trial in [('core','core-bbe-enabled'),('shaders','shaders-bbe-enabled')]:
-            self.assertEqual(descriptors(matrix[control]),descriptors(matrix[trial]))
-            a, b = configs(matrix[control]),configs(matrix[trial])
-            for name in a:
-                if name!='config/BBEConfig.json':
-                    self.assertEqual(a[name],b[name])
-            before, after = json.loads(a['config/BBEConfig.json']),json.loads(b['config/BBEConfig.json'])
-            options_before = {x['option']:x['value'] for x in before['bbe.config.storage.main']}
-            options_after = {x['option']:x['value'] for x in after['bbe.config.storage.main']}
-            delta = {key for key in options_before if options_before[key]!=options_after[key]}
-            self.assertEqual(delta,{'optimize.master'})
-            self.assertTrue(options_after['optimize.master'])
-
-    def test_c2me_is_a_single_addition(self):
-        matrix = profiles()
-        for control, trial in [('core','c2me'),('shaders','c2me-shaders')]:
-            a = {p.name for p in descriptors(matrix[control])}
-            b = {p.name for p in descriptors(matrix[trial])}
-            self.assertEqual(b-a,{'c2me-fabric.pw.toml'})
-            self.assertEqual(a-b,set())
-            old, new = configs(matrix[control]),configs(matrix[trial])
-            self.assertEqual(set(new)-set(old),{'config/c2me.toml'})
-            for key in old:
-                self.assertEqual(old[key],new[key])
-
-    def test_baseline_does_not_change_reference_configs(self):
-        matrix = profiles()
-        self.assertEqual(len(descriptors(matrix['baseline'])),4)
-        self.assertEqual(configs(matrix['baseline']),{})
-        self.assertEqual(configs(matrix['dependencies']),{})
+        for control, trial, mod in [('baseline','bad','badoptimizations'),('resourceful-control','structure','structure-layout-optimizer'),('zconfig-control','fastnoise','zfastnoise')]:
+            a={p.name for p in descriptors(matrix[control])}; b={p.name for p in descriptors(matrix[trial])}
+            self.assertEqual(b-a,{mod+'.pw.toml'}); self.assertFalse(a-b)
+    def test_all_profiles_preserve_bbe_and_reference(self):
+        reference=configs(profiles()['baseline'])
+        for profile in profiles().values():
+            actual=configs(profile)
+            for key,value in reference.items(): self.assertEqual(actual[key],value)
+            options={x['option']:x['value'] for x in json.loads(actual['config/BBEConfig.json'])['bbe.config.storage.main']}
+            self.assertTrue(options['optimize.master'])
+    def test_baseline_matches_alpha2_bbe_package(self):
+        import zipfile, tomllib
+        historical=json.loads((ROOT/'docs/history/alpha.2/profiles.json').read_text())['core-bbe-enabled']
+        self.assertEqual(descriptors(historical),descriptors(profiles()['baseline']))
+        self.assertEqual(configs(historical),configs(profiles()['baseline']))
+        path=ROOT/'dist/Lumina-Optimized-0.1.0-alpha.2-core-bbe-enabled.mrpack'
+        if path.exists():
+            with zipfile.ZipFile(path) as z:
+                for key,value in configs(historical).items(): self.assertEqual(z.read('overrides/'+key),value)
+                current=ROOT/'dist/Lumina-Optimized-0.1.0-alpha.3-baseline.mrpack'
+                if current.exists():
+                    with zipfile.ZipFile(current) as trial:
+                        before=json.loads(z.read('modrinth.index.json'))
+                        after=json.loads(trial.read('modrinth.index.json'))
+                        self.assertEqual(before['dependencies'],after['dependencies'])
+                        self.assertEqual(sorted(before['files'],key=lambda x:x['path']),sorted(after['files'],key=lambda x:x['path']))
+    def test_trio_is_union(self):
+        matrix=profiles(); union=set()
+        for name in ['bad','structure','fastnoise']: union.update(p.name for p in descriptors(matrix[name]))
+        self.assertEqual(union,{p.name for p in descriptors(matrix['core'])})
+    def test_gnetum_factorial(self):
+        matrix=profiles()
+        for control,trial in [('baseline','gnetum'),('baseline-noif','gnetum-noif'),('baseline-shaders','gnetum-shaders')]:
+            a={p.name for p in descriptors(matrix[control])}; b={p.name for p in descriptors(matrix[trial])}
+            self.assertEqual(b-a,{'gnetum.pw.toml'}); self.assertFalse(a-b)
+        for name in ['baseline-noif','gnetum-noif']:
+            self.assertNotIn('immediatelyfast.pw.toml',{p.name for p in descriptors(matrix[name])})
+    def test_c2me_separate(self):
+        matrix=profiles()
+        for control,trial in [('baseline','c2me'),('core','c2me-all'),('shaders','c2me-shaders')]:
+            a={p.name for p in descriptors(matrix[control])}; b={p.name for p in descriptors(matrix[trial])}
+            self.assertEqual(b-a,{'c2me-fabric.pw.toml'}); self.assertFalse(a-b)
+    def test_deduplication_disabled(self):
+        for profile in profiles().values():
+            actual=configs(profile)
+            if 'structure-layout-optimizer.pw.toml' in {p.name for p in descriptors(profile)}:
+                self.assertIs(json.loads(actual['config/structure_layout_optimizer.jsonc'])['deduplicateShuffledTemplatePoolElementList'],False)
+    def test_modrinth_incompatibility_rejected(self):
+        projects={'a':{'id':'1','dependencies':[{'project_id':'b','version_id':None,'dependency_type':'incompatible'}]},'b':{'id':'2','dependencies':[]}}
+        with self.assertRaisesRegex(ValueError,'Incompatibilidad'): validate_modrinth_dependencies(projects)
 
 class ResolutionTests(unittest.TestCase):
     @classmethod

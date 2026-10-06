@@ -1,0 +1,1 @@
+profile,mrpack_sha256,os,cpu,gpu,java_build,world_sha256,settings_sha256,scenario,run,import_status,startup_status,stability_status,visual_parity_status,avg_fps,frametime_p99_ms,one_percent_low_fps,frames_over_50ms_per_min,rss_mib,heap_used_mib,gc_pause_ms,chunk_server_p99_ms,chunk_visible_p99_ms,chunks_per_second,hud_update_hz,hud_response_ms,evidence

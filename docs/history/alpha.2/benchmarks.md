@@ -1,8 +1,8 @@
 # Protocolo reproducible (pendiente de ejecutar)
 
-Alpha.3 toma **alpha.2 con BBE activo** como control principal (`baseline`). El usuario informa mediciones previas, pero los datos crudos y sus ajustes no fueron entregados: [registro](history/alpha.2/measurements.json). No hay mediciones de los nuevos candidatos. Se conserva el [protocolo anterior](history/alpha.2/benchmarks.md).
-
-Para continuidad, recuperar primero resolución, distancias, animaciones, calidad, mundo y hardware efectivos de esas mediciones; usar exactamente esos valores en toda la matriz alpha.3. Los valores de ejemplo abajo sirven para un ensayo nuevo si no se dispone de esa referencia: no reescriben ni representan las mediciones del usuario.
+Este protocolo conserva la referencia de alpha.1. Alpha.2 añade los perfiles
+aislados y acumulativos de [alpha.2.md](alpha.2.md), sin cambiar los ajustes de
+comparación. No existen mediciones previas: [estado histórico](history/alpha.1/measurements.json).
 
 ## Instancias
 
@@ -112,34 +112,3 @@ sin shader como con un shader fijado, incluyendo recarga.
 
 Para cada prueba marcar PASS/FAIL/PENDIENTE y adjuntar evidencia. Un `.mrpack`
 validado estáticamente no equivale a un modpack arrancado ni a una mejora medida.
-
-## Comparaciones específicas alpha.3
-
-Antes de medir, importar cada perfil en una instancia independiente con Java 25. Guardar el hash del `.mrpack`, mods cargados y `latest.log`; confirmar SLO false en la config efectiva después del arranque. No copiar una carpeta `config` con candidatos adicionales al control.
-
-| Control | Ensayo | Qué separa |
-| --- | --- | --- |
-| `baseline` | `bad` | BadOptimizations |
-| `baseline` | `structure` | SLO + biblioteca |
-| `resourceful-control` | `structure` | SLO con biblioteca constante |
-| `baseline` | `fastnoise` | Fast Noise + biblioteca |
-| `zconfig-control` | `fastnoise` | Fast Noise con biblioteca constante |
-| `baseline` | `dependencies` | Coste de ambas bibliotecas |
-| `dependencies` | `core` | Tres candidatos con bibliotecas constantes |
-| `baseline` | `core` | Conjunto completo |
-| `baseline-shaders` | `shaders` | Conjunto completo con Iris fijo |
-| `baseline` | `c2me` | C2ME aislado |
-| `core` | `c2me-all` | C2ME con candidatos |
-| `shaders` | `c2me-shaders` | C2ME con candidatos e Iris |
-
-Cada candidato tiene perfil sin los otros dos. Si aparece una regresión solamente en Core, hacer nuevos ensayos por parejas antes de atribuirla a un mod. No alterar flags entre control y ensayo.
-
-SLO: usar estructuras de jigsaw (pueblos, bastiones, trial chambers), registrar coordenadas/piezas y tiempos de generación del mismo conjunto. Fast Noise: ejecutar rutas sin generar separadas en Overworld, Nether y End; además guardar bloques, biomas y estructuras de las regiones comparadas. Comparar NBT semántico normalizando timestamps/estado volátil, no hashes binarios de `.mca` como prueba única. Desactivar deduplicación evita esa transformación concreta de SLO, pero no certifica por sí solo paridad del conjunto. Guardar y reabrir; no mezclar chunks creados por perfiles distintos dentro de un ensayo.
-
-BadOptimizations: escena fija, ruta pregenerada, transiciones día/noche, cambios de FOV y distancia, lightmaps/partículas/entidades/cofres. Comparar capturas visuales y logs junto a frametimes, sin declarar mejoras si el resultado queda dentro de la dispersión.
-
-Gnetum: ejecutar `baseline`, `baseline-noif`, `gnetum`, `gnetum-noif` con mismos ajustes y HUD; los dos perfiles sin IF se usan solamente para aislar interacción. Después comparar `baseline-shaders` / `gnetum-shaders`, primero sin shader y luego con el mismo shader/preset/hash. Comprobar HUD tras F1, resize, cambios de GUI, inventario, mapas, chat, daño/corazones y cambio de hotbar. Registrar cadencia del HUD y tiempo de respuesta a eventos, además de FPS del mundo. Defaults: tres pases, HUD hasta 60 FPS y pantalla hasta 20, downscale apagado. La pantalla puede verse igual en una captura fija y actualizar menos frecuentemente: registrar ese cambio temporal y no presentarlo como calidad idéntica. Capturas de vídeo para cadencia deben ir en ensayos diagnósticos aparte y medir su sobrecarga. Guardar los cuatro configs efectivos; no desactivar opciones de IF silenciosamente.
-
-C2ME: revisar errores de mixin/clases/nativos y los NightConfig seleccionados con ZConfig. Repetir generación, cancelación rápida de carga, cambio de dimensión, guardado/reapertura y sesión prolongada; comparar chunks disponibles y visibles por separado. Un aviso de `notickvd` o distancia alterada invalida la igualdad de referencia hasta investigarlo.
-
-Por perfil registrar importación/arranque/estabilidad/paridad/rendimiento como PENDIENTE, PASS o FAIL con evidencia. La [plantilla](test-results-alpha.3.csv) está vacía de resultados; no contiene mediciones simuladas.
