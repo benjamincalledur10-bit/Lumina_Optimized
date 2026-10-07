@@ -1,4 +1,5 @@
 """Validación estática. Usa VersionPredicate de Fabric; no arranca Minecraft."""
+import argparse
 import hashlib
 import io
 import json
@@ -8,6 +9,7 @@ import shutil
 import subprocess
 import tomllib
 import urllib.request
+from urllib.parse import urlsplit, unquote
 import zipfile
 from profiles import ROOT, configs, descriptors, pack_version, profiles
 
@@ -22,10 +24,54 @@ def fetch(url):
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / hashlib.sha256(url.encode()).hexdigest()
     if not path.exists():
-        request = urllib.request.Request(url, headers={'User-Agent': 'Lumina-Optimized/0.1.0-alpha.3'})
+        request = urllib.request.Request(url, headers={'User-Agent': 'Lumina-Optimized/0.1.0-alpha.4'})
         with urllib.request.urlopen(request, timeout=60) as response:
             path.write_bytes(response.read())
     return path.read_bytes()
+
+def publication_or_local_pin(mod, require_publications=False):
+    """Never label locally computed hashes/dependencies as published metadata."""
+    api_url = 'https://api.modrinth.com/v2/version/' + mod['update']['modrinth']['version']
+    if require_publications:
+        return json.loads(fetch(api_url)), 'published_metadata_and_hashes'
+    local = ROOT / 'docs/research/local-jars-alpha.4.json'
+    evidence = json.loads(local.read_text())['jars'] if local.exists() else []
+    matches = [item for item in evidence if item['version_id'] == mod['update']['modrinth']['version']]
+    if matches and not matches[0]['publication_metadata_verified']:
+        item = matches[0]
+        # Prefer full API metadata whenever it is actually available in the download cache.
+        api_url = 'https://api.modrinth.com/v2/version/' + item['version_id']
+        if (CACHE / hashlib.sha256(api_url.encode()).hexdigest()).exists():
+            return json.loads(fetch(api_url)), 'published_metadata_and_hashes'
+        url = urlsplit(item['official_url'])
+        require(url.scheme == 'https' and url.netloc == 'cdn.modrinth.com', 'Origen local no oficial')
+        require(item['download_origins'][0].split('?')[0] == item['official_url'], 'Origen diferente')
+        require(unquote(url.path).split('/') == ['', 'data', item['project_id'], 'versions', item['version_id'], item['filename']], 'IDs/ruta no corresponden al origen')
+        require(item['pin_record']['dependencies'] is None, 'No inventar dependencias de publicación no consultada')
+        return item['pin_record'], 'local_hashes_and_official_download_origin; publication_metadata_pending'
+    version = json.loads(fetch('https://api.modrinth.com/v2/version/' + mod['update']['modrinth']['version']))
+    return version, 'published_metadata_and_hashes'
+
+def validate_sha512_evidence(sources):
+    """Check supplied published hashes only against the exact recorded identities."""
+    path = ROOT/'docs/research/modrinth-sha512-alpha.4.json'
+    if not path.exists():
+        return {}
+    evidence = json.loads(path.read_text())
+    checked = {}
+    by_name = {path.name:source for path,source in sources.items()}
+    for record in evidence['records']:
+        name = record['descriptor']
+        require(name not in checked and name in by_name, 'Evidencia duplicada o sin mod: '+name)
+        mod, _, data, version, inventory = by_name[name]
+        identity = mod['update']['modrinth']
+        require(identity['mod-id'] == record['project_id'] and identity['version'] == record['version_id'], 'IDs distintos de la evidencia: '+name)
+        require(version['version_number'] == record['publication_version'] and mod['filename'] == record['filename'], 'Versión/archivo distintos de la evidencia: '+name)
+        require(inventory[0]['id'] == record['fabric_mod_id'] and inventory[0]['version'] == record['fabric_mod_version'], 'Versión interna distinta de la evidencia: '+name)
+        require(hashlib.sha512(data).hexdigest() == record['sha512'], 'SHA-512 publicado aportado no coincide: '+name)
+        require(mod['download']['hash-format'] == 'sha512' and mod['download']['hash'] == record['sha512'], 'Packwiz no usa el SHA-512 aportado: '+name)
+        checked[name] = {**record, 'status':'matched_local_jar_and_packwiz', 'evidence_date':evidence['evidence_date'], 'verified_date':evidence['verified_date'], 'source':evidence['source']}
+    return checked
 
 class FabricVersions:
     def __init__(self, loader):
@@ -57,12 +103,20 @@ def inspect_jar(data, origin, inventory):
         require(jar.testzip() is None, f'JAR corrupto: {origin}')
         if 'fabric.mod.json' not in jar.namelist():
             return
-        metadata = json.loads(jar.read('fabric.mod.json'))
+        raw_metadata = jar.read('fabric.mod.json')
+        try:
+            metadata = json.loads(raw_metadata)
+            metadata_note = None
+        except json.JSONDecodeError:
+            # BetterGrassify contiene un salto literal en description; no modificar el JAR.
+            metadata = json.loads(raw_metadata, strict=False)
+            metadata_note = 'Control literal en string; requiere parser permisivo de Fabric. JAR conservado sin cambios.'
         inventory.append({'origin': origin, 'id': metadata['id'], 'version': metadata['version'],
                           'jar_sha512': hashlib.sha512(data).hexdigest(),
                           'depends': metadata.get('depends', {}), 'breaks': metadata.get('breaks', {}),
+                          'recommends': metadata.get('recommends', {}), 'suggests': metadata.get('suggests', {}),
                           'conflicts': metadata.get('conflicts', {}), 'provides': metadata.get('provides', []),
-                          'environment': metadata.get('environment', '*')})
+                          'environment': metadata.get('environment', '*'), 'metadata_note': metadata_note})
         for nested in metadata.get('jars', []):
             inspect_jar(jar.read(nested['file']), origin + '!' + nested['file'], inventory)
 
@@ -108,6 +162,7 @@ def validate_configs():
     bbe = json.loads((ROOT / 'pack/config/BBEConfig.json').read_text())
     require(ec['safeMode'] and not ec['tickCulling'] and not ec['solidLeaves'], 'Referencia Entity Culling alterada')
     require(mc['leavesCullingMode']=='DEFAULT' and not mc['useItemFrameLOD'] and not mc['useItemFrame3FaceCulling'], 'Calidad More Culling alterada')
+    require(tomllib.loads((ROOT/'variants/moreculling.toml').read_text()) == mc, 'TOML More Culling debe conservar valores del JSON histórico')
     options = {x['option']:x['value'] for x in bbe['bbe.config.storage.main']}
     require(options['optimize.master'] is False and options['optimize.banner'] is False and options['optimize.sign'] is False, 'Referencia BBE alterada')
     require(all(options[x] for x in ['animation.chest','animation.shulker','animation.bell','animation.decoratedpot']), 'Animaciones desactivadas')
@@ -124,6 +179,8 @@ def validate_configs():
         disassembly = subprocess.run(['javap','-p','-c','-classpath',str(jar),cls], check=True, capture_output=True, text=True).stdout
         for key in keys:
             require(key in disassembly, 'Opción ausente en JAR: '+key)
+    code = subprocess.run(['javap','-p','-c','-classpath',str(ROOT/'.build/validator/moreculling.jar'),'ca.fxco.moreculling.MoreCulling$1'],check=True,capture_output=True,text=True).stdout
+    require('Toml4jConfigSerializer' in code, 'Serializador More Culling no coincide')
     slo = json.loads((ROOT/'variants/structure_layout_optimizer.jsonc').read_text())
     require(slo == {'deduplicateShuffledTemplatePoolElementList': False}, 'Deduplicación SLO debe permanecer desactivada')
     for filename, cls, expected in [
@@ -135,6 +192,51 @@ def validate_configs():
         jar.write_bytes(fetch(mod['download']['url']))
         code = subprocess.run(['javap','-p','-c','-v','-classpath',str(jar),cls],check=True,capture_output=True,text=True).stdout
         require(all(key in code for key in expected), 'Esquema/ruta SLO no verificado: '+cls)
+    modernfix = (ROOT/'variants/modernfix-mixins.properties').read_text()
+    require('mixin.perf.remove_biome_temperature_cache=false' in modernfix, 'Colisión de caché de biomas no desactivada')
+    mod = tomllib.loads((ROOT/'variants/modernfix-mvus.pw.toml').read_text())
+    with zipfile.ZipFile(io.BytesIO(fetch(mod['download']['url']))) as jar:
+        require(any('perf/remove_biome_temperature_cache/' in path for path in jar.namelist()), 'Mixin ModernFix ausente')
+    require((ROOT/'variants/iris.properties').read_text().strip()=='enableShaders=false', 'Shaders deben comenzar desactivados')
+    iris = tomllib.loads((ROOT/'variants/iris.pw.toml').read_text())
+    path = ROOT/'.build/validator/iris.jar'
+    path.write_bytes(fetch(iris['download']['url']))
+    code = subprocess.run(['javap','-p','-c','-classpath',str(path),'net.irisshaders.iris.config.IrisConfig'],check=True,capture_output=True,text=True).stdout
+    require('String enableShaders' in code and 'Properties.getProperty' in code, 'Opción real Iris no encontrada')
+    servercore = tomllib.loads((ROOT/'variants/servercore.pw.toml').read_text())
+    jar_path = ROOT/'.build/validator/servercore.jar'
+    jar_path.write_bytes(fetch(servercore['download']['url']))
+    schema = {
+        'MainConfig': ['features', 'dynamic', 'breeding-cap', 'activation-range', 'mob-spawning'],
+        'OptimizationConfig': ['reduce-sync-loads', 'cache-ticking-chunks', 'optimize-command-blocks', 'fast-biome-lookups', 'cancel-duplicate-fluid-ticks'],
+        'data.FeatureConfig': ['prevent-enderpearl-chunkloading', 'chunk-tick-distance-affects-random-ticks', 'prevent-moving-into-unloaded-chunks', 'autosave-interval-seconds', 'xp-merge-fraction', 'xp-merge-radius', 'item-merge-radius', 'lobotomize-villagers.enabled', 'lobotomize-villagers.tick-interval'],
+        'data.dynamic.DynamicConfig': ['enabled', 'default-values', 'dynamic-settings'],
+        'data.activation_range.ActivationRangeConfig': ['enabled', 'use-vertical-range', 'skip-non-immune'],
+        'data.breeding_cap.BreedingCapConfig': ['enabled'],
+        'data.mob_spawning.MobSpawnConfig': ['zombie-reinforcements', 'nether-portal-randomticks', 'monster-spawners', 'infested', 'categories'],
+        'data.mob_spawning.EnforcedMobcap': ['enforce-mobcap'],
+    }
+    for cls, keys in schema.items():
+        code = subprocess.run(['javap','-p','-v','-classpath',str(jar_path),'me.wesley1808.servercore.common.config.'+cls],check=True,capture_output=True,text=True).stdout
+        require(all('value="'+key+'"' in code for key in keys), 'ServerCore schema changed: '+cls)
+    with zipfile.ZipFile(jar_path) as container:
+        yaml_jar = ROOT/'.build/validator/snakeyaml.jar'
+        yaml_jar.write_bytes(container.read('META-INF/jars/snakeyaml-2.7.jar'))
+    subprocess.run(['javac','-cp',str(yaml_jar),'-d',str(yaml_jar.parent),str(ROOT/'scripts/ServerCoreConfigCheck.java')],check=True)
+    subprocess.run(['java','-cp',str(yaml_jar.parent)+os.pathsep+str(yaml_jar),'ServerCoreConfigCheck',str(ROOT/'variants/servercore/config.yml'),str(ROOT/'variants/servercore/optimizations.yml')],check=True)
+    async_config = tomllib.loads((ROOT/'variants/asynclogger.toml').read_text())
+    require(async_config['enabled'] and not async_config['noDebugLog'] and not async_config['testPerformance'] and not async_config['filtering']['enabled'], 'Async Logger must preserve diagnostic messages')
+    async_mod = tomllib.loads((ROOT/'variants/asynclogger.pw.toml').read_text())
+    async_jar = ROOT/'.build/validator/asynclogger.jar'
+    async_jar.write_bytes(fetch(async_mod['download']['url']))
+    code = subprocess.run(['javap','-p','-v','-classpath',str(async_jar),'me.decce.asynclogger.core.AsyncLoggerConfig'],check=True,capture_output=True,text=True).stdout
+    require('filtering.enabled' in code and 'noDebugLog' in code and 'testPerformance' in code, 'Async Logger schema changed')
+    require((ROOT/'variants/biome-blend-options.txt').read_bytes() == b'version:5023\nbiomeBlendRadius:2\nbetterBiomeBlendRadius:2\n', 'Conservar mezcla de biomas de referencia; no fijar otros ajustes gráficos')
+    bbb_mod = tomllib.loads((ROOT/'variants/better-biome-blend.pw.toml').read_text())
+    bbb_jar = ROOT/'.build/validator/better-biome-blend.jar'
+    bbb_jar.write_bytes(fetch(bbb_mod['download']['url']))
+    code = subprocess.run(['javap','-p','-c','-classpath',str(bbb_jar),'fionathemortal.betterbiomeblend.mixin.MixinOptions'],check=True,capture_output=True,text=True).stdout
+    require('String betterBiomeBlendRadius' in code and 'OptionAccess.process' in code, 'Persistencia BBB no encontrada en el JAR')
     c2me_mod = tomllib.loads((ROOT/'variants/c2me-fabric.pw.toml').read_text())
     with zipfile.ZipFile(io.BytesIO(fetch(c2me_mod['download']['url']))) as container:
         for part, cls, expected_strings in [
@@ -148,10 +250,14 @@ def validate_configs():
             code = subprocess.run(['javap','-p','-c','-classpath',str(jar),cls],check=True,capture_output=True,text=True).stdout
             require(all(s in code for s in expected_strings),'Claves C2ME ausentes: '+part)
 
-def validate_modrinth_dependencies(projects):
+def validate_modrinth_dependencies(projects, embedded_projects=None):
+    providers = dict(embedded_projects or {})
+    providers.update(projects)
     for version in projects.values():
+        if version['dependencies'] is None:
+            continue  # Reported explicitly as pending; actual JAR dependencies still checked.
         for dep in version['dependencies']:
-            target = projects.get(dep['project_id'])
+            target = providers.get(dep['project_id'])
             matches = target is not None and (not dep['version_id'] or target['id'] == dep['version_id'])
             if dep['dependency_type'] == 'required':
                 require(matches, 'Dependencia Modrinth incorrecta: ' + str(dep))
@@ -159,6 +265,9 @@ def validate_modrinth_dependencies(projects):
                 require(not matches, 'Incompatibilidad Modrinth: ' + str(dep))
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--require-publications', action='store_true', help='Exigir respuestas reales de publicación para todos los pins; requiere red o caché completa')
+    args = parser.parse_args()
     require(shutil.which('java') and shutil.which('javac') and shutil.which('javap'), 'Validar requiere un JDK 17+; Minecraft requiere Java 25')
     check_index(ROOT / 'pack')
     loader = fetch(LOADER_URL)
@@ -175,10 +284,12 @@ def main():
         matrix = profiles()
         all_descriptors = sorted({p for profile in matrix.values() for p in descriptors(profile)})
         sources = {}
+        publication_checks = {}
         for path in all_descriptors:
             mod = tomllib.loads(path.read_text())
             require(mod.get('pin') is True, f'Versión no fijada: {path}')
-            version = json.loads(fetch('https://api.modrinth.com/v2/version/' + mod['update']['modrinth']['version']))
+            version, evidence_status = publication_or_local_pin(mod, args.require_publications)
+            publication_checks[path.name] = evidence_status
             require(version['project_id'] == mod['update']['modrinth']['mod-id'], 'Proyecto incorrecto')
             require('26.3' in version['game_versions'] and 'fabric' in version['loaders'], 'Publicación incompatible')
             file = next(f for f in version['files'] if f['filename'] == mod['filename'])
@@ -191,6 +302,10 @@ def main():
             inventory = []
             inspect_jar(data, mod['filename'], inventory)
             sources[path] = (mod, file, data, version, inventory)
+        supplied_sha512 = validate_sha512_evidence(sources)
+        for name in supplied_sha512:
+            if 'pending' in publication_checks[name]:
+                publication_checks[name] = 'published_sha512_supplied_by_user_'+supplied_sha512[name]['evidence_date']+'; full_publication_metadata_pending'
         reports = {}
         for name, profile in matrix.items():
             check_index(ROOT / '.build' / name)
@@ -200,7 +315,16 @@ def main():
                 inventory.extend(source[4])
             available, chosen, alternatives = resolve(inventory, engine)
             projects = {source[3]['project_id']:source[3] for source in selected.values()}
-            validate_modrinth_dependencies(projects)
+            embedded_projects = {}
+            # Solo acreditar una publicación integrada si sus bytes coinciden con hashes publicados.
+            publication_path = ROOT/'docs/research/embedded-placeholder-alpha.4.json'
+            if publication_path.exists():
+                publication = json.loads(publication_path.read_text())
+                expected_hashes = {f['hashes']['sha512'] for f in publication['files']}
+                matches = [rec for rec in inventory if '!' in rec['origin'] and rec['jar_sha512'] in expected_hashes]
+                if matches:
+                    embedded_projects[publication['project_id']] = publication
+            validate_modrinth_dependencies(projects, embedded_projects)
             expected_configs = configs(profile)
             path = ROOT / 'dist' / f'Lumina-Optimized-{pack_version()}-{name}.mrpack'
             with zipfile.ZipFile(path) as archive:
@@ -224,11 +348,25 @@ def main():
                     for algorithm, expected_hash in entry['hashes'].items():
                         require(hashlib.new(algorithm,data).hexdigest()==expected_hash, 'Hash de exportación inválido')
                     require(entry['env']=={'client':'required','server':'unsupported' if mod['side']=='client' else 'required'}, 'Lado incorrecto')
-            reports[name] = {'files':len(selected), 'resolved':available,
+            external_dependencies = {'fabric-api.pw.toml','cloth-config.pw.toml','resourceful-config.pw.toml','zconfig.pw.toml'}
+            external_count = sum(p.name in external_dependencies for p in descriptors(profile))
+            nested_records = [rec for rec in inventory if '!' in rec['origin'] and not rec['origin'].startswith('fabric-loader!')]
+            nested_selected = [rec for rec in chosen.values() if '!' in rec['origin'] and not rec['origin'].startswith('fabric-loader!')]
+            reports[name] = {'files':len(selected),
+                             'principal_mods':len(selected)-external_count,
+                             'external_dependency_jars':external_count,
+                             'integrated_module_occurrences':len(nested_records),
+                             'integrated_distinct_ids':len({rec['id'] for rec in nested_records}),
+                             'integrated_selected_ids':len(nested_selected),
+                             'loader_provided_modules':{rec['id']:rec['version'] for rec in loader_inventory},
+                             'modrinth_dependencies_satisfied_by_embedded':{key:value['id'] for key,value in embedded_projects.items()}, 'resolved':available,
                              'selected_jar_origins':{k:v['origin'] for k,v in chosen.items()},
                              'nested_alternatives':alternatives,
                              'config_sha256':{p:hashlib.sha256(data).hexdigest() for p,data in expected_configs.items()},
                              'mrpack_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
+        for descriptor, evidence in supplied_sha512.items():
+            evidence['exports_checked'] = [name for name,profile in matrix.items() if descriptor in {p.name for p in descriptors(profile)}]
+            evidence['status'] = 'matched_local_jar_packwiz_and_all_exports_containing_mod'
         checksums = ROOT / 'dist' / f'SHA256SUMS-{pack_version()}'
         checked = set()
         for line in checksums.read_text().splitlines():
@@ -241,7 +379,7 @@ def main():
             for name in bundle.namelist():
                 require(bundle.read(name)==(ROOT/'dist'/name).read_bytes(), 'Bundle desactualizado')
         history_assets = {}
-        for release in ('alpha.1','alpha.2'):
+        for release in ('alpha.1','alpha.2','alpha.3'):
             history_assets[release] = {}
             for line in (ROOT/'docs/history'/release/'SHA256SUMS').read_text().splitlines():
                 expected, filename = line.split('  ',1)
@@ -253,11 +391,15 @@ def main():
                     history_assets[release][filename] = 'no presente localmente; hash histórico conservado'
         report = {'scope':'Validación estática con VersionPredicate de Fabric 0.19.5; selección del candidato más reciente de cada módulo anidado. No ejecuta el resolvedor completo, mixins, launcher, Minecraft ni benchmarks.',
                   'version':pack_version(), 'loader_sha256':hashlib.sha256(loader).hexdigest(),
+                  'publication_checks':publication_checks,
+                  'publication_metadata_pending':[name for name,status in publication_checks.items() if 'pending' in status],
+                  'supplied_publication_sha512':supplied_sha512,
+                  'publication_hashes_pending':[name for name,status in publication_checks.items() if 'pending' in status and name not in supplied_sha512],
                   'historical_assets':history_assets,
                   'minecraft_tests':{'import':'pending','startup':'pending','stability':'pending','performance':'pending'},
                   'jar_metadata':{p.name:sources[p][4] for p in all_descriptors}, 'variants':reports}
         (ROOT/'docs/validation.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-        print(f'OK: {len(reports)} paquetes, JAR anidados, predicados Fabric, configs, hashes y alpha.1/alpha.2 preservadas')
+        print(f'OK: {len(reports)} paquetes, JAR anidados, predicados Fabric, configs, hashes y alpha.1/alpha.2/alpha.3 preservadas; hashes publicados pendientes: {len(report["publication_hashes_pending"])}; metadatos completos pendientes: {len(report["publication_metadata_pending"])}')
     finally:
         engine.close()
 

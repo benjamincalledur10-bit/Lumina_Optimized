@@ -1,0 +1,245 @@
+{
+  "scope": "30 principales incluidos en Shaders; Core excluye Iris. Validación en juego pendiente.",
+  "targets": [
+    {
+      "number": 1,
+      "slug": "sodium",
+      "name": "Sodium",
+      "version": "0.9.2+mc26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 2,
+      "slug": "iris",
+      "name": "Iris",
+      "version": "1.11.7+mc26.3",
+      "status": "included",
+      "note": "Solo Shaders"
+    },
+    {
+      "number": 3,
+      "slug": "entityculling",
+      "name": "Entity Culling",
+      "version": "1.11.2",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 4,
+      "slug": "ferrite-core",
+      "name": "FerriteCore",
+      "version": "9.0.0-fabric",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 5,
+      "slug": "lithium",
+      "name": "Lithium",
+      "version": "0.26.2+mc26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 6,
+      "slug": "immediatelyfast",
+      "name": "ImmediatelyFast",
+      "version": "1.17.1+26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 7,
+      "slug": "sodium-extra",
+      "name": "Sodium Extra",
+      "version": "0.9.4+mc26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 8,
+      "slug": "moreculling",
+      "name": "More Culling",
+      "version": "1.9.0",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 9,
+      "slug": "badoptimizations",
+      "name": "BadOptimizations",
+      "version": "2.4.1",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 10,
+      "slug": "c2me-fabric",
+      "name": "C2ME",
+      "version": "0.4.2-alpha.0.89+26.3",
+      "status": "included",
+      "note": "Experimental"
+    },
+    {
+      "number": 11,
+      "slug": "fast-ip-ping",
+      "name": "Fast IP Ping",
+      "version": "v1.0.12-mc26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 12,
+      "slug": "crash-assistant",
+      "name": "Crash Assistant",
+      "version": "1.11.14",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 13,
+      "slug": "chunky",
+      "name": "Chunky",
+      "version": "1.5.3 Fabric",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 14,
+      "slug": "bettergrassify",
+      "name": "BetterGrassify",
+      "version": "1.8.8+fabric.26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 15,
+      "slug": "ixeris",
+      "name": "Ixeris",
+      "version": "4.6.8+26.3-fabric",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 16,
+      "slug": "better-block-entities",
+      "name": "Better Block Entities",
+      "version": "1.3.9+mc26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 17,
+      "slug": "modernfix-mvus",
+      "name": "ModernFix-mVUS",
+      "version": "5.27.20-build.2",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 18,
+      "slug": "zfastnoise",
+      "name": "Fast Noise",
+      "version": "1.1.1+26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 19,
+      "slug": "gnetum",
+      "name": "Gnetum",
+      "version": "4.6.3+26.3-fabric",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 20,
+      "slug": "better-biome-blend",
+      "name": "Better Biome Blend",
+      "version": "26.3-1.4.0-fabric",
+      "status": "included",
+      "note": "SHA-512 contrastado con evidencia Modrinth aportada por el usuario del 2026-10-06; metadatos completos de publicación pendientes"
+    },
+    {
+      "number": 21,
+      "slug": "clumps",
+      "name": "Clumps",
+      "version": "26.3.2",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 22,
+      "slug": "structure-layout-optimizer",
+      "name": "Structure Layout Optimizer",
+      "version": "1.1.4+26.3-fabric",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 23,
+      "slug": "jasione",
+      "name": "Jasione",
+      "version": "1.0.9+26.1.2-fabric",
+      "status": "included",
+      "note": "SHA-512 contrastado con evidencia Modrinth aportada por el usuario del 2026-10-06; metadatos completos de publicación pendientes"
+    },
+    {
+      "number": 24,
+      "slug": "zfastsurface",
+      "name": "Fast Surface",
+      "version": "1.0.0+26.3",
+      "status": "included",
+      "note": "SHA-512 contrastado con evidencia Modrinth aportada por el usuario del 2026-10-06; metadatos completos de publicación pendientes"
+    },
+    {
+      "number": 25,
+      "slug": "scalablelux",
+      "name": "ScalableLux",
+      "version": "0.3.0-alpha.0.6+26.3",
+      "status": "included",
+      "note": "Experimental"
+    },
+    {
+      "number": 26,
+      "slug": "krypton",
+      "name": "Krypton",
+      "version": "0.3.2",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 27,
+      "slug": "servercore",
+      "name": "ServerCore",
+      "version": "1.5.20+26.3",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 28,
+      "slug": "asynclogger",
+      "name": "Async Logger",
+      "version": "2.2.2+26.1.2-fabric",
+      "status": "included",
+      "note": null
+    },
+    {
+      "number": 29,
+      "slug": "fastmapcodec",
+      "name": "FastMapCodec",
+      "version": "1.0.4",
+      "status": "included",
+      "note": "SHA-512 contrastado con evidencia Modrinth aportada por el usuario del 2026-10-06; metadatos completos de publicación pendientes"
+    },
+    {
+      "number": 30,
+      "slug": "modmenu",
+      "name": "Mod Menu",
+      "version": "21.0.0",
+      "status": "included",
+      "note": null
+    }
+  ]
+}

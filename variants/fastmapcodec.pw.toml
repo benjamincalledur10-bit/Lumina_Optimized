@@ -1,0 +1,14 @@
+name = "FastMapCodec"
+filename = "fastmapcodec-fabric-1.0.4.jar"
+pin = true
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/CN7axcWy/versions/I6Iu1TAV/fastmapcodec-fabric-1.0.4.jar"
+hash-format = "sha512"
+hash = "bf38ad840858d7e1c7e1ff8755035b004b20e013003216b581b9ae958ecff39e1746e87da326ce93e1b9543ffd3046f945a84d49d9066c211275abfe216f9af6"
+
+[update]
+[update.modrinth]
+mod-id = "CN7axcWy"
+version = "I6Iu1TAV"

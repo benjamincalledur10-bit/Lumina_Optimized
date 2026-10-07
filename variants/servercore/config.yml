@@ -1,0 +1,32 @@
+# Opciones verificadas en ServerCore 1.5.20+26.3. Mantener comportamiento de referencia.
+features:
+  prevent-enderpearl-chunkloading: false
+  chunk-tick-distance-affects-random-ticks: false
+  prevent-moving-into-unloaded-chunks: false
+  autosave-interval-seconds: 300
+  xp-merge-fraction: 40
+  xp-merge-radius: 0.5
+  item-merge-radius: 0.5
+  lobotomize-villagers:
+    enabled: false
+    tick-interval: 20
+dynamic:
+  enabled: false
+  default-values: {}
+  dynamic-settings: []
+breeding-cap:
+  enabled: false
+activation-range:
+  enabled: false
+  use-vertical-range: false
+  skip-non-immune: false
+mob-spawning:
+  zombie-reinforcements:
+    enforce-mobcap: false
+  nether-portal-randomticks:
+    enforce-mobcap: false
+  monster-spawners:
+    enforce-mobcap: false
+  infested:
+    enforce-mobcap: false
+# Sin categories: el autor obtiene capacidades, intervalos y despawn de vanilla.

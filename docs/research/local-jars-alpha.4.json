@@ -1,0 +1,715 @@
+{
+  "scope": "Local JAR inspection and official CDN provenance. All four previously local-only SHA512s now match the user-supplied official Modrinth extract dated2026-10-06; full publication metadata for those four is still unavailable. No JAR is committed or embedded in mrpack.",
+  "jars": [
+    {
+      "slug": "servercore",
+      "filename": "servercore-fabric-1.5.20+26.3.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/4WWQxlQP/versions/LCG1Bm84/servercore-fabric-1.5.20%2B26.3.jar?mr_download_reason=standalone&mr_game_version=26.3&mr_loader=fabric",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/LCG1Bm84/servercore-fabric-1.5.20%2B26.3.jar",
+      "project_id": "4WWQxlQP",
+      "version_id": "LCG1Bm84",
+      "hashes": {
+        "sha1": "ec5fdf4798e29e483fa861dead101b0d9d6d72cb",
+        "sha256": "62fba7c2c7915b73f68af9cfa3a616473dd58865dc5c213b46ddd678b1aa9065",
+        "sha512": "abe1f806ea587971faf7de826e18b07314a4a9e690f64a4c3a54e7f61c3e6f4792633b13a917252bd8de154cec39da6619110d83799cf533450c5b4cac7a8448"
+      },
+      "size": 901416,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "servercore",
+        "version": "1.5.20+26.3",
+        "name": "ServerCore",
+        "description": "A Fabric mod that aims to optimize the minecraft server.",
+        "authors": [
+          "Wesley1808"
+        ],
+        "contact": {
+          "sources": "https://github.com/Wesley1808/ServerCore",
+          "issues": "https://github.com/Wesley1808/ServerCore/issues"
+        },
+        "icon": "icon.png",
+        "license": "MIT",
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "me.wesley1808.servercore.fabric.common.ServerCoreFabric"
+          ]
+        },
+        "mixins": [
+          "servercore.common.mixins.json",
+          "servercore.fabric.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "minecraft": ">=26.3-",
+          "fabric-api-base": "*",
+          "fabric-command-api-v2": "*",
+          "fabric-lifecycle-events-v1": "*"
+        },
+        "breaks": {
+          "cardboard": "*"
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/dazzleconf-core-1.3.0-M2.jar"
+          },
+          {
+            "file": "META-INF/jars/dazzleconf-ext-snakeyaml-1.3.0-M2.jar"
+          },
+          {
+            "file": "META-INF/jars/placeholder-api-3.2.0+26.3.jar"
+          },
+          {
+            "file": "META-INF/jars/snakeyaml-2.7.jar"
+          }
+        ],
+        "accessWidener": "servercore.accesswidener"
+      },
+      "nested_jars": [
+        {
+          "path": "META-INF/jars/dazzleconf-core-1.3.0-M2.jar",
+          "sha512": "069987c975ec5f87158b42eacc48399cbbde8eb877cbec2f77a0fc2f6cd23549a95f1f3392da4753b5550560d89c72292b602e3f1423ec5080c86a66adcbf241",
+          "fabric_metadata": {
+            "schemaVersion": 1,
+            "id": "space_arim_dazzleconf_dazzleconf-core",
+            "version": "1.3.0-M2",
+            "name": "dazzleconf-core",
+            "custom": {
+              "fabric-loom:generated": true
+            }
+          }
+        },
+        {
+          "path": "META-INF/jars/dazzleconf-ext-snakeyaml-1.3.0-M2.jar",
+          "sha512": "84a5eaf3e27ee6ea5187757f6488ca8fbb0bc62c812f642e5f43b21e3437f396472fd9734e260da61170b199fc298dd74d11eeba6068987533e858b8812be368",
+          "fabric_metadata": {
+            "schemaVersion": 1,
+            "id": "space_arim_dazzleconf_dazzleconf-ext-snakeyaml",
+            "version": "1.3.0-M2",
+            "name": "dazzleconf-ext-snakeyaml",
+            "custom": {
+              "fabric-loom:generated": true
+            }
+          }
+        },
+        {
+          "path": "META-INF/jars/placeholder-api-3.2.0+26.3.jar",
+          "sha512": "eb2bb31e51068aad2581b7864ea7b11b1209ba1c2b27551cd5837d9b312b818b73bb47c06374b46b99b73401c62c6b6c115f702c55aed6afd467ad8ad6448de4",
+          "fabric_metadata": {
+            "schemaVersion": 1,
+            "id": "placeholder-api",
+            "version": "3.2.0+26.3",
+            "name": "Placeholder API",
+            "description": "Simple api for mods allowing for user friendly formatting and universal placeholders!",
+            "authors": [
+              "Patbox"
+            ],
+            "contact": {
+              "homepage": "https://pb4.eu",
+              "sources": "https://github.com/Patbox/TextPlaceholderAPI"
+            },
+            "license": "LGPLv3",
+            "icon": "assets/icon.png",
+            "environment": "*",
+            "depends": {
+              "fabricloader": ">=0.18.4",
+              "minecraft": ">=26.2-"
+            },
+            "custom": {
+              "modmenu": {
+                "badges": [
+                  "library"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "path": "META-INF/jars/snakeyaml-2.7.jar",
+          "sha512": "61d5ec2125c09b7c16960f18bca6026aada494b0fe5a131ae84ef02e1e8899c93399a39ded239d0eb4c93fc40d47e594e78fdbff1bced0d50b785795b8729093",
+          "fabric_metadata": {
+            "schemaVersion": 1,
+            "id": "org_yaml_snakeyaml",
+            "version": "2.7",
+            "name": "snakeyaml",
+            "custom": {
+              "fabric-loom:generated": true
+            }
+          }
+        }
+      ],
+      "publication_metadata_verified": true,
+      "hash_origin": "published-and-local",
+      "pin_record": {
+        "author_id": "M6QxQqoY",
+        "changelog": "",
+        "changelog_url": null,
+        "date_published": "2026-09-16T13:50:35.746707Z",
+        "dependencies": [],
+        "downloads": 13381,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "servercore-fabric-1.5.20+26.3.jar",
+            "hashes": {
+              "sha1": "ec5fdf4798e29e483fa861dead101b0d9d6d72cb",
+              "sha512": "abe1f806ea587971faf7de826e18b07314a4a9e690f64a4c3a54e7f61c3e6f4792633b13a917252bd8de154cec39da6619110d83799cf533450c5b4cac7a8448"
+            },
+            "primary": true,
+            "size": 901416,
+            "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/LCG1Bm84/servercore-fabric-1.5.20%2B26.3.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "LCG1Bm84",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "ServerCore Fabric 1.5.20+26.3",
+        "project_id": "4WWQxlQP",
+        "version_number": "1.5.20+26.3",
+        "version_type": "release"
+      }
+    },
+    {
+      "slug": "krypton",
+      "filename": "krypton-0.3.2.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar?mr_download_reason=standalone",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar",
+      "project_id": "fQEb0iXm",
+      "version_id": "UugdIYJw",
+      "hashes": {
+        "sha1": "21b21cb88e412f0bce73b6609de6dd6aca958d7d",
+        "sha256": "0b4a648b9c2f048247f849712aff58b2bac5b27b60c0072bb6bf493ad8b79fef",
+        "sha512": "d1d57ebd41395b75b01f130cd9503eb8d208212424a399ff9f367f50be8fbc1c6472442b33c686e777c3148f6a609520e8fb732c755157c358cb207fd4d1123a"
+      },
+      "size": 268849,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "krypton",
+        "version": "0.3.2",
+        "name": "Krypton",
+        "description": "A Fabric mod that optimizes the Minecraft networking stack and entity tracker.",
+        "authors": [
+          "tuxed"
+        ],
+        "contact": {
+          "website": "https://github.com/astei/krypton",
+          "repo": "https://github.com/astei/krypton"
+        },
+        "license": "LGPL-3.0",
+        "icon": "assets/krypton/icon.png",
+        "environment": "*",
+        "entrypoints": {
+          "client": [
+            "me.steinborn.krypton.mod.client.KryptonClientInitializer"
+          ],
+          "server": [
+            "me.steinborn.krypton.mod.server.KryptonServerInitializer"
+          ],
+          "main": [
+            "me.steinborn.krypton.mod.shared.KryptonSharedInitializer"
+          ]
+        },
+        "mixins": [
+          "krypton.mixins.json"
+        ],
+        "accessWidener": "krypton.accesswidener",
+        "depends": {
+          "fabricloader": ">=0.18.4",
+          "minecraft": ">=26.2"
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/velocity-native-3.4.0-SNAPSHOT.jar"
+          }
+        ]
+      },
+      "nested_jars": [
+        {
+          "path": "META-INF/jars/velocity-native-3.4.0-SNAPSHOT.jar",
+          "sha512": "3a405e657ae43958a9c04fcde685298eb9ec41ce361fa93647afea4c1555247a6842a24b25d16fbf733da5ec4ec9da7bc2278bee7e65c1a999fd4240266c0dce",
+          "fabric_metadata": {
+            "schemaVersion": 1,
+            "id": "com_velocitypowered_velocity-native",
+            "version": "3.4.0-SNAPSHOT",
+            "name": "velocity-native",
+            "custom": {
+              "fabric-loom:generated": true
+            }
+          }
+        }
+      ],
+      "publication_metadata_verified": true,
+      "hash_origin": "published-and-local",
+      "pin_record": {
+        "author_id": "y0WF9UR5",
+        "changelog": "* Update for Minecraft 26.3\n* Change how encryption is injected. This improves compatibility with other mods that modify the login process. Notably, this makes e4mc work.",
+        "changelog_url": null,
+        "date_published": "2026-09-30T05:12:54.012334Z",
+        "dependencies": [],
+        "downloads": 66458,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "krypton-0.3.2.jar",
+            "hashes": {
+              "sha1": "21b21cb88e412f0bce73b6609de6dd6aca958d7d",
+              "sha512": "d1d57ebd41395b75b01f130cd9503eb8d208212424a399ff9f367f50be8fbc1c6472442b33c686e777c3148f6a609520e8fb732c755157c358cb207fd4d1123a"
+            },
+            "primary": true,
+            "size": 268849,
+            "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "UugdIYJw",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "Krypton 0.3.2",
+        "project_id": "fQEb0iXm",
+        "version_number": "0.3.2",
+        "version_type": "release"
+      }
+    },
+    {
+      "slug": "jasione",
+      "filename": "jasione-1.0.9+26.1.2-fabric.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/qlDkBPij/versions/kbKBk4b3/jasione-1.0.9%2B26.1.2-fabric.jar?mr_download_reason=standalone",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/qlDkBPij/versions/kbKBk4b3/jasione-1.0.9%2B26.1.2-fabric.jar",
+      "project_id": "qlDkBPij",
+      "version_id": "kbKBk4b3",
+      "hashes": {
+        "sha1": "d5056e60d62e2416ea0ea7267694212574ddd4a0",
+        "sha256": "111b508a5eb9486af2d4c53408b5e73b1fc3f390e11a28402dbc9ef56204e118",
+        "sha512": "ad6ff0c19eab2945489c2523d19fcd79b39cc33ed7130e3c5b3ac13028dd66ed1d207faaa0b04399d2cfd67cbb1c2390d0733c667dea8c3bb9a01a3e03a61829"
+      },
+      "size": 748721,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "jasione",
+        "version": "1.0.9+26.1.2-fabric",
+        "name": "Jasione",
+        "description": "Reduce GC pressure by safely eliminating Enum#values array cloning and memory allocation overhead through bytecode analysis",
+        "authors": [
+          "decce"
+        ],
+        "contact": {
+          "homepage": "https://modrinth.com/mod/jasione",
+          "sources": "https://github.com/decce6/jasione",
+          "issues": "https://github.com/decce6/jasione/issues"
+        },
+        "license": "LGPL-3.0-only",
+        "icon": "jasione.png",
+        "entrypoints": {
+          "preLaunch": [
+            "me.decce.jasione.service.fabric.FabricPreLaunchEntrypoint"
+          ],
+          "main": [
+            "me.decce.jasione.fabric.FabricEntrypoint"
+          ],
+          "libjf:asm": [
+            "me.decce.jasione.service.fabric.LibJFEntrypoint"
+          ]
+        },
+        "depends": {
+          "minecraft": ">=26.1",
+          "fabricloader": ">=0.16.0"
+        },
+        "breaks": {
+          "redirector": "*"
+        }
+      },
+      "nested_jars": [],
+      "publication_metadata_verified": false,
+      "hash_origin": "published-sha512-supplied-by-user-and-local",
+      "pin_record": {
+        "id": "kbKBk4b3",
+        "project_id": "qlDkBPij",
+        "version_number": "1.0.9+26.1.2-fabric",
+        "game_versions": [
+          "26.3"
+        ],
+        "loaders": [
+          "fabric"
+        ],
+        "dependencies": null,
+        "files": [
+          {
+            "filename": "jasione-1.0.9+26.1.2-fabric.jar",
+            "url": "https://cdn.modrinth.com/data/qlDkBPij/versions/kbKBk4b3/jasione-1.0.9%2B26.1.2-fabric.jar",
+            "size": 748721,
+            "hashes": {
+              "sha1": "d5056e60d62e2416ea0ea7267694212574ddd4a0",
+              "sha512": "ad6ff0c19eab2945489c2523d19fcd79b39cc33ed7130e3c5b3ac13028dd66ed1d207faaa0b04399d2cfd67cbb1c2390d0733c667dea8c3bb9a01a3e03a61829"
+            }
+          }
+        ]
+      },
+      "publication_sha512_verified": true,
+      "publication_sha512_evidence": {
+        "evidence_date": "2026-10-06",
+        "verified_date": "2026-10-07",
+        "source": "User-supplied SHA-512 extract reported as official Modrinth metadata; not a fresh API response",
+        "sha512": "ad6ff0c19eab2945489c2523d19fcd79b39cc33ed7130e3c5b3ac13028dd66ed1d207faaa0b04399d2cfd67cbb1c2390d0733c667dea8c3bb9a01a3e03a61829",
+        "status": "matches_local_jar_packwiz_and_exports"
+      }
+    },
+    {
+      "slug": "asynclogger",
+      "filename": "asynclogger-2.2.2+26.1.2-fabric.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/zvNzKfGF/versions/Ert0LmWj/asynclogger-2.2.2%2B26.1.2-fabric.jar?mr_download_reason=standalone",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/zvNzKfGF/versions/Ert0LmWj/asynclogger-2.2.2%2B26.1.2-fabric.jar",
+      "project_id": "zvNzKfGF",
+      "version_id": "Ert0LmWj",
+      "hashes": {
+        "sha1": "d1affbf48c50f60ae59e6b66fb78b1e6427bfddf",
+        "sha256": "34dd1a6f9c47a4f2b36cb42f64309822dded7e466047332638c58f18a7e76478",
+        "sha512": "2775a667b13ade2e2596a5de0662abef41c837c5cb33152b305beb59eacbfe671f2fc0853f50f86c162d96ff78b7f9f59cf4ba654e6a9d3685b6d73709b05253"
+      },
+      "size": 584150,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "asynclogger",
+        "version": "2.2.2+26.1.2-fabric",
+        "name": "Async Logger",
+        "description": "Asynchronous logging and efficient filtering - performance improvements and utility for keeping your logs clean",
+        "authors": [
+          "decce"
+        ],
+        "contributors": [
+          "Asbestosstar",
+          "Aresky"
+        ],
+        "contact": {
+          "homepage": "https://modrinth.com/mod/asynclogger",
+          "sources": "https://github.com/decce6/asynclogger",
+          "issues": "https://github.com/decce6/asynclogger/issues"
+        },
+        "license": "LGPL-3.0-only",
+        "icon": "asynclogger.png",
+        "entrypoints": {
+          "preLaunch": [
+            "me.decce.asynclogger.service.fabric.FabricPreLaunchEntrypoint"
+          ],
+          "main": [
+            "me.decce.asynclogger.fabric.FabricEntrypoint"
+          ]
+        },
+        "languageAdapters": {
+          "asynclogger": "me.decce.asynclogger.service.fabric.FabricLanguageAdapter"
+        },
+        "depends": {
+          "minecraft": ">=26.1",
+          "fabricloader": ">=0.16.0"
+        }
+      },
+      "nested_jars": [],
+      "publication_metadata_verified": true,
+      "hash_origin": "published-and-local",
+      "pin_record": {
+        "author_id": "pzpYP9M0",
+        "changelog": "- Fixed game crash when `filtering.sysout` is set to `true`\n- Added Ornithe support (independent of Minecraft version)",
+        "changelog_url": null,
+        "date_published": "2026-08-12T08:59:31.683483Z",
+        "dependencies": [],
+        "downloads": 337007,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "asynclogger-2.2.2+26.1.2-fabric.jar",
+            "hashes": {
+              "sha1": "d1affbf48c50f60ae59e6b66fb78b1e6427bfddf",
+              "sha512": "2775a667b13ade2e2596a5de0662abef41c837c5cb33152b305beb59eacbfe671f2fc0853f50f86c162d96ff78b7f9f59cf4ba654e6a9d3685b6d73709b05253"
+            },
+            "primary": true,
+            "size": 584150,
+            "url": "https://cdn.modrinth.com/data/zvNzKfGF/versions/Ert0LmWj/asynclogger-2.2.2%2B26.1.2-fabric.jar"
+          }
+        ],
+        "game_versions": [
+          "26.1",
+          "26.1.1",
+          "26.1.2",
+          "26.2",
+          "26.3"
+        ],
+        "id": "Ert0LmWj",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "Async Logger 2.2.2+26.1.2-fabric",
+        "project_id": "zvNzKfGF",
+        "version_number": "2.2.2+26.1.2-fabric",
+        "version_type": "release"
+      }
+    },
+    {
+      "slug": "better-biome-blend",
+      "filename": "betterbiomeblend-fabric-26.3-1.4.0.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/Rs6c7WyL/versions/Oag8dQao/betterbiomeblend-fabric-26.3-1.4.0.jar?mr_download_reason=standalone",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/Rs6c7WyL/versions/Oag8dQao/betterbiomeblend-fabric-26.3-1.4.0.jar",
+      "project_id": "Rs6c7WyL",
+      "version_id": "Oag8dQao",
+      "hashes": {
+        "sha1": "8361c6d55399052d0ee13c191163d19660ab4af1",
+        "sha256": "552affdbaca81e0d74fe8be3e1cae301b434adcbcdb3087658a693c0a11386ed",
+        "sha512": "66e82c5e86b8377c20978dfca7c1fb69b68513d738df0c6dfbb387ac01a96f0932093b3dd674ee7bf40ede98da59f3677938a455affa08ac7629fe6efb595edc"
+      },
+      "size": 68701,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "betterbiomeblend",
+        "version": "1.4.0",
+        "name": "Better Biome Blend",
+        "description": "This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.",
+        "authors": [
+          "FionaTheMortal"
+        ],
+        "contact": {
+          "homepage": "",
+          "sources": "https://github.com/FionaTheMortal/better-biome-blend/"
+        },
+        "license": "LGPL",
+        "icon": "assets/betterbiomeblend/betterbiomeblend.png",
+        "environment": "*",
+        "accessWidener": "betterbiomeblend.accesswidener",
+        "entrypoints": {
+          "client": [
+            "fionathemortal.betterbiomeblend.fabric.BetterBiomeBlendFabric"
+          ]
+        },
+        "mixins": [
+          "betterbiomeblend.mixins.json",
+          "betterbiomeblend-sodium.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "fabric-api": "*",
+          "minecraft": "~26.3",
+          "java": ">=25"
+        }
+      },
+      "nested_jars": [],
+      "publication_metadata_verified": false,
+      "hash_origin": "published-sha512-supplied-by-user-and-local",
+      "pin_record": {
+        "id": "Oag8dQao",
+        "project_id": "Rs6c7WyL",
+        "version_number": "26.3-1.4.0-fabric",
+        "game_versions": [
+          "26.3"
+        ],
+        "loaders": [
+          "fabric"
+        ],
+        "dependencies": null,
+        "files": [
+          {
+            "filename": "betterbiomeblend-fabric-26.3-1.4.0.jar",
+            "url": "https://cdn.modrinth.com/data/Rs6c7WyL/versions/Oag8dQao/betterbiomeblend-fabric-26.3-1.4.0.jar",
+            "size": 68701,
+            "hashes": {
+              "sha1": "8361c6d55399052d0ee13c191163d19660ab4af1",
+              "sha512": "66e82c5e86b8377c20978dfca7c1fb69b68513d738df0c6dfbb387ac01a96f0932093b3dd674ee7bf40ede98da59f3677938a455affa08ac7629fe6efb595edc"
+            }
+          }
+        ]
+      },
+      "publication_sha512_verified": true,
+      "publication_sha512_evidence": {
+        "evidence_date": "2026-10-06",
+        "verified_date": "2026-10-07",
+        "source": "User-supplied SHA-512 extract reported as official Modrinth metadata; not a fresh API response",
+        "sha512": "66e82c5e86b8377c20978dfca7c1fb69b68513d738df0c6dfbb387ac01a96f0932093b3dd674ee7bf40ede98da59f3677938a455affa08ac7629fe6efb595edc",
+        "status": "matches_local_jar_packwiz_and_exports"
+      }
+    },
+    {
+      "slug": "zfastsurface",
+      "filename": "zfastsurface-1.0.0+26.3.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/FRSaEVFk/versions/yOBmJfgG/zfastsurface-1.0.0%2B26.3.jar?mr_download_reason=standalone",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/FRSaEVFk/versions/yOBmJfgG/zfastsurface-1.0.0%2B26.3.jar",
+      "project_id": "FRSaEVFk",
+      "version_id": "yOBmJfgG",
+      "hashes": {
+        "sha1": "94bf26960bba98cec7027ef01ec7184c7d450c19",
+        "sha256": "4d492127c4c16cd08d42ddd84ccb4eaafc4e879e8b41721decf2b65e10ee8213",
+        "sha512": "7a8f2b72bcb903625bb521d6f99186741e7fc2e63bac574714e3f5fa4c606fea9249104f4756e7384b907245de74564c1c53397dfe951cb292d84cb0fc9747e4"
+      },
+      "size": 38430,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "zfastsurface",
+        "version": "1.0.0+26.3",
+        "name": "Fast Surface",
+        "description": "vanilla surface builder optimizations",
+        "authors": [
+          "ZenXArch"
+        ],
+        "contact": {
+          "mastodon": "https://mastodon.social/@ZenXArch",
+          "discord": "https://discord.gg/RFSmd7debX",
+          "sources": "https://codeberg.org/ZenXArch/FastNoise",
+          "modrinth": "https://modrinth.com/mod/zfastsurface"
+        },
+        "license": "Mozilla Public License 2.0",
+        "icon": "assets/zfastsurface/icon.png",
+        "environment": "*",
+        "mixins": [
+          "zfastsurface.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "minecraft": "~26.3",
+          "java": ">=25",
+          "zconfig": ">=1.0.0+26.x"
+        },
+        "breaks": {
+          "moonrise": "*"
+        },
+        "recommends": {
+          "c2me": "*",
+          "zmatcomp": "*"
+        },
+        "accessWidener": "zfastsurface.ct"
+      },
+      "nested_jars": [],
+      "publication_metadata_verified": false,
+      "hash_origin": "published-sha512-supplied-by-user-and-local",
+      "pin_record": {
+        "id": "yOBmJfgG",
+        "project_id": "FRSaEVFk",
+        "version_number": "1.0.0+26.3",
+        "game_versions": [
+          "26.3"
+        ],
+        "loaders": [
+          "fabric"
+        ],
+        "dependencies": null,
+        "files": [
+          {
+            "filename": "zfastsurface-1.0.0+26.3.jar",
+            "url": "https://cdn.modrinth.com/data/FRSaEVFk/versions/yOBmJfgG/zfastsurface-1.0.0%2B26.3.jar",
+            "size": 38430,
+            "hashes": {
+              "sha1": "94bf26960bba98cec7027ef01ec7184c7d450c19",
+              "sha512": "7a8f2b72bcb903625bb521d6f99186741e7fc2e63bac574714e3f5fa4c606fea9249104f4756e7384b907245de74564c1c53397dfe951cb292d84cb0fc9747e4"
+            }
+          }
+        ]
+      },
+      "publication_sha512_verified": true,
+      "publication_sha512_evidence": {
+        "evidence_date": "2026-10-06",
+        "verified_date": "2026-10-07",
+        "source": "User-supplied SHA-512 extract reported as official Modrinth metadata; not a fresh API response",
+        "sha512": "7a8f2b72bcb903625bb521d6f99186741e7fc2e63bac574714e3f5fa4c606fea9249104f4756e7384b907245de74564c1c53397dfe951cb292d84cb0fc9747e4",
+        "status": "matches_local_jar_packwiz_and_exports"
+      }
+    },
+    {
+      "slug": "fastmapcodec",
+      "filename": "fastmapcodec-fabric-1.0.4.jar",
+      "download_origins": [
+        "https://cdn.modrinth.com/data/CN7axcWy/versions/I6Iu1TAV/fastmapcodec-fabric-1.0.4.jar?mr_download_reason=standalone",
+        "https://modrinth.com/"
+      ],
+      "official_url": "https://cdn.modrinth.com/data/CN7axcWy/versions/I6Iu1TAV/fastmapcodec-fabric-1.0.4.jar",
+      "project_id": "CN7axcWy",
+      "version_id": "I6Iu1TAV",
+      "hashes": {
+        "sha1": "37fac0eb1a9689a0be3de00c32f00c64586a7629",
+        "sha256": "e14a97501cfa0846a1118b9ed9381d573507ecaea6b8700dbb1e9bdac10afc9e",
+        "sha512": "bf38ad840858d7e1c7e1ff8755035b004b20e013003216b581b9ae958ecff39e1746e87da326ce93e1b9543ffd3046f945a84d49d9066c211275abfe216f9af6"
+      },
+      "size": 8815,
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "fastmapcodec",
+        "version": "1.0.4",
+        "name": "FastMapCodec",
+        "description": "Fixes O(n^2) in BaseMapCodec.decode (TPS freezes on player join mainly)",
+        "authors": [
+          "neko"
+        ],
+        "license": "MIT",
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "dev.neko.fastmapcodec.FastMapCodecFabric"
+          ]
+        },
+        "mixins": [
+          "fastmapcodec.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.3",
+          "minecraft": ">=1.21",
+          "java": ">=21"
+        }
+      },
+      "nested_jars": [],
+      "publication_metadata_verified": false,
+      "hash_origin": "published-sha512-supplied-by-user-and-local",
+      "pin_record": {
+        "id": "I6Iu1TAV",
+        "project_id": "CN7axcWy",
+        "version_number": "1.0.4",
+        "game_versions": [
+          "26.3"
+        ],
+        "loaders": [
+          "fabric"
+        ],
+        "dependencies": null,
+        "files": [
+          {
+            "filename": "fastmapcodec-fabric-1.0.4.jar",
+            "url": "https://cdn.modrinth.com/data/CN7axcWy/versions/I6Iu1TAV/fastmapcodec-fabric-1.0.4.jar",
+            "size": 8815,
+            "hashes": {
+              "sha1": "37fac0eb1a9689a0be3de00c32f00c64586a7629",
+              "sha512": "bf38ad840858d7e1c7e1ff8755035b004b20e013003216b581b9ae958ecff39e1746e87da326ce93e1b9543ffd3046f945a84d49d9066c211275abfe216f9af6"
+            }
+          }
+        ]
+      },
+      "publication_sha512_verified": true,
+      "publication_sha512_evidence": {
+        "evidence_date": "2026-10-06",
+        "verified_date": "2026-10-07",
+        "source": "User-supplied SHA-512 extract reported as official Modrinth metadata; not a fresh API response",
+        "sha512": "bf38ad840858d7e1c7e1ff8755035b004b20e013003216b581b9ae958ecff39e1746e87da326ce93e1b9543ffd3046f945a84d49d9066c211275abfe216f9af6",
+        "status": "matches_local_jar_packwiz_and_exports"
+      }
+    }
+  ]
+}

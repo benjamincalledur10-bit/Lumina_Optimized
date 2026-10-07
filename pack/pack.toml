@@ -1,5 +1,5 @@
 name = "Lumina Optimized"
-version = "0.1.0-alpha.3"
+version = "0.1.0-alpha.4"
 description = "Base de optimización para Minecraft 26.3 con Fabric. Rendimiento pendiente de medición."
 pack-format = "packwiz:1.1.0"
 

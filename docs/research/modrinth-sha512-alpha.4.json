@@ -1,0 +1,206 @@
+{
+  "scope": "SHA-512 evidence only; does not supply full publication metadata, dependencies or game_versions lists",
+  "source": "User-supplied values recovered from official Modrinth metadata on2026-10-06; no independent fresh API retrieval in this session",
+  "evidence_date": "2026-10-06",
+  "verified_date": "2026-10-07",
+  "records": [
+    {
+      "descriptor": "jasione.pw.toml",
+      "slug": "jasione",
+      "publication_version": "1.0.9+26.1.2-fabric",
+      "project_id": "qlDkBPij",
+      "version_id": "kbKBk4b3",
+      "filename": "jasione-1.0.9+26.1.2-fabric.jar",
+      "fabric_mod_id": "jasione",
+      "fabric_mod_version": "1.0.9+26.1.2-fabric",
+      "sha512": "ad6ff0c19eab2945489c2523d19fcd79b39cc33ed7130e3c5b3ac13028dd66ed1d207faaa0b04399d2cfd67cbb1c2390d0733c667dea8c3bb9a01a3e03a61829"
+    },
+    {
+      "descriptor": "better-biome-blend.pw.toml",
+      "slug": "better-biome-blend",
+      "publication_version": "26.3-1.4.0-fabric",
+      "project_id": "Rs6c7WyL",
+      "version_id": "Oag8dQao",
+      "filename": "betterbiomeblend-fabric-26.3-1.4.0.jar",
+      "fabric_mod_id": "betterbiomeblend",
+      "fabric_mod_version": "1.4.0",
+      "sha512": "66e82c5e86b8377c20978dfca7c1fb69b68513d738df0c6dfbb387ac01a96f0932093b3dd674ee7bf40ede98da59f3677938a455affa08ac7629fe6efb595edc"
+    },
+    {
+      "descriptor": "zfastsurface.pw.toml",
+      "slug": "zfastsurface",
+      "publication_version": "1.0.0+26.3",
+      "project_id": "FRSaEVFk",
+      "version_id": "yOBmJfgG",
+      "filename": "zfastsurface-1.0.0+26.3.jar",
+      "fabric_mod_id": "zfastsurface",
+      "fabric_mod_version": "1.0.0+26.3",
+      "sha512": "7a8f2b72bcb903625bb521d6f99186741e7fc2e63bac574714e3f5fa4c606fea9249104f4756e7384b907245de74564c1c53397dfe951cb292d84cb0fc9747e4"
+    },
+    {
+      "descriptor": "fastmapcodec.pw.toml",
+      "slug": "fastmapcodec",
+      "publication_version": "1.0.4",
+      "project_id": "CN7axcWy",
+      "version_id": "I6Iu1TAV",
+      "filename": "fastmapcodec-fabric-1.0.4.jar",
+      "fabric_mod_id": "fastmapcodec",
+      "fabric_mod_version": "1.0.4",
+      "sha512": "bf38ad840858d7e1c7e1ff8755035b004b20e013003216b581b9ae958ecff39e1746e87da326ce93e1b9543ffd3046f945a84d49d9066c211275abfe216f9af6"
+    }
+  ],
+  "verification": [
+    {
+      "slug": "jasione",
+      "version": "1.0.9+26.1.2-fabric",
+      "version_id": "kbKBk4b3",
+      "sha512": "ad6ff0c19eab2945489c2523d19fcd79b39cc33ed7130e3c5b3ac13028dd66ed1d207faaa0b04399d2cfd67cbb1c2390d0733c667dea8c3bb9a01a3e03a61829",
+      "jar_match": true,
+      "version_matches_local_pin": true,
+      "version_id_matches_packwiz": true,
+      "project_id_matches_packwiz": true,
+      "fabric_version": "1.0.9+26.1.2-fabric",
+      "packwiz_hash_matches": true,
+      "jar_source": "verified local download cache",
+      "exports": {
+        "Lumina-Optimized-0.1.0-alpha.4-core-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-core.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-gnetum-control.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-optimizations.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        }
+      }
+    },
+    {
+      "slug": "better-biome-blend",
+      "version": "26.3-1.4.0-fabric",
+      "version_id": "Oag8dQao",
+      "sha512": "66e82c5e86b8377c20978dfca7c1fb69b68513d738df0c6dfbb387ac01a96f0932093b3dd674ee7bf40ede98da59f3677938a455affa08ac7629fe6efb595edc",
+      "jar_match": true,
+      "version_matches_local_pin": true,
+      "version_id_matches_packwiz": true,
+      "project_id_matches_packwiz": true,
+      "fabric_version": "1.4.0",
+      "packwiz_hash_matches": true,
+      "jar_source": "verified local download cache",
+      "exports": {
+        "Lumina-Optimized-0.1.0-alpha.4-core-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-core.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-gnetum-control.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        }
+      }
+    },
+    {
+      "slug": "zfastsurface",
+      "version": "1.0.0+26.3",
+      "version_id": "yOBmJfgG",
+      "sha512": "7a8f2b72bcb903625bb521d6f99186741e7fc2e63bac574714e3f5fa4c606fea9249104f4756e7384b907245de74564c1c53397dfe951cb292d84cb0fc9747e4",
+      "jar_match": true,
+      "version_matches_local_pin": true,
+      "version_id_matches_packwiz": true,
+      "project_id_matches_packwiz": true,
+      "fabric_version": "1.0.0+26.3",
+      "packwiz_hash_matches": true,
+      "jar_source": "verified local download cache",
+      "exports": {
+        "Lumina-Optimized-0.1.0-alpha.4-core-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-core.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-gnetum-control.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-optimizations.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        }
+      }
+    },
+    {
+      "slug": "fastmapcodec",
+      "version": "1.0.4",
+      "version_id": "I6Iu1TAV",
+      "sha512": "bf38ad840858d7e1c7e1ff8755035b004b20e013003216b581b9ae958ecff39e1746e87da326ce93e1b9543ffd3046f945a84d49d9066c211275abfe216f9af6",
+      "jar_match": true,
+      "version_matches_local_pin": true,
+      "version_id_matches_packwiz": true,
+      "project_id_matches_packwiz": true,
+      "fabric_version": "1.0.4",
+      "packwiz_hash_matches": true,
+      "jar_source": "verified local download cache",
+      "exports": {
+        "Lumina-Optimized-0.1.0-alpha.4-core-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-core.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-gnetum-control.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-optimizations.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders-conservative.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        },
+        "Lumina-Optimized-0.1.0-alpha.4-shaders.mrpack": {
+          "sha512_matches": true,
+          "official_url_matches": true
+        }
+      }
+    }
+  ]
+}

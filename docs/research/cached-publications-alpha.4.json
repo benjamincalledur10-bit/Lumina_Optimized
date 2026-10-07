@@ -1,0 +1,108 @@
+{
+  "status": "The three cached publications are now integrated; local Downloads JARs match published hashes. No JAR pending.",
+  "publications": [
+    {
+      "author_id": "M6QxQqoY",
+      "changelog": "",
+      "changelog_url": null,
+      "date_published": "2026-09-16T13:50:35.746707Z",
+      "dependencies": [],
+      "downloads": 13381,
+      "featured": false,
+      "files": [
+        {
+          "file_type": null,
+          "filename": "servercore-fabric-1.5.20+26.3.jar",
+          "hashes": {
+            "sha1": "ec5fdf4798e29e483fa861dead101b0d9d6d72cb",
+            "sha512": "abe1f806ea587971faf7de826e18b07314a4a9e690f64a4c3a54e7f61c3e6f4792633b13a917252bd8de154cec39da6619110d83799cf533450c5b4cac7a8448"
+          },
+          "primary": true,
+          "size": 901416,
+          "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/LCG1Bm84/servercore-fabric-1.5.20%2B26.3.jar"
+        }
+      ],
+      "game_versions": [
+        "26.3"
+      ],
+      "id": "LCG1Bm84",
+      "loaders": [
+        "fabric"
+      ],
+      "name": "ServerCore Fabric 1.5.20+26.3",
+      "project_id": "4WWQxlQP",
+      "version_number": "1.5.20+26.3",
+      "version_type": "release"
+    },
+    {
+      "author_id": "y0WF9UR5",
+      "changelog": "* Update for Minecraft 26.3\n* Change how encryption is injected. This improves compatibility with other mods that modify the login process. Notably, this makes e4mc work.",
+      "changelog_url": null,
+      "date_published": "2026-09-30T05:12:54.012334Z",
+      "dependencies": [],
+      "downloads": 66458,
+      "featured": false,
+      "files": [
+        {
+          "file_type": null,
+          "filename": "krypton-0.3.2.jar",
+          "hashes": {
+            "sha1": "21b21cb88e412f0bce73b6609de6dd6aca958d7d",
+            "sha512": "d1d57ebd41395b75b01f130cd9503eb8d208212424a399ff9f367f50be8fbc1c6472442b33c686e777c3148f6a609520e8fb732c755157c358cb207fd4d1123a"
+          },
+          "primary": true,
+          "size": 268849,
+          "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar"
+        }
+      ],
+      "game_versions": [
+        "26.3"
+      ],
+      "id": "UugdIYJw",
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Krypton 0.3.2",
+      "project_id": "fQEb0iXm",
+      "version_number": "0.3.2",
+      "version_type": "release"
+    },
+    {
+      "author_id": "pzpYP9M0",
+      "changelog": "- Fixed game crash when `filtering.sysout` is set to `true`\n- Added Ornithe support (independent of Minecraft version)",
+      "changelog_url": null,
+      "date_published": "2026-08-12T08:59:31.683483Z",
+      "dependencies": [],
+      "downloads": 337007,
+      "featured": false,
+      "files": [
+        {
+          "file_type": null,
+          "filename": "asynclogger-2.2.2+26.1.2-fabric.jar",
+          "hashes": {
+            "sha1": "d1affbf48c50f60ae59e6b66fb78b1e6427bfddf",
+            "sha512": "2775a667b13ade2e2596a5de0662abef41c837c5cb33152b305beb59eacbfe671f2fc0853f50f86c162d96ff78b7f9f59cf4ba654e6a9d3685b6d73709b05253"
+          },
+          "primary": true,
+          "size": 584150,
+          "url": "https://cdn.modrinth.com/data/zvNzKfGF/versions/Ert0LmWj/asynclogger-2.2.2%2B26.1.2-fabric.jar"
+        }
+      ],
+      "game_versions": [
+        "26.1",
+        "26.1.1",
+        "26.1.2",
+        "26.2",
+        "26.3"
+      ],
+      "id": "Ert0LmWj",
+      "loaders": [
+        "fabric"
+      ],
+      "name": "Async Logger 2.2.2+26.1.2-fabric",
+      "project_id": "zvNzKfGF",
+      "version_number": "2.2.2+26.1.2-fabric",
+      "version_type": "release"
+    }
+  ]
+}

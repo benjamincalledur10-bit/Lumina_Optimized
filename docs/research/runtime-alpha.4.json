@@ -1,0 +1,136 @@
+{
+  "scope": "Intentos locales de inicialización real previos al nuevo contraste SHA-512, con los mismos paquetes/hashes. No entrada al mundo, exploración, guardado ni rendimiento.",
+  "java": "Azul Zulu 25.0.4.1 ARM64",
+  "minecraft": "26.3",
+  "fabric_loader": "0.19.5",
+  "profiles": {
+    "core": {
+      "exit_code": 255,
+      "fabric_resolver": "passed; complete target modlist emitted",
+      "fabric_reported_count": 120,
+      "full_startup": "blocked: SDL no displays",
+      "world_checks": "not_attempted",
+      "console_sha256": "e32767c52359d61aaf416ee7675b0a536c30f0c11d4a4b468d8b3008d1d945a7",
+      "excerpt": [
+        " - ¡El mod 'Fast Surface' (zfastsurface) 1.0.0+26.3 recomienda cualquier versión de zmatcomp, que no tienes!",
+        "[12:12:10] [main/INFO]: Successfully configured async logger context with [wrapSysOutSysErr=false, filtering.enabled=false, filtering.global=false]",
+        "java.lang.RuntimeException: Operation not permitted (sysctl failed)",
+        "[12:12:11] [main/WARN]: Cannot find native library osx-aarch_64-libc2me-opts-natives-math.dylib, possibly unsupported platform for native acceleration",
+        "[12:12:11] [main/WARN]: Option 'mixin.perf.release_protochunks' overriden (by mods [c2me]) to 'false'",
+        "[12:12:11] [main/WARN]: Option 'mixin.bugfix.paper_chunk_patches' overriden (by mods [c2me]) to 'false'",
+        "[12:12:11] [main/WARN]: Option 'mixin.perf.cache_strongholds' overriden (by mods [c2me]) to 'false'",
+        "[12:12:11] [main/WARN]: Option 'mixin.bugfix.chunk_deadlock' overriden (by mods [c2me]) to 'false'",
+        "[12:12:11] [main/WARN]: Option 'mixin.perf.remove_biome_temperature_cache' overriden (by user configuration) to 'false'",
+        "[12:12:12] [main/WARN]: Error loading class: org/codeberg/zenxarch/matcomp/compiler/MaterialRuleInterpreter (java.lang.ClassNotFoundException: org/codeberg/zenxarch/matcomp/compiler/MaterialRuleInterpreter)",
+        "[12:12:17] [Render thread/INFO]: [ServerCore] Loaded V1.5.20+26.3!",
+        "[12:12:17] [Render thread/INFO]: Krypton is now accelerating your Minecraft client's networking stack 🚀",
+        "java.lang.IllegalStateException: Unable to initialize SDL: The video driver did not add any displays"
+      ],
+      "temperature_overwrite_warning_present": false,
+      "servercore_main_config_loaded": "not verified; integrated server not created",
+      "asynclogger_filters_enabled": false,
+      "biome_blend_options_after_initialization": {
+        "biomeBlendRadius": "2",
+        "betterBiomeBlendRadius": "2"
+      },
+      "moreculling_settings_after_initialization": {
+        "version": 1,
+        "enableSodiumMenu": true,
+        "signTextCulling": false,
+        "rainCulling": false,
+        "useBlockStateCulling": false,
+        "useCustomItemFrameRenderer": true,
+        "itemFrameMapCulling": true,
+        "useItemFrameLOD": false,
+        "useItemFrame3FaceCulling": false,
+        "paintingCulling": true,
+        "leavesCullingMode": "DEFAULT",
+        "includeMangroveRoots": false,
+        "endGatewayCulling": false,
+        "useOnModdedBlocksByDefault": false
+      },
+      "iris_shaders_enabled": null,
+      "tested_mrpack_sha256": "3953c141a8e1f7309ba1ba501a51357a846c93579e27fd33e6ede4cbcdfa6e43"
+    },
+    "shaders": {
+      "exit_code": 255,
+      "fabric_resolver": "passed; complete target modlist emitted",
+      "fabric_reported_count": 124,
+      "full_startup": "blocked: SDL no displays",
+      "world_checks": "not_attempted",
+      "console_sha256": "5c6c8db31bf429dff894db857e1ce13bcbe5d525ed8be55c463b20fea22c7b6f",
+      "excerpt": [
+        " - ¡El mod 'Fast Surface' (zfastsurface) 1.0.0+26.3 recomienda cualquier versión de zmatcomp, que no tienes!",
+        "[12:12:33] [main/INFO]: Successfully configured async logger context with [wrapSysOutSysErr=false, filtering.enabled=false, filtering.global=false]",
+        "java.lang.RuntimeException: Operation not permitted (sysctl failed)",
+        "[12:12:33] [main/WARN]: Cannot find native library osx-aarch_64-libc2me-opts-natives-math.dylib, possibly unsupported platform for native acceleration",
+        "[12:12:34] [main/WARN]: Option 'mixin.perf.release_protochunks' overriden (by mods [c2me]) to 'false'",
+        "[12:12:34] [main/WARN]: Option 'mixin.bugfix.paper_chunk_patches' overriden (by mods [c2me]) to 'false'",
+        "[12:12:34] [main/WARN]: Option 'mixin.perf.cache_strongholds' overriden (by mods [c2me]) to 'false'",
+        "[12:12:34] [main/WARN]: Option 'mixin.bugfix.chunk_deadlock' overriden (by mods [c2me]) to 'false'",
+        "[12:12:34] [main/WARN]: Option 'mixin.perf.remove_biome_temperature_cache' overriden (by user configuration) to 'false'",
+        "[12:12:34] [main/WARN]: Error loading class: org/codeberg/zenxarch/matcomp/compiler/MaterialRuleInterpreter (java.lang.ClassNotFoundException: org/codeberg/zenxarch/matcomp/compiler/MaterialRuleInterpreter)",
+        "[12:12:39] [Render thread/INFO]: [ServerCore] Loaded V1.5.20+26.3!",
+        "[12:12:39] [Render thread/INFO]: Krypton is now accelerating your Minecraft client's networking stack 🚀",
+        "java.lang.IllegalStateException: Unable to initialize SDL: The video driver did not add any displays"
+      ],
+      "temperature_overwrite_warning_present": false,
+      "servercore_main_config_loaded": "not verified; integrated server not created",
+      "asynclogger_filters_enabled": false,
+      "biome_blend_options_after_initialization": {
+        "biomeBlendRadius": "2",
+        "betterBiomeBlendRadius": "2"
+      },
+      "moreculling_settings_after_initialization": {
+        "version": 1,
+        "enableSodiumMenu": true,
+        "signTextCulling": false,
+        "rainCulling": false,
+        "useBlockStateCulling": false,
+        "useCustomItemFrameRenderer": true,
+        "itemFrameMapCulling": true,
+        "useItemFrameLOD": false,
+        "useItemFrame3FaceCulling": false,
+        "paintingCulling": true,
+        "leavesCullingMode": "DEFAULT",
+        "includeMangroveRoots": false,
+        "endGatewayCulling": false,
+        "useOnModdedBlocksByDefault": false
+      },
+      "iris_shaders_enabled": false,
+      "tested_mrpack_sha256": "0aa69452430e22bda02101e4046f09c59379ebd789c7c9675a7c1ef792675a2a"
+    },
+    "alpha3-reference": {
+      "exit_code": 255,
+      "fabric_resolver": "passed; modlist emitted",
+      "fabric_reported_count": 69,
+      "full_startup": "blocked: SDL no displays",
+      "world_checks": "not_attempted",
+      "console_sha256": "b5705ebaa850f1dd05310a53d024c16bff62a0223cd3b8ec359a6fab34cba895",
+      "excerpt": [
+        "java.lang.IllegalStateException: Unable to initialize SDL: The video driver did not add any displays"
+      ],
+      "temperature_overwrite_warning_present": false,
+      "scope": "Earlier preparation control before the seven supplied JAR; unchanged reference contents"
+    }
+  },
+  "initial_conflict": "[11:35:46] [main/WARN]: Method overwrite conflict for getTemperature in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.",
+  "date": "2026-10-07",
+  "configuration": "Full29/30 target; BBE enabled, MoreCulling actual TOML preserves conservative JSON values, ModernFix temperature cache disabled, ServerCore behavior/distance overrides disabled, shaders disabled, biome blend5x5",
+  "minecraft_tests": {
+    "import": "pending",
+    "startup": "blocked before menu: SDL without displays",
+    "exploration": "not executed",
+    "save_reopen": "not executed",
+    "stability": "not measured",
+    "performance": "no measurements"
+  },
+  "publication_metadata_pending": [
+    "jasione",
+    "better-biome-blend",
+    "zfastsurface",
+    "fastmapcodec"
+  ],
+  "publication_hashes_pending": [],
+  "supplied_sha512_evidence_date": "2026-10-06"
+}

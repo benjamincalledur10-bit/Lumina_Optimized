@@ -1,0 +1,3 @@
+version:5023
+biomeBlendRadius:2
+betterBiomeBlendRadius:2

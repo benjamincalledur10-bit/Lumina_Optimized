@@ -1,0 +1,1298 @@
+{
+  "new_publications": [
+    {
+      "slug": "sodium-extra",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "QXAY01zS",
+        "changelog": "### Changed\r\n\r\n- Ported Sodium Extra to Minecraft 26.3.\r\n- Reworked Reduce Resolution on macOS to use SDL's high pixel-density window handling.\r\n- Improved planar and custom fog distance handling.\r\n\r\n### Removed\r\n\r\n- Removed the Wayland/XWayland Fullscreen Resolution option and recovery flow; Sodium now provides this support.\r\n- Removed the legacy macOS OpenGL and Vulkan framebuffer/presentation workarounds; SDL now handles the required window scaling.\r\n\r\n### Fixed\r\n\r\n- Fixed Panini Projection scaling with the active FOV.\r\n- Fixed blank tooltip translations.\r\n- Fixed custom fog distance encoding and preservation.\r\n- Improved fog rendering compatibility by avoiding a Redirect.\r\n\r\n**Full Changelog**: https://github.com/FlashyReese/sodium-extra/compare/mc26.2-0.9.4...mc26.3-0.9.4",
+        "changelog_url": null,
+        "date_published": "2026-09-16T02:48:18.058397Z",
+        "dependencies": [
+          {
+            "dependency_type": "optional",
+            "file_name": null,
+            "project_id": "EE4vxUHj",
+            "version_id": null
+          },
+          {
+            "dependency_type": "optional",
+            "file_name": null,
+            "project_id": "Bh37bMuy",
+            "version_id": null
+          },
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "AANobbMI",
+            "version_id": null
+          },
+          {
+            "dependency_type": "optional",
+            "file_name": null,
+            "project_id": "YL57xq9U",
+            "version_id": null
+          }
+        ],
+        "downloads": 922554,
+        "featured": true,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "sodium-extra-fabric-0.9.4+mc26.3.jar",
+            "hashes": {
+              "sha1": "ff2056f222b751fe161123e71e55afd5b2f41da4",
+              "sha512": "a2e8d8416a556b7a351460a06407119eaba62f06636377001720bbda9b797dc881b2bb4528fb75a0459fee34475db529858633b6b86b545a72d0f13cf3c2b7bb"
+            },
+            "primary": true,
+            "size": 465553,
+            "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/te2y9qZn/sodium-extra-fabric-0.9.4%2Bmc26.3.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "te2y9qZn",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "[Fabric] Sodium Extra 0.9.4 - Minecraft 26.3",
+        "project_id": "PtjYWJkn",
+        "version_number": "mc26.3-0.9.4+fabric",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "sodium-extra",
+        "version": "0.9.4+mc26.3",
+        "name": "Sodium Extra",
+        "description": "Features that shouldn't be in Sodium.",
+        "authors": [
+          {
+            "name": "FlashyReese",
+            "contact": {
+              "homepage": "https://flashyreese.me"
+            }
+          }
+        ],
+        "contributors": [
+          "AMereBagatelle",
+          "DragonEggBedrockBreaking",
+          "EatMyVenom",
+          "HarvelsX",
+          "Kichura",
+          "Madis0"
+        ],
+        "contact": {
+          "homepage": "https://modrinth.com/mod/sodium-extra",
+          "sources": "https://github.com/FlashyReese/sodium-extra-fabric",
+          "issues": "https://github.com/FlashyReese/sodium-extra-fabric/issues"
+        },
+        "license": "LGPLv3",
+        "icon": "assets/sodium-extra/textures/icon.png",
+        "environment": "client",
+        "entrypoints": {
+          "client": [
+            "me.flashyreese.mods.sodiumextra.SodiumExtraFabricClientModInitializer"
+          ],
+          "sodium:config_api_user": [
+            "me.flashyreese.mods.sodiumextra.client.config.SodiumExtraConfig"
+          ]
+        },
+        "custom": {
+          "modmenu": {
+            "parent": {
+              "id": "sodium"
+            },
+            "links": {
+              "modmenu.crowdin": "https://crowdin.com/project/sodium-extra",
+              "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/sodium-extra",
+              "modmenu.discord": "https://flashyreese.me/discord",
+              "modmenu.donate": "https://ko-fi.com/flashyreese",
+              "modmenu.github_releases": "https://github.com/FlashyReese/sodium-extra-fabric/releases",
+              "modmenu.kofi": "https://ko-fi.com/flashyreese",
+              "modmenu.modrinth": "https://modrinth.com/mod/sodium-extra"
+            }
+          }
+        },
+        "accessWidener": "sodium-extra.accesswidener",
+        "mixins": [
+          "sodium-extra.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "sodium": ">=0.9.2+mc26.3",
+          "minecraft": "26.3"
+        },
+        "breaks": {
+          "iris": "<1.7.0",
+          "reeses-sodium-options": "<1.8.4"
+        },
+        "suggests": {
+          "greenlight": ">=0.1.0",
+          "reeses-sodium-options": ">=2.2.0"
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/greenlight-api-0.1.0+mc26.3.jar"
+          }
+        ]
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "fast-ip-ping",
+      "stage": "utilities",
+      "published_version": {
+        "author_id": "2BxNHwNQ",
+        "changelog": "- MC 26.2 && MC 26.3\n\n-------\n\nBuild Information\n\n- File name: `fast-ip-ping-v1.0.12-mc26.3.jar`\n- SHA-256: `088b5168cdd8cd0655bcb503efcba803d2dee0ba12c275908dad49f013229130`\n- Built from: https://github.com/Fallen-Breath/fast-ip-ping/actions/runs/35250740027",
+        "changelog_url": null,
+        "date_published": "2026-09-17T17:26:12.597896Z",
+        "dependencies": [],
+        "downloads": 76551,
+        "featured": true,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "fast-ip-ping-v1.0.12-mc26.3.jar",
+            "hashes": {
+              "sha1": "7db094c0a3f4c0d272d41c800838c57fe6bb823e",
+              "sha512": "b81e57aff8e161d75a1ca84576db89c7a0d874da50eb7f8ca17c3391bf75be2243db3d56a76294abdf84bca81eb78bb2613c380f4ab70f0f2c7119f08703b813"
+            },
+            "primary": true,
+            "size": 11310,
+            "url": "https://cdn.modrinth.com/data/9mtu0sUO/versions/N6hOHbOO/fast-ip-ping-v1.0.12-mc26.3.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "N6hOHbOO",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ],
+        "name": "[merged] Fast IP Ping v1.0.12 for mc26.3",
+        "project_id": "9mtu0sUO",
+        "version_number": "v1.0.12-mc26.3",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "fastipping",
+        "version": "1.0.12",
+        "name": "Fast IP Ping",
+        "description": "Yeet the laggy reversed DNS lookup for literal IP server addresses",
+        "authors": [
+          "Fallen_Breath"
+        ],
+        "contact": {
+          "homepage": "https://modrinth.com/mod/fast-ip-ping",
+          "sources": "https://github.com/Fallen-Breath/fast-ip-ping"
+        },
+        "license": "LGPL-3.0",
+        "icon": "icon.png",
+        "environment": "client",
+        "entrypoints": {
+          "main": [
+            "me.fallenbreath.fastipping.FastIpPingMod::fabricInit"
+          ]
+        },
+        "mixins": [
+          "fastipping.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.11.4",
+          "minecraft": ">=26.3"
+        }
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "crash-assistant",
+      "stage": "utilities",
+      "published_version": {
+        "author_id": "Sk2o9sva",
+        "changelog": "- 26.3: fixed compatibility with `Control Flex` mod.\n\n### [See full changelog](https://kostromdan.github.io/Crash-Assistant/changelog.md)",
+        "changelog_url": null,
+        "date_published": "2026-09-20T21:20:35.332895Z",
+        "dependencies": [],
+        "downloads": 411831,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "CrashAssistant-fabric-26.2-26.3-1.11.14.jar",
+            "hashes": {
+              "sha1": "dea53a10e5fbfaacd18e212a0eb0fe328b3e9467",
+              "sha512": "eab56ff4773821ea74c16987a986032e0d41119078efed17f66e4d6f1e19ab43e1e465463b09386644c4ae73942909f29ff725736e2ea1ad6de9b8313080de31"
+            },
+            "primary": true,
+            "size": 3464190,
+            "url": "https://cdn.modrinth.com/data/ix1qq8Ux/versions/alR3tamq/CrashAssistant-fabric-26.2-26.3-1.11.14.jar"
+          }
+        ],
+        "game_versions": [
+          "26.2",
+          "26.3"
+        ],
+        "id": "alR3tamq",
+        "loaders": [
+          "fabric",
+          "quilt"
+        ],
+        "name": "CrashAssistant-fabric-26.2-26.3-1.11.14.jar",
+        "project_id": "ix1qq8Ux",
+        "version_number": "1.11.14",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "crash_assistant",
+        "version": "1.11.14",
+        "name": "Crash Assistant",
+        "description": "Shows a GUI after Minecraft crashes, immediately showing all affected logs, crash reports, or hs_err files. Provides a one-click solution to upload them, copy the link, and perform other actions for easier reporting, debugging, and troubleshooting, like analysis log for the most common crash reasons.",
+        "authors": [
+          "KostromDan"
+        ],
+        "contact": {
+          "homepage": "https://www.curseforge.com/minecraft/mc-mods/crash-assistant",
+          "sources": "https://github.com/KostromDan/Crash-Assistant",
+          "issues": "https://github.com/KostromDan/Crash-Assistant/issues"
+        },
+        "license": "KostromDan's Modded Minecraft License (Version 1.1.3)",
+        "icon": "crash_assistant_logo.png",
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "dev.kostromdan.mods.crash_assistant.fabric.CrashAssistantFabric"
+          ],
+          "client": [
+            "dev.kostromdan.mods.crash_assistant.fabric.client.CrashAssistantFabricClient"
+          ]
+        },
+        "languageAdapters": {
+          "crash_assistant": "dev.kostromdan.mods.crash_assistant.fabric.entrypoint.CrashAssistantLanguageAdapter"
+        },
+        "mixins": [
+          "crash_assistant.mixins.json",
+          "crash_assistant-fabric.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.3",
+          "minecraft": ">=26.2",
+          "java": ">=25"
+        }
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "chunky",
+      "stage": "utilities",
+      "published_version": {
+        "author_id": "nfBsvT1J",
+        "changelog": "",
+        "changelog_url": null,
+        "date_published": "2026-05-04T05:47:16.215347Z",
+        "dependencies": [
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "P7dR8mSH",
+            "version_id": null
+          }
+        ],
+        "downloads": 1003611,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "Chunky-Fabric-1.5.3.jar",
+            "hashes": {
+              "sha1": "fc1f2f374c5c82117599071ed18b6ef9bba2c7fb",
+              "sha512": "b83bfe7b218d0aa6232af977ae741dc1f82b10e50cd12bb759f65cf416b8b62beccb543e587ef0b9670abe03815660f8e091bc6823624d65cf07300571573516"
+            },
+            "primary": true,
+            "size": 354095,
+            "url": "https://cdn.modrinth.com/data/fALzjamp/versions/4Eotm6ov/Chunky-Fabric-1.5.3.jar"
+          }
+        ],
+        "game_versions": [
+          "26.1",
+          "26.1.1",
+          "26.1.2",
+          "26.2",
+          "26.3"
+        ],
+        "id": "4Eotm6ov",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "Chunky 1.5.3",
+        "project_id": "fALzjamp",
+        "version_number": "1.5.3",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "chunky",
+        "version": "1.5.3",
+        "name": "Chunky",
+        "description": "Pre-generates chunks, quickly, efficiently, and safely",
+        "authors": [
+          "pop4959"
+        ],
+        "contact": {
+          "website": "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator",
+          "homepage": "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator",
+          "repo": "https://github.com/pop4959/Chunky",
+          "sources": "https://github.com/pop4959/Chunky",
+          "issues": "https://github.com/pop4959/Chunky/issues"
+        },
+        "license": "GPLv3",
+        "icon": "assets/chunky/icon.png",
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "org.popcraft.chunky.ChunkyFabric"
+          ]
+        },
+        "mixins": [
+          "chunky.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.18.1",
+          "fabric-api": "*",
+          "minecraft": ">=26.1",
+          "java": ">=25"
+        },
+        "custom": {
+          "modmenu": {
+            "links": {
+              "modmenu.discord": "https://discord.gg/ZwVJukcNQG"
+            }
+          }
+        }
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "bettergrassify",
+      "stage": "visual",
+      "published_version": {
+        "author_id": "JRIVBRCT",
+        "changelog": "# 1.8.8+fabric.26.3\n🗃️**Detailed Changelog: [1.8.7 --> 1.8.8](https://github.com/UltimatChamp/BetterGrassify/compare/1.8.7%2bfabric.26.2...1.8.8%2bfabric.26.3)**\n\n---\n\n### Added\n\n- Added support for Minecraft `26.3`.\n",
+        "changelog_url": null,
+        "date_published": "2026-09-16T15:57:36.595673Z",
+        "dependencies": [
+          {
+            "dependency_type": "optional",
+            "file_name": null,
+            "project_id": "9s6osm5g",
+            "version_id": null
+          },
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "P7dR8mSH",
+            "version_id": null
+          }
+        ],
+        "downloads": 446729,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "BetterGrassify-1.8.8+fabric.26.3.jar",
+            "hashes": {
+              "sha1": "626f74d3265d140f80ebb5ca1703f43ba07ff1bd",
+              "sha512": "14cd361bb1f56d207a3e811a25d4af9bfc76d52bcd7bd9aad73ca8f334a7226ff3cb69d9890d4fc3cdd83eb4b630077b36870dcaff8149be178207ee2a9ea90d"
+            },
+            "primary": true,
+            "size": 89214,
+            "url": "https://cdn.modrinth.com/data/m5T5xmUy/versions/8qcmuwZa/BetterGrassify-1.8.8%2Bfabric.26.3.jar"
+          },
+          {
+            "file_type": null,
+            "filename": "BetterGrassify-1.8.8+fabric.26.3-sources.jar",
+            "hashes": {
+              "sha1": "aa1b342b469044a87d301541965bf223ec0d25d9",
+              "sha512": "83eec3cc4bb4923e705ec783973165f14037297249b71f0436db0cc69d251761af172d2a54e0dddcca3d5a18d82079b680e03ef9c83010c9bcc498e594b651c7"
+            },
+            "primary": false,
+            "size": 63901,
+            "url": "https://cdn.modrinth.com/data/m5T5xmUy/versions/8qcmuwZa/BetterGrassify-1.8.8%2Bfabric.26.3-sources.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "8qcmuwZa",
+        "loaders": [
+          "fabric",
+          "quilt"
+        ],
+        "name": "BetterGrassify 1.8.8+fabric.26.3",
+        "project_id": "m5T5xmUy",
+        "version_number": "1.8.8+fabric.26.3",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "bettergrass",
+        "version": "1.8.8+fabric.26.3",
+        "name": "BetterGrassify",
+        "description": "Gamers can finally touch grass!?\nOptiFine's Fancy and Fast better grass for Fabric!",
+        "authors": [
+          "UltimatChamp, JayemCeekay"
+        ],
+        "contact": {
+          "homepage": "https://github.com/UltimatChamp/BetterGrassify",
+          "issues": "https://github.com/UltimatChamp/BetterGrassify/issues"
+        },
+        "license": "Apache-2.0",
+        "icon": "assets/bettergrass/icon.png",
+        "environment": "client",
+        "entrypoints": {
+          "client": [
+            "dev.ultimatchamp.bettergrass.BetterGrassify"
+          ],
+          "modmenu": [
+            "dev.ultimatchamp.bettergrass.config.ModMenuAPIImpl"
+          ],
+          "sodium:config_api_user": [
+            "dev.ultimatchamp.bettergrass.config.SodiumOptionsScreenBuilder"
+          ]
+        },
+        "mixins": [
+          "bettergrass.mixins.json"
+        ],
+        "depends": {
+          "minecraft": ">=26.3",
+          "fabricloader": "*",
+          "fabric-api": "*"
+        },
+        "breaks": {},
+        "recommends": {
+          "cloth-config": "*"
+        },
+        "custom": {
+          "modmenu": {
+            "links": {
+              "modmenu.modrinth": "https://modrinth.com/mod/BetterGrassify",
+              "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/bettergrassify",
+              "modmenu.discord": "https://discord.gg/kfKjjhv3pn"
+            },
+            "update_checker": true
+          }
+        }
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "ixeris",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "pzpYP9M0",
+        "changelog": "- Fixed game crash on 26.3 NeoForge\n- Improved blocking behavior when setting window progress on SDL",
+        "changelog_url": null,
+        "date_published": "2026-09-21T13:04:05.828185Z",
+        "dependencies": [],
+        "downloads": 314690,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "Ixeris-4.6.8+26.3-fabric.jar",
+            "hashes": {
+              "sha1": "c38a65adc0f1cb4a7e4f493ab32f908f5ee4742e",
+              "sha512": "5bc37bc60b3fa5c48ae097166363f02e5e3dafaa17afa2521c85251747ed2f8f30affad912d1db2816301dc6ae32fe7858a74c2cd0674fe44332150a2ccb6e69"
+            },
+            "primary": true,
+            "size": 759635,
+            "url": "https://cdn.modrinth.com/data/p8RJPJIC/versions/QocCYDs0/Ixeris-4.6.8%2B26.3-fabric.jar"
+          },
+          {
+            "file_type": null,
+            "filename": "Ixeris-4.6.8+26.3-fabric-api-sources.jar",
+            "hashes": {
+              "sha1": "12c6669fcb5180068d397991b95c296fa923df0b",
+              "sha512": "078a965d1be1e06881ecc26700352d3440ce41e7a6a5e424a85350512017af0104b32f3945530e189d441d26f4459f08e3959c88c05ad26ad17980383d1766fa"
+            },
+            "primary": false,
+            "size": 3441,
+            "url": "https://cdn.modrinth.com/data/p8RJPJIC/versions/QocCYDs0/Ixeris-4.6.8%2B26.3-fabric-api-sources.jar"
+          },
+          {
+            "file_type": null,
+            "filename": "Ixeris-4.6.8+26.3-fabric-api.jar",
+            "hashes": {
+              "sha1": "b70d57a060a2f5312e167264c0e9c3133e8255e6",
+              "sha512": "e7fa7cbcc3c7ab32c9ceb0a95e3eac6ff9fb48d7cfaf3b41f98a02b68dfeb4317b2378dae64ec82303c7196e559b36818b63d2ea7d304ae7900902922369d38d"
+            },
+            "primary": false,
+            "size": 4200,
+            "url": "https://cdn.modrinth.com/data/p8RJPJIC/versions/QocCYDs0/Ixeris-4.6.8%2B26.3-fabric-api.jar"
+          },
+          {
+            "file_type": null,
+            "filename": "Ixeris-4.6.8+26.3-fabric-sources.jar",
+            "hashes": {
+              "sha1": "09ce234ea7800e7625fc915cc53994e9cf1a6ca9",
+              "sha512": "c1086046f07424831f77e721a2e7d9c6864b58f1abb2aa1df4922f37844fb18f27d5e6a479e8f8114c3d3ace12c411a88fbc5d7f565339cebb9b142097405087"
+            },
+            "primary": false,
+            "size": 75309,
+            "url": "https://cdn.modrinth.com/data/p8RJPJIC/versions/QocCYDs0/Ixeris-4.6.8%2B26.3-fabric-sources.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "QocCYDs0",
+        "loaders": [
+          "fabric",
+          "quilt"
+        ],
+        "name": "Ixeris 4.6.8+26.3-fabric",
+        "project_id": "p8RJPJIC",
+        "version_number": "4.6.8+26.3-fabric",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "ixeris",
+        "version": "4.6.8+26.3-fabric",
+        "name": "Ixeris",
+        "description": "Buffered raw input and threaded event polling",
+        "authors": [
+          "decce"
+        ],
+        "contributors": [
+          "LitnhJacuzzi"
+        ],
+        "contact": {
+          "homepage": "https://modrinth.com/mod/ixeris",
+          "sources": "https://github.com/decce6/Ixeris",
+          "issues": "https://github.com/decce6/Ixeris/issues"
+        },
+        "license": "LGPL-3.0-only",
+        "icon": "ixeris.png",
+        "environment": "client",
+        "entrypoints": {
+          "client": [
+            "me.decce.ixeris.fabric.IxerisModFabric"
+          ]
+        },
+        "depends": {
+          "minecraft": ">=26.3",
+          "fabricloader": ">=0.16.0"
+        },
+        "mixins": [
+          {
+            "config": "ixeris.mixins.json",
+            "environment": "client"
+          },
+          {
+            "config": "ixeris.core.mixins.json",
+            "environment": "client"
+          }
+        ]
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "modernfix-mvus",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "eDR2h1iF",
+        "changelog": "",
+        "changelog_url": null,
+        "date_published": "2026-09-25T17:18:49.851183Z",
+        "dependencies": [
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "P7dR8mSH",
+            "version_id": null
+          }
+        ],
+        "downloads": 344673,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "modernfix-5.27.20-build.2.jar",
+            "hashes": {
+              "sha1": "b63337e801fbf2cb420a049d69220c56e083f514",
+              "sha512": "b586434056107aac4ef86e9351d66170dac65a45a1e5f8bd48fb931b3012ab2431b16476eb9c256773339e2b4c60f6f3e90a4709180f700b2aea59ff607f4243"
+            },
+            "primary": true,
+            "size": 1168784,
+            "url": "https://cdn.modrinth.com/data/TjSm1wrD/versions/pa9cAfYg/modernfix-5.27.20-build.2.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "pa9cAfYg",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "ModernFix-mVUS 5.27.20-build.2 for 26.3",
+        "project_id": "TjSm1wrD",
+        "version_number": "5.27.20-build.2",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "modernfix",
+        "version": "5.27.20-build.2",
+        "name": "ModernFix",
+        "description": "Egregious, yet effective performance improvements for modern Minecraft",
+        "authors": [
+          "embeddedt"
+        ],
+        "contact": {
+          "sources": "https://github.com/coredex-source/ModernFix---mVUS",
+          "homepage": "https://modrinth.com/mod/modernfix-mvus",
+          "issues": "https://github.com/coredex-source/ModernFix---mVUS/issues"
+        },
+        "license": "LGPL-3.0",
+        "icon": "icon.png",
+        "custom": {
+          "modmenu": {
+            "links": {
+              "modmenu.kofi": "https://ko-fi.com/coredex",
+              "modmenu.github_releases": "https://github.com/coredex-source/ModernFix---mVUS/releases",
+              "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/modernfix-mvus"
+            }
+          }
+        },
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "org.embeddedt.modernfix.ModernFixFabric"
+          ],
+          "client": [
+            "org.embeddedt.modernfix.ModernFixClientFabric"
+          ],
+          "modmenu": [
+            "org.embeddedt.modernfix.fabric.modmenu.ModernFixModMenuApiImpl"
+          ],
+          "preLaunch": [
+            "org.embeddedt.modernfix.ModernFixPreLaunchFabric"
+          ]
+        },
+        "mixins": [
+          "modernfix-fabric.mixins.json",
+          "modernfix-common.mixins.json"
+        ],
+        "accessWidener": "modernfix.accesswidener",
+        "depends": {
+          "minecraft": "~26.3-",
+          "fabricloader": ">=0.16.10"
+        },
+        "breaks": {
+          "dashloader": "<5.0.0-beta.1"
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/mixinextras-fabric-0.5.4.jar"
+          }
+        ]
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "scalablelux",
+      "stage": "experimental",
+      "published_version": {
+        "author_id": "KdStZyTU",
+        "changelog": "This version is uploaded automatically by GitHub Actions.  \n\nChangelog:  \n- [9ee89981](https://github.com/RelativityMC/ScalableLux/commit/9ee899818a134115f8321dd61a723b4170273afc) build: 26.3 - ishland  \n- [fa8b28b1](https://github.com/RelativityMC/ScalableLux/commit/fa8b28b1551a1ec9c23fa2d26233e61194c3314e) fix: archivesName - ishland  \n",
+        "changelog_url": null,
+        "date_published": "2026-09-16T13:41:48.559727Z",
+        "dependencies": [],
+        "downloads": 153324,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "ScalableLux-fabric-mc26.3-0.3.0-alpha.0.6-all.jar",
+            "hashes": {
+              "sha1": "d51dcbe901452a1cb378139ca351009254e7ab0d",
+              "sha512": "ded5a939fb20ab81c1f33b147ca9b98050773dbb28dff16df939c7d567b626809522994ec8dbfb99e7f498dc6a4e62f25e141a87d18efb43f73fc5ad1569ccc9"
+            },
+            "primary": true,
+            "size": 193021,
+            "url": "https://cdn.modrinth.com/data/Ps1zyz6x/versions/g4eqNSKd/ScalableLux-fabric-mc26.3-0.3.0-alpha.0.6-all.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "g4eqNSKd",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "0.3.0-alpha.0.6 devbuild for fabric 26.3",
+        "project_id": "Ps1zyz6x",
+        "version_number": "0.3.0-alpha.0.6+26.3",
+        "version_type": "alpha"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "scalablelux",
+        "version": "0.3.0-alpha.0.6+26.3",
+        "name": "ScalableLux",
+        "description": "Rewrites the light engine to fix lighting performance and lighting errors",
+        "authors": [
+          "Spottedleaf",
+          "ishland"
+        ],
+        "contact": {
+          "issues": "https://github.com/RelativityMC/ScalableLux/issues",
+          "sources": "https://github.com/RelativityMC/ScalableLux"
+        },
+        "provides": [
+          "starlight"
+        ],
+        "breaks": {
+          "phosphor": "*"
+        },
+        "license": "LGPL-3.0-only",
+        "icon": "assets/scalablelux/icon.png",
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "ca.spottedleaf.starlight.common.ScalableLuxEntrypoint"
+          ]
+        },
+        "mixins": [
+          "scalablelux.mixins.json"
+        ],
+        "accessWidener": "scalablelux.accesswidener",
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "minecraft": ">=26.3-rc.1"
+        }
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "clumps",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "l45nT5ov",
+        "changelog": "- [Update CurseForgeGradle, fixing the build](https://github.com/jaredlll08/Clumps/commit/43dfc0cdad83f1f6b179812e7918b27264093a5e) - Jared \n- [Port to 26.3](https://github.com/jaredlll08/Clumps/commit/c4cc11f9b1def9a60508a0ada14a6293ea794ec6) - Jared \n- [Port to 26.2](https://github.com/jaredlll08/Clumps/commit/6c4d4e4bee4c0d9f7cff5de802508e27914aadca) - Jared \n- [Port to 26.1.2](https://github.com/jaredlll08/Clumps/commit/a9cb23b093f76c2ba691fcc6e13067547c98425d) - Jared \n- [Port to 26.1.1](https://github.com/jaredlll08/Clumps/commit/5a65f702a9578edea77f7139949a6c4293392173) - Jared \n- [Port to 26.1](https://github.com/jaredlll08/Clumps/commit/5fcec428801eee0e76677dcc5e26cd699031c1bb) - Jared \n- [Port to 1.21.11](https://github.com/jaredlll08/Clumps/commit/ddf3979e3c7f249b7abdb6bbfc887e6957c4d84a) - Jared \n- [Port to 1.21.10. Close #166](https://github.com/jaredlll08/Clumps/commit/8875200e3d796c88359a9b749c13d7e6153e37d8) - Jared \n- [Port to 1.21.9. Close #164](https://github.com/jaredlll08/Clumps/commit/5032adf8914e0c5e6d6c39cc0b3d7f688437c9db) - Jared \n- [port to 1.21.8](https://github.com/jaredlll08/Clumps/commit/fbd61df8b6e6a9acc13d837aaf89518338744faf) - Jared",
+        "changelog_url": null,
+        "date_published": "2026-09-16T17:03:19.759021Z",
+        "dependencies": [
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "P7dR8mSH",
+            "version_id": null
+          }
+        ],
+        "downloads": 190686,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "Clumps-fabric-26.3-26.3.2.jar",
+            "hashes": {
+              "sha1": "86d6618f772320bb5e66b4696396a450d5cb845e",
+              "sha512": "8c166ae97e1999d0f213d0a181d6ef87b99648016c92c9aa1414d2c2e24364b12549569cd7e247a3d675df703ae6a8a88fc175d3f527818c710578408508c8ab"
+            },
+            "primary": true,
+            "size": 20154,
+            "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/J4I1wxJZ/Clumps-fabric-26.3-26.3.2.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "J4I1wxJZ",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "Fabric-26.3-26.3.2",
+        "project_id": "Wnxd13zP",
+        "version_number": "26.3.2",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "clumps",
+        "name": "Clumps",
+        "version": "26.3.2",
+        "environment": "*",
+        "icon": "icon.png",
+        "authors": [
+          "Jaredlll08"
+        ],
+        "license": "MIT",
+        "contact": {
+          "homepage": "https://www.curseforge.com/minecraft/mc-mods/clumps",
+          "sources": "https://github.com/jaredlll08/Clumps",
+          "issues": "https://github.com/jaredlll08/Clumps/issues"
+        },
+        "description": "Clumps xp orbs together.",
+        "entrypoints": {},
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "java": ">=25",
+          "minecraft": "26.3"
+        },
+        "custom": {},
+        "mixins": [
+          {
+            "config": "clumps.mixins.json",
+            "environment": "*"
+          }
+        ]
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "modmenu",
+      "stage": "utilities",
+      "published_version": {
+        "author_id": "uF4fzWRt",
+        "changelog": "- Update deps for 26.3 release (resolves #1092)\n- Update Estonian translation, thanks Madis0\n- Use a better word for \"Credits\" in the Russian translation (resolves #1098)",
+        "changelog_url": null,
+        "date_published": "2026-09-23T21:31:03.843943Z",
+        "dependencies": [
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "P7dR8mSH",
+            "version_id": null
+          },
+          {
+            "dependency_type": "required",
+            "file_name": null,
+            "project_id": "eXts2L7r",
+            "version_id": null
+          }
+        ],
+        "downloads": 1028562,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "modmenu-21.0.0.jar",
+            "hashes": {
+              "sha1": "66ec40f1cd0c037ddca2b5fc6b4b976d479c18e8",
+              "sha512": "588c0c557963f4778572ee81bfafc190b332c26d5926c5fe7e3e1614dcf8e14f58e3bc80a97694521dd05907e9753a7c8575048ea769e4dbf40a3db74a4e2606"
+            },
+            "primary": true,
+            "size": 856779,
+            "url": "https://cdn.modrinth.com/data/mOgUt4GM/versions/kyy7dbrZ/modmenu-21.0.0.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "kyy7dbrZ",
+        "loaders": [
+          "fabric",
+          "quilt"
+        ],
+        "name": "v21.0.0 for 26.3",
+        "project_id": "mOgUt4GM",
+        "version_number": "21.0.0",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "modmenu",
+        "name": "Mod Menu",
+        "version": "21.0.0",
+        "environment": "client",
+        "license": "MIT",
+        "icon": "assets/modmenu/icon.png",
+        "entrypoints": {
+          "client": [
+            "com.terraformersmc.modmenu.ModMenu"
+          ],
+          "modmenu": [
+            "com.terraformersmc.modmenu.ModMenuModMenuCompat"
+          ]
+        },
+        "contact": {
+          "homepage": "https://modrinth.com/mod/modmenu",
+          "sources": "https://github.com/TerraformersMC/ModMenu",
+          "issues": "https://github.com/TerraformersMC/ModMenu/issues"
+        },
+        "depends": {
+          "fabric-resource-loader-v1": "*",
+          "fabric-screen-api-v1": "*",
+          "fabric-key-mapping-api-v1": "*",
+          "fabric-lifecycle-events-v1": "*",
+          "fabricloader": ">=0.19.2",
+          "minecraft": ">=26.3-"
+        },
+        "authors": [
+          "Prospector",
+          "haykam821",
+          "gniftygnome",
+          "TerraformersMC"
+        ],
+        "contributors": [
+          "shedaniel",
+          "Draylar",
+          "Mordna",
+          "Madis0",
+          "Yanis48",
+          "LemmaEOF",
+          "fewizz",
+          "XuyuEre",
+          "geniiii",
+          "thiagokenis",
+          "Juuxel",
+          "Chloe Dawn",
+          "modmuss50",
+          "Patbox",
+          "Lykrast",
+          "Pyrofab",
+          "UpcraftLP",
+          "swordglowsblue",
+          "hinataaki",
+          "LeonXu98",
+          "magneticflux",
+          "vanja-san",
+          "AlexIIL",
+          "masoncook16",
+          "el97",
+          "Hephaestus-Dev",
+          "zabi94",
+          "dexman545",
+          "dhouck",
+          "Hambaka",
+          "po-stulate",
+          "FlashyReese",
+          "egeesin",
+          "TheGlitch76",
+          "ludg1e",
+          "williambl",
+          "PepperCode1",
+          "ThatTrollzer",
+          "ToffeeMax",
+          "kalucky0",
+          "Maaster",
+          "MartrixX",
+          "NotSteven",
+          "Dolphin 2.1",
+          "ENDERZOMBI102",
+          "anatom3000",
+          "OroArmor",
+          "jackassmc",
+          "Vaerian",
+          "RDKRACZ",
+          "Hulenkius",
+          "XfedeX",
+          "spnda",
+          "Jab125",
+          "SolidBlock",
+          "Tkain",
+          "nfitzen",
+          "DenaryDev",
+          "legenden",
+          "NaiNonTH",
+          "MagnusHJensen",
+          "Benjamin-Norton",
+          "triphora",
+          "Pyrrha",
+          "sakura-ryoko",
+          "lowercasebtw",
+          "tnoctua",
+          "litetex",
+          "Starmoe(Celestia)",
+          "Coredex"
+        ],
+        "description": "Adds a mod menu to view the list of mods you have installed.",
+        "mixins": [
+          "mixins.modmenu.json"
+        ],
+        "custom": {
+          "modmenu": {
+            "links": {
+              "modmenu.discord": "https://discord.gg/jEGF5fb"
+            }
+          }
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/fabric-api-base-2.0.6+fcdff87f5d.jar"
+          },
+          {
+            "file": "META-INF/jars/fabric-key-mapping-api-v1-2.0.8+3434d6d95d.jar"
+          },
+          {
+            "file": "META-INF/jars/fabric-lifecycle-events-v1-4.1.9+ffef5f675d.jar"
+          },
+          {
+            "file": "META-INF/jars/fabric-resource-loader-v1-3.0.4+fcdff87f5d.jar"
+          },
+          {
+            "file": "META-INF/jars/fabric-screen-api-v1-5.2.4+48607d035d.jar"
+          },
+          {
+            "file": "META-INF/jars/placeholder-api-3.2.0+26.3.jar"
+          }
+        ]
+      },
+      "source": "Modrinth publication metadata from read-only local cache; JAR hash matched independently"
+    },
+    {
+      "slug": "servercore",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "M6QxQqoY",
+        "changelog": "",
+        "changelog_url": null,
+        "date_published": "2026-09-16T13:50:35.746707Z",
+        "dependencies": [],
+        "downloads": 13381,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "servercore-fabric-1.5.20+26.3.jar",
+            "hashes": {
+              "sha1": "ec5fdf4798e29e483fa861dead101b0d9d6d72cb",
+              "sha512": "abe1f806ea587971faf7de826e18b07314a4a9e690f64a4c3a54e7f61c3e6f4792633b13a917252bd8de154cec39da6619110d83799cf533450c5b4cac7a8448"
+            },
+            "primary": true,
+            "size": 901416,
+            "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/LCG1Bm84/servercore-fabric-1.5.20%2B26.3.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "LCG1Bm84",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "ServerCore Fabric 1.5.20+26.3",
+        "project_id": "4WWQxlQP",
+        "version_number": "1.5.20+26.3",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "servercore",
+        "version": "1.5.20+26.3",
+        "name": "ServerCore",
+        "description": "A Fabric mod that aims to optimize the minecraft server.",
+        "authors": [
+          "Wesley1808"
+        ],
+        "contact": {
+          "sources": "https://github.com/Wesley1808/ServerCore",
+          "issues": "https://github.com/Wesley1808/ServerCore/issues"
+        },
+        "icon": "icon.png",
+        "license": "MIT",
+        "environment": "*",
+        "entrypoints": {
+          "main": [
+            "me.wesley1808.servercore.fabric.common.ServerCoreFabric"
+          ]
+        },
+        "mixins": [
+          "servercore.common.mixins.json",
+          "servercore.fabric.mixins.json"
+        ],
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "minecraft": ">=26.3-",
+          "fabric-api-base": "*",
+          "fabric-command-api-v2": "*",
+          "fabric-lifecycle-events-v1": "*"
+        },
+        "breaks": {
+          "cardboard": "*"
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/dazzleconf-core-1.3.0-M2.jar"
+          },
+          {
+            "file": "META-INF/jars/dazzleconf-ext-snakeyaml-1.3.0-M2.jar"
+          },
+          {
+            "file": "META-INF/jars/placeholder-api-3.2.0+26.3.jar"
+          },
+          {
+            "file": "META-INF/jars/snakeyaml-2.7.jar"
+          }
+        ],
+        "accessWidener": "servercore.accesswidener"
+      },
+      "source": "Official metadata from read-only Modrinth cache; Downloads JAR matches published SHA1/SHA512/size and official download origin"
+    },
+    {
+      "slug": "krypton",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "y0WF9UR5",
+        "changelog": "* Update for Minecraft 26.3\n* Change how encryption is injected. This improves compatibility with other mods that modify the login process. Notably, this makes e4mc work.",
+        "changelog_url": null,
+        "date_published": "2026-09-30T05:12:54.012334Z",
+        "dependencies": [],
+        "downloads": 66458,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "krypton-0.3.2.jar",
+            "hashes": {
+              "sha1": "21b21cb88e412f0bce73b6609de6dd6aca958d7d",
+              "sha512": "d1d57ebd41395b75b01f130cd9503eb8d208212424a399ff9f367f50be8fbc1c6472442b33c686e777c3148f6a609520e8fb732c755157c358cb207fd4d1123a"
+            },
+            "primary": true,
+            "size": 268849,
+            "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar"
+          }
+        ],
+        "game_versions": [
+          "26.3"
+        ],
+        "id": "UugdIYJw",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "Krypton 0.3.2",
+        "project_id": "fQEb0iXm",
+        "version_number": "0.3.2",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "krypton",
+        "version": "0.3.2",
+        "name": "Krypton",
+        "description": "A Fabric mod that optimizes the Minecraft networking stack and entity tracker.",
+        "authors": [
+          "tuxed"
+        ],
+        "contact": {
+          "website": "https://github.com/astei/krypton",
+          "repo": "https://github.com/astei/krypton"
+        },
+        "license": "LGPL-3.0",
+        "icon": "assets/krypton/icon.png",
+        "environment": "*",
+        "entrypoints": {
+          "client": [
+            "me.steinborn.krypton.mod.client.KryptonClientInitializer"
+          ],
+          "server": [
+            "me.steinborn.krypton.mod.server.KryptonServerInitializer"
+          ],
+          "main": [
+            "me.steinborn.krypton.mod.shared.KryptonSharedInitializer"
+          ]
+        },
+        "mixins": [
+          "krypton.mixins.json"
+        ],
+        "accessWidener": "krypton.accesswidener",
+        "depends": {
+          "fabricloader": ">=0.18.4",
+          "minecraft": ">=26.2"
+        },
+        "jars": [
+          {
+            "file": "META-INF/jars/velocity-native-3.4.0-SNAPSHOT.jar"
+          }
+        ]
+      },
+      "source": "Official metadata from read-only Modrinth cache; Downloads JAR matches published SHA1/SHA512/size and official download origin"
+    },
+    {
+      "slug": "asynclogger",
+      "stage": "optimizations",
+      "published_version": {
+        "author_id": "pzpYP9M0",
+        "changelog": "- Fixed game crash when `filtering.sysout` is set to `true`\n- Added Ornithe support (independent of Minecraft version)",
+        "changelog_url": null,
+        "date_published": "2026-08-12T08:59:31.683483Z",
+        "dependencies": [],
+        "downloads": 337007,
+        "featured": false,
+        "files": [
+          {
+            "file_type": null,
+            "filename": "asynclogger-2.2.2+26.1.2-fabric.jar",
+            "hashes": {
+              "sha1": "d1affbf48c50f60ae59e6b66fb78b1e6427bfddf",
+              "sha512": "2775a667b13ade2e2596a5de0662abef41c837c5cb33152b305beb59eacbfe671f2fc0853f50f86c162d96ff78b7f9f59cf4ba654e6a9d3685b6d73709b05253"
+            },
+            "primary": true,
+            "size": 584150,
+            "url": "https://cdn.modrinth.com/data/zvNzKfGF/versions/Ert0LmWj/asynclogger-2.2.2%2B26.1.2-fabric.jar"
+          }
+        ],
+        "game_versions": [
+          "26.1",
+          "26.1.1",
+          "26.1.2",
+          "26.2",
+          "26.3"
+        ],
+        "id": "Ert0LmWj",
+        "loaders": [
+          "fabric"
+        ],
+        "name": "Async Logger 2.2.2+26.1.2-fabric",
+        "project_id": "zvNzKfGF",
+        "version_number": "2.2.2+26.1.2-fabric",
+        "version_type": "release"
+      },
+      "jar_metadata": {
+        "schemaVersion": 1,
+        "id": "asynclogger",
+        "version": "2.2.2+26.1.2-fabric",
+        "name": "Async Logger",
+        "description": "Asynchronous logging and efficient filtering - performance improvements and utility for keeping your logs clean",
+        "authors": [
+          "decce"
+        ],
+        "contributors": [
+          "Asbestosstar",
+          "Aresky"
+        ],
+        "contact": {
+          "homepage": "https://modrinth.com/mod/asynclogger",
+          "sources": "https://github.com/decce6/asynclogger",
+          "issues": "https://github.com/decce6/asynclogger/issues"
+        },
+        "license": "LGPL-3.0-only",
+        "icon": "asynclogger.png",
+        "entrypoints": {
+          "preLaunch": [
+            "me.decce.asynclogger.service.fabric.FabricPreLaunchEntrypoint"
+          ],
+          "main": [
+            "me.decce.asynclogger.fabric.FabricEntrypoint"
+          ]
+        },
+        "languageAdapters": {
+          "asynclogger": "me.decce.asynclogger.service.fabric.FabricLanguageAdapter"
+        },
+        "depends": {
+          "minecraft": ">=26.1",
+          "fabricloader": ">=0.16.0"
+        }
+      },
+      "source": "Official metadata from read-only Modrinth cache; Downloads JAR matches published SHA1/SHA512/size and official download origin"
+    }
+  ],
+  "fresh_network_query": false
+}

@@ -6,22 +6,27 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import tomllib
 import zipfile
 from profiles import ROOT, configs, descriptors, pack_version, profiles
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--packwiz', default='packwiz')
+    parser.add_argument('--cache', help='Caché aislada de packwiz (permite exportar archivos verificados sin red)')
     parser.add_argument('--profile', action='append', help='Construir solo este perfil (repetible)')
     args = parser.parse_args()
     executable = shutil.which(args.packwiz)
     if not executable:
         parser.error('Instala packwiz o usa --packwiz /ruta/al/binario')
     executable = str(Path(executable).resolve())
+    command = [executable]
+    if args.cache:
+        command.extend(['--cache', str(Path(args.cache).resolve())])
     matrix = profiles()
     if args.profile and set(args.profile) - matrix.keys():
         parser.error('Perfil desconocido')
-    subprocess.run([executable, 'refresh'], cwd=ROOT / 'pack', check=True)
+    subprocess.run([*command, 'refresh'], cwd=ROOT / 'pack', check=True)
     out = ROOT / 'dist'
     out.mkdir(exist_ok=True)
     targets = []
@@ -45,11 +50,16 @@ def main():
         for key in ('name', 'description'):
             source = re.sub(rf'^{key} = .*?$', lambda _: key + ' = ' + json.dumps(profile[key], ensure_ascii=False), source, count=1, flags=re.MULTILINE)
         manifest.write_text(source)
-        subprocess.run([executable, 'refresh'], cwd=stage, check=True)
+        subprocess.run([*command, 'refresh'], cwd=stage, check=True)
         target = out / f'Lumina-Optimized-{pack_version()}-{name}.mrpack'
-        subprocess.run([executable, 'modrinth', 'export', '--output', str(target)], cwd=stage, check=True)
+        subprocess.run([*command, 'modrinth', 'export', '--output', str(target)], cwd=stage, check=True)
         if not target.is_file():
             raise RuntimeError(f'packwiz no generó {target}')
+        with zipfile.ZipFile(target) as archive:
+            exported = json.loads(archive.read('modrinth.index.json'))
+            expected_files = {'mods/' + tomllib.loads(p.read_text())['filename'] for p in descriptors(profile)}
+            if {item['path'] for item in exported['files']} != expected_files:
+                raise RuntimeError('Exportación incompleta: ' + str(target))
         targets.append(target)
     checksum = out / f'SHA256SUMS-{pack_version()}'
     checksum.write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}\n' for p in sorted(targets)))

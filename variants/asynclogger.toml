@@ -1,0 +1,13 @@
+# Valores predeterminados; conservar todos los mensajes para revisar la alpha.
+enabled = true
+noDebugLog = false
+testPerformance = false
+
+[filtering]
+enabled = false
+global = false
+sysout = false
+levels = []
+loggers = []
+strings = []
+regexes = []

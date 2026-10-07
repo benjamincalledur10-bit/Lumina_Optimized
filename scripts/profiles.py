@@ -29,6 +29,8 @@ def configs(profile):
     }
     result = {"config/" + filename: (ROOT / "pack/config" / filename).read_bytes()
               for mod, filename in mapping.items() if mod in present}
+    if profile.get("moreculling_toml") and "moreculling.pw.toml" in present:
+        result["config/moreculling.toml"] = (ROOT / "variants/moreculling.toml").read_bytes()
     if profile.get("bbe_enabled"):
         path = "config/BBEConfig.json"
         if path not in result:
@@ -42,6 +44,18 @@ def configs(profile):
         result["config/c2me.toml"] = (ROOT / "variants/c2me.toml").read_bytes()
     if "structure-layout-optimizer.pw.toml" in present:
         result["config/structure_layout_optimizer.jsonc"] = (ROOT / "variants/structure_layout_optimizer.jsonc").read_bytes()
+    if "iris.pw.toml" in present:
+        result["config/iris.properties"] = (ROOT / "variants/iris.properties").read_bytes()
+    if "modernfix-mvus.pw.toml" in present:
+        result["config/modernfix-mixins.properties"] = (ROOT / "variants/modernfix-mixins.properties").read_bytes()
+    if "servercore.pw.toml" in present:
+        for filename in ("config.yml", "optimizations.yml"):
+            result["config/servercore/" + filename] = (ROOT / "variants/servercore" / filename).read_bytes()
+    if "asynclogger.pw.toml" in present:
+        result["config/asynclogger.toml"] = (ROOT / "variants/asynclogger.toml").read_bytes()
+    if "better-biome-blend.pw.toml" in present:
+        # BBB defaults to 29x29; retain Minecraft 26.3's initial 5x5 reference.
+        result["options.txt"] = (ROOT / "variants/biome-blend-options.txt").read_bytes()
     return result
 
 def pack_version():

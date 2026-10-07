@@ -1,71 +1,7 @@
 {
-  "baseline": {
-    "name": "Lumina Optimized baseline",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "bad": {
-    "name": "Lumina Optimized bad",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "badoptimizations.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "resourceful-control": {
-    "name": "Lumina Optimized resourceful-control",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "resourceful-config.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "structure": {
-    "name": "Lumina Optimized structure",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "resourceful-config.pw.toml",
-      "structure-layout-optimizer.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "zconfig-control": {
-    "name": "Lumina Optimized zconfig-control",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "zconfig.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "fastnoise": {
-    "name": "Lumina Optimized fastnoise",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "zconfig.pw.toml",
-      "zfastnoise.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "dependencies": {
-    "name": "Lumina Optimized dependencies",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "resourceful-config.pw.toml",
-      "zconfig.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "core": {
-    "name": "Lumina Optimized core",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+  "alpha3-reference": {
+    "name": "Lumina Optimized alpha3-reference",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
     "add": [
       "badoptimizations.pw.toml",
       "structure-layout-optimizer.pw.toml",
@@ -76,94 +12,9 @@
     "remove": [],
     "bbe_enabled": true
   },
-  "shaders": {
-    "name": "Lumina Optimized shaders",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "badoptimizations.pw.toml",
-      "structure-layout-optimizer.pw.toml",
-      "resourceful-config.pw.toml",
-      "zfastnoise.pw.toml",
-      "zconfig.pw.toml",
-      "iris.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "baseline-shaders": {
-    "name": "Lumina Optimized baseline-shaders",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "iris.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "baseline-noif": {
-    "name": "Lumina Optimized baseline-noif",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [],
-    "remove": [
-      "immediatelyfast.pw.toml"
-    ],
-    "bbe_enabled": true
-  },
-  "gnetum": {
-    "name": "Lumina Optimized gnetum",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "gnetum.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "gnetum-noif": {
-    "name": "Lumina Optimized gnetum-noif",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "gnetum.pw.toml"
-    ],
-    "remove": [
-      "immediatelyfast.pw.toml"
-    ],
-    "bbe_enabled": true
-  },
-  "gnetum-shaders": {
-    "name": "Lumina Optimized gnetum-shaders",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "gnetum.pw.toml",
-      "iris.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "c2me": {
-    "name": "Lumina Optimized c2me",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "c2me-fabric.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "c2me-all": {
-    "name": "Lumina Optimized c2me-all",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
-    "add": [
-      "badoptimizations.pw.toml",
-      "structure-layout-optimizer.pw.toml",
-      "resourceful-config.pw.toml",
-      "zfastnoise.pw.toml",
-      "zconfig.pw.toml",
-      "c2me-fabric.pw.toml"
-    ],
-    "remove": [],
-    "bbe_enabled": true
-  },
-  "c2me-shaders": {
-    "name": "Lumina Optimized c2me-shaders",
-    "description": "Alpha.3 de prueba; base alpha.2 con BBE activo. Rendimiento pendiente de medición.",
+  "optimizations": {
+    "name": "Lumina Optimized optimizations",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
     "add": [
       "badoptimizations.pw.toml",
       "structure-layout-optimizer.pw.toml",
@@ -171,9 +22,181 @@
       "zfastnoise.pw.toml",
       "zconfig.pw.toml",
       "c2me-fabric.pw.toml",
-      "iris.pw.toml"
+      "gnetum.pw.toml",
+      "sodium-extra.pw.toml",
+      "ixeris.pw.toml",
+      "modernfix-mvus.pw.toml",
+      "scalablelux.pw.toml",
+      "clumps.pw.toml",
+      "servercore.pw.toml",
+      "krypton.pw.toml",
+      "jasione.pw.toml",
+      "asynclogger.pw.toml",
+      "zfastsurface.pw.toml",
+      "fastmapcodec.pw.toml"
     ],
     "remove": [],
-    "bbe_enabled": true
+    "bbe_enabled": true,
+    "moreculling_toml": true
+  },
+  "core": {
+    "name": "Lumina Optimized core",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "c2me-fabric.pw.toml",
+      "gnetum.pw.toml",
+      "sodium-extra.pw.toml",
+      "ixeris.pw.toml",
+      "modernfix-mvus.pw.toml",
+      "scalablelux.pw.toml",
+      "clumps.pw.toml",
+      "fast-ip-ping.pw.toml",
+      "crash-assistant.pw.toml",
+      "chunky.pw.toml",
+      "modmenu.pw.toml",
+      "bettergrassify.pw.toml",
+      "servercore.pw.toml",
+      "krypton.pw.toml",
+      "jasione.pw.toml",
+      "asynclogger.pw.toml",
+      "zfastsurface.pw.toml",
+      "fastmapcodec.pw.toml",
+      "better-biome-blend.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true,
+    "moreculling_toml": true
+  },
+  "shaders": {
+    "name": "Lumina Optimized shaders",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "c2me-fabric.pw.toml",
+      "gnetum.pw.toml",
+      "sodium-extra.pw.toml",
+      "ixeris.pw.toml",
+      "modernfix-mvus.pw.toml",
+      "scalablelux.pw.toml",
+      "clumps.pw.toml",
+      "fast-ip-ping.pw.toml",
+      "crash-assistant.pw.toml",
+      "chunky.pw.toml",
+      "modmenu.pw.toml",
+      "bettergrassify.pw.toml",
+      "iris.pw.toml",
+      "servercore.pw.toml",
+      "krypton.pw.toml",
+      "jasione.pw.toml",
+      "asynclogger.pw.toml",
+      "zfastsurface.pw.toml",
+      "fastmapcodec.pw.toml",
+      "better-biome-blend.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true,
+    "moreculling_toml": true
+  },
+  "core-conservative": {
+    "name": "Lumina Optimized core-conservative",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "sodium-extra.pw.toml",
+      "ixeris.pw.toml",
+      "modernfix-mvus.pw.toml",
+      "clumps.pw.toml",
+      "fast-ip-ping.pw.toml",
+      "crash-assistant.pw.toml",
+      "chunky.pw.toml",
+      "modmenu.pw.toml",
+      "bettergrassify.pw.toml",
+      "servercore.pw.toml",
+      "krypton.pw.toml",
+      "jasione.pw.toml",
+      "asynclogger.pw.toml",
+      "zfastsurface.pw.toml",
+      "fastmapcodec.pw.toml",
+      "better-biome-blend.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true,
+    "moreculling_toml": true
+  },
+  "shaders-conservative": {
+    "name": "Lumina Optimized shaders-conservative",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "sodium-extra.pw.toml",
+      "ixeris.pw.toml",
+      "modernfix-mvus.pw.toml",
+      "clumps.pw.toml",
+      "fast-ip-ping.pw.toml",
+      "crash-assistant.pw.toml",
+      "chunky.pw.toml",
+      "modmenu.pw.toml",
+      "bettergrassify.pw.toml",
+      "iris.pw.toml",
+      "servercore.pw.toml",
+      "krypton.pw.toml",
+      "jasione.pw.toml",
+      "asynclogger.pw.toml",
+      "zfastsurface.pw.toml",
+      "fastmapcodec.pw.toml",
+      "better-biome-blend.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true,
+    "moreculling_toml": true
+  },
+  "gnetum-control": {
+    "name": "Lumina Optimized gnetum-control",
+    "description": "Alpha.4 de prueba; BBE activo. Estabilidad y rendimiento en Minecraft pendientes.",
+    "add": [
+      "badoptimizations.pw.toml",
+      "structure-layout-optimizer.pw.toml",
+      "resourceful-config.pw.toml",
+      "zfastnoise.pw.toml",
+      "zconfig.pw.toml",
+      "c2me-fabric.pw.toml",
+      "sodium-extra.pw.toml",
+      "ixeris.pw.toml",
+      "modernfix-mvus.pw.toml",
+      "scalablelux.pw.toml",
+      "clumps.pw.toml",
+      "fast-ip-ping.pw.toml",
+      "crash-assistant.pw.toml",
+      "chunky.pw.toml",
+      "modmenu.pw.toml",
+      "bettergrassify.pw.toml",
+      "servercore.pw.toml",
+      "krypton.pw.toml",
+      "jasione.pw.toml",
+      "asynclogger.pw.toml",
+      "zfastsurface.pw.toml",
+      "fastmapcodec.pw.toml",
+      "better-biome-blend.pw.toml"
+    ],
+    "remove": [],
+    "bbe_enabled": true,
+    "moreculling_toml": true
   }
 }

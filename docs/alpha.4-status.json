@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0-alpha.4",
+  "branch": "modpackdev",
+  "initial_head": "46b27a1",
+  "target_principal_count": 30,
+  "core_principals": 29,
+  "shaders_principals": 30,
+  "external_dependencies": 4,
+  "static_tests": 17,
+  "exports": 7,
+  "scope": "Full target exported locally; all published hash comparisons passed; four full publication metadata checks pending; no full startup/play test because SDL has no displays",
+  "pending_mods": [],
+  "static_validation": "passed_with_full_publication_metadata_gaps",
+  "real_initialization": "Core/Shaders resolved before SDL; no screen, no world entered",
+  "world_exploration_save_reopen": "not_executed",
+  "performance_measurements": [],
+  "publication_metadata_pending": [
+    "better-biome-blend.pw.toml",
+    "fastmapcodec.pw.toml",
+    "jasione.pw.toml",
+    "zfastsurface.pw.toml"
+  ],
+  "configuration_corrections": [
+    "ModernFix temperature cache disabled for Lithium",
+    "More Culling conservative values supplied in actual TOML; alpha3 reference unchanged",
+    "Better Biome Blend initial radius5x5 preserved"
+  ],
+  "publication_hashes_pending": [],
+  "publication_hashes_verified": 34,
+  "supplied_sha512_evidence_date": "2026-10-06",
+  "supplied_sha512_verified_date": "2026-10-07"
+}
