@@ -1,0 +1,18 @@
+{
+  "enabled": {
+    "value": "ON"
+  },
+  "showHudFps": {
+    "value": "ON"
+  },
+  "downscale": {
+    "value": "OFF"
+  },
+  "fastFboBlit": {
+    "value": "ON"
+  },
+  "numberOfPasses": 3,
+  "maxFps": 60,
+  "screenMaxFps": 20,
+  "map": {}
+}

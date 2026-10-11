@@ -1,0 +1,11 @@
+{
+  "configVersion": 9,
+  "safeMode": true,
+  "tickCulling": false,
+  "solidLeaves": false,
+  "forceDisplayCulling": false,
+  "renderNametagsThroughWalls": true,
+  "skipEntityCulling": false,
+  "skipBlockEntityCulling": false,
+  "blockEntityFrustumCulling": true
+}

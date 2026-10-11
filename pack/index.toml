@@ -2,57 +2,258 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/BBEConfig.json"
-hash = "ce7fe1da7424a6719cd602a26d619a481ca204131f78c12f89fd61bd0c9bc6e6"
+hash = "bee65340de3136aa0d7e9550cf3d523f95017ede6f25e9611c48825e5c690111"
+
+[[files]]
+file = "config/c2me.toml"
+hash = "3720c670c54508b85834e1b72d78f6c2b52db30e3c66a297964de37342e43585"
+
+[[files]]
+file = "config/cullleaves.json"
+hash = "597892644119cc324a2294077e2c92dcf872e06e8280f0f88bf55a42a36208bf"
 
 [[files]]
 file = "config/entityculling.json"
 hash = "37c6a93e8437b64a4c28de3fea64fb3e443f3e881823eaf94af6b7a87c375717"
 
 [[files]]
-file = "config/moreculling.json"
-hash = "63b05c09c565766df2323c48ec131a0b04521ab134fc9905cdfce88c7ccc6b23"
+file = "config/gnetum.json"
+hash = "0037c06120528eeb1dd1e58be143ce5aca4c83fdf81eeff846946f08ad6cb7b5"
+
+[[files]]
+file = "config/iris.properties"
+hash = "eb4c72f6737a9c80e57445045729a969bb0bed4f4261c14ac07eebfd473a25f7"
+
+[[files]]
+file = "config/lambdynlights.toml"
+hash = "e19bce6893801ae05f0fae89da121ca081e25da436592e3eb3b03511645282dc"
+
+[[files]]
+file = "config/modernfix-mixins.properties"
+hash = "09e7e06d22088bc11e5156025b3f5db78b5d9cd6d1916b13bf371ee2815d4629"
+
+[[files]]
+file = "config/moreculling.toml"
+hash = "62c2ed733c0cb52094449e73812ad8f20a6c1b1a378e22a9ab3eec862d582a0b"
+
+[[files]]
+file = "config/servercore/config.yml"
+hash = "30c57ec37ac1419016490f6b8e4e3f99ff979ebe2d16c6af7a732e3433958dad"
+
+[[files]]
+file = "config/servercore/optimizations.yml"
+hash = "33f3dff4d82acb89a48777f2665aedd17520b68e6636f8fdd63597f04d381608"
+
+[[files]]
+file = "config/sodium-extra-options.json"
+hash = "682a2cbed83501eb45b11fe9b4b8b56a26c10a777842f8649822547245162ca6"
+
+[[files]]
+file = "mods/badoptimizations.pw.toml"
+hash = "06959bcf51a2bcb896164faba5dc54bae0a7dc8275c0fb5db4e856bd5fc3575a"
+metafile = true
 
 [[files]]
 file = "mods/better-block-entities.pw.toml"
-hash = "dea7facdd022bd7babc26b06e77ab0bbf2072d2381e954419c9222f5e0af24ee"
+hash = "7f42badf190dcbb168bbeef8ab967241b4d1d59332ae6a506050fe2e38043656"
+metafile = true
+
+[[files]]
+file = "mods/better-mount-hud.pw.toml"
+hash = "1deccfb89ad22de919763f6fc2a95272f7f781ee1002a9cac223cc46685fa463"
+metafile = true
+
+[[files]]
+file = "mods/bettergrassify.pw.toml"
+hash = "39bff8f394b69a9c55ffeba8d70c1d7dc50be9ae8c9a54c041e1ef7ec23724bf"
+metafile = true
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "f7eacd963aea1f8f7ab02dc311afeb9959040f4c729ee64ecbfc38150307e04a"
+metafile = true
+
+[[files]]
+file = "mods/chunky.pw.toml"
+hash = "921d23d9b326e9ba60ab73ad2ac5a2c28ac9c26885b37b35398b73f5e3c67ab3"
 metafile = true
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
-hash = "4892e58859161dc14789108ea0d0beedb53bc2081ee560b4a3af6ca9c481a068"
+hash = "cdcc5ee3e3ecccec42d2256cea5e801c020238dcc094138967295ff226e10b29"
+metafile = true
+
+[[files]]
+file = "mods/clumps.pw.toml"
+hash = "0b1d6b27bd1fef4a3b8d04c095ec97ccfd8ba5fcf581b14828808082077b0f94"
+metafile = true
+
+[[files]]
+file = "mods/crash-assistant.pw.toml"
+hash = "af40369b3c6a3732ec151894bd006c1ba4dfdaa9a0d0e1fdccbddef5a376fc65"
+metafile = true
+
+[[files]]
+file = "mods/cull-leaves.pw.toml"
+hash = "0fdb501f824be63757ccb09bc23cd6d71ce1ce7a99fa03251b8e85635281d238"
+metafile = true
+
+[[files]]
+file = "mods/debugify.pw.toml"
+hash = "738703cf77855ecdec11a5c0f5e4ca2c389563b89a4bdbbc93169e857f57c9df"
+metafile = true
+
+[[files]]
+file = "mods/e4mc.pw.toml"
+hash = "836c3a08d2de26b9c09a607716b7843c2bbdb639b92d13cea186429b481bddd4"
+metafile = true
+
+[[files]]
+file = "mods/entity-model-features.pw.toml"
+hash = "cd67592f6992d36a2e676f7143bfc9c6b27aad0e4175c3b195c14f42c710be0f"
 metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "077ff001f411c0533f6adaf60d7d377a35594014bed43aebd30b0baa4cba5dc5"
+hash = "329986d18817ea102ef450303978a1fdac8ecd90b03ffd7dd2ac2ce5cb129b62"
+metafile = true
+
+[[files]]
+file = "mods/entitytexturefeatures.pw.toml"
+hash = "f417d7e6b3ab9a5d2b12aab5deafc19457226200b5c8c07bb66f436e5b39dfd5"
 metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "780bf3518e4856ad311e3d8d382c171f65b620012710d1a2f065cb7199d8aaf2"
+hash = "5a8fd7168e4ff3df0d1835fb1844c6dfd4fdb8baab2af92abe920287ac1809f3"
+metafile = true
+
+[[files]]
+file = "mods/fabric-language-kotlin.pw.toml"
+hash = "1aef1dbf4bc0167ddb67ed297ce3b0f401859a8b8e25c7a6bedb86d12e3a38c9"
+metafile = true
+
+[[files]]
+file = "mods/fast-ip-ping.pw.toml"
+hash = "6efe87c9466d7bd7fbc9b2fc8b3b8fe40b94d00098ba1a260def4e954accd2f9"
+metafile = true
+
+[[files]]
+file = "mods/fastquit.pw.toml"
+hash = "ae43b407e7814b85605bb812b2ccaea2c43787fd7dad5289cfc3b05004ecbdb6"
 metafile = true
 
 [[files]]
 file = "mods/ferrite-core.pw.toml"
-hash = "f7ea9c8081b1fcba1ce86f0df41d7d85cb27f421c8515361bbbf5991c53880d1"
+hash = "9e3f934971e0a2f0b599fa916a65a9a3b060c6bf243e3797a6033224a9eccf54"
+metafile = true
+
+[[files]]
+file = "mods/forge-config-api-port.pw.toml"
+hash = "4e9956d58f63f78036f5a62c8cff43c3b1bb2fa72adf6fddf9096a13fa93f736"
+metafile = true
+
+[[files]]
+file = "mods/geckolib.pw.toml"
+hash = "1da77515d1a039060b7d3ef6bf715d0f6324acb3d099f55e1df8e9eba50f1610"
+metafile = true
+
+[[files]]
+file = "mods/gnetum.pw.toml"
+hash = "3be704c4bc3409ca517a97b709a8af7023543ed2eb999cccd6a2e5b4a0ec8fae"
 metafile = true
 
 [[files]]
 file = "mods/immediatelyfast.pw.toml"
-hash = "797ecc44d6ab92e4457a26e1f108988083eb58a3aefe0a9be58b3bd7ea370675"
+hash = "82eaa6ed6921e4e6480ece6485b32358ee01ca1735aab6679e4cdf36f32d0b7e"
+metafile = true
+
+[[files]]
+file = "mods/iris.pw.toml"
+hash = "e2bb4db06004aec3d3548d9875a36f5b70588166fa2cf761bcc47be7ddfe94ab"
+metafile = true
+
+[[files]]
+file = "mods/ixeris.pw.toml"
+hash = "c6f99eaf08a6eb94b375aa13ed53ff41b9e7f8b9be63bebc9d7f5765b27fb6d7"
+metafile = true
+
+[[files]]
+file = "mods/lambdynamiclights.pw.toml"
+hash = "7ff8b82034eb2420fdd642a59c33d11a1b716996651e21035c3b20a08fd40ff7"
 metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "8bb260be5a9c44ac398b7c8bc6cbfc05dfae013bef1d5c1bf984b7b6ac18425e"
+hash = "79e6b4e25bf6dec0b869bfbe6a93603b9759006f16beb8bb0f291286f8f2c752"
+metafile = true
+
+[[files]]
+file = "mods/modernfix-mvus.pw.toml"
+hash = "8446a73a087ddd90f145b5c3a5d1faf3ac61d5f04b8031ce38e57710904e64e0"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+hash = "e9c29abe302a07c972411207900c0f3c0a565f83a124002a4e60dfcdba20ccf9"
 metafile = true
 
 [[files]]
 file = "mods/moreculling.pw.toml"
-hash = "e6ecddabab75599c07c5da4f2130164ed180444aa6eca1d932efa2dba3f3ce93"
+hash = "c7c943cedc4ac38b1a1f6c54bf5836a8f00402d426999cc22a18e0cb627af2ce"
+metafile = true
+
+[[files]]
+file = "mods/reeses-sodium-options.pw.toml"
+hash = "e6d0fd9b31b79b6129faaf3f862e8f7a73a08cd39fd96f81552b34483f4ee0ec"
+metafile = true
+
+[[files]]
+file = "mods/rrls.pw.toml"
+hash = "3f1348a70db48841a324576b3fa19977eca22be93545f761e66e987bfcee8b94"
+metafile = true
+
+[[files]]
+file = "mods/servercore.pw.toml"
+hash = "43ab010ee0139314eceb321b84376ca1494617eb8846b595e3cb42ab4d7671dc"
+metafile = true
+
+[[files]]
+file = "mods/skyboxify.pw.toml"
+hash = "ce5c7ee11da195a477b872c1943d75bb2b310b6525313743ab03643d075b0c6c"
+metafile = true
+
+[[files]]
+file = "mods/sodium-extra.pw.toml"
+hash = "97f85b48e64177663868ecd7b73ebdf75df980dfa6d838ce64aed187d713bda2"
+metafile = true
+
+[[files]]
+file = "mods/sodium-shadowy-path-blocks.pw.toml"
+hash = "b84efeabdae7e9efd95e42110c21a2be871c66a2bb7e13d52522ca1293a2c96b"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "3344183588d34595e6d8efafae79341dbb177837af427c722d4b5cd0bfa83e55"
+hash = "bb4973c272697eed8d5d556420659b04c4f9c146c16b19c6162269e45c78f652"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+hash = "c22db106690593b2ebb147ebc0be780c4dbe664360576bcf5048176ad18886e3"
+metafile = true
+
+[[files]]
+file = "mods/zconfig.pw.toml"
+hash = "325f78648e934f4aa1a2e85e9a9063d341e56c354ddef8047882e10e8243df78"
+metafile = true
+
+[[files]]
+file = "mods/zfastnoise.pw.toml"
+hash = "7f1285f3a77e7c2d3c25293b39559bb3405cce23a40c5b9be8ee431a8fc143f1"
+metafile = true
+
+[[files]]
+file = "mods/zoomify.pw.toml"
+hash = "f1f607a4dd2a733e1822cee832518c21a42c5d18e50f5e4fa1d34722e208b14d"
 metafile = true

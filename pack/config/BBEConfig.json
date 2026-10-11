@@ -2,7 +2,7 @@
   "bbe.config.storage.main": [
     {
       "option": "optimize.master",
-      "value": false
+      "value": true
     },
     {
       "option": "optimize.banner",

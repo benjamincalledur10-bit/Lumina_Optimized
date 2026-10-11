@@ -1,40 +1,15 @@
-# Dependencias alpha.4
+# Dependencias alpha.5
 
-Core contiene **29 principales + 4 dependencias externas** (33 JAR descargables); Shaders **30 + 4** (34). Fabric API **0.161.0+26.3**, Cloth Config **26.3.159+fabric**, Resourceful Config **6.0.1** y ZConfig **1.0.0+26.x** permanecen fijados. Minecraft 26.3 / Java 25 / Loader 0.19.5 satisfacen los requisitos efectivos de todos los JAR revisados.
+35 principales + 7 bibliotecas externas, 42 descargas. La biblioteca solicitada Text Placeholder API 3.2.0+26.3 se acredita por SHA-512 dentro de Mod Menu y ServerCore. ZConfig 1.0.0+26.x es la única incorporación fuera de la lista objetivo, exigida por Fast Noise 1.1.1+26.3.
 
-## Bibliotecas proporcionadas e integradas
+Se compararon publicaciones completas de Modrinth (Fabric y game_versions incluyen 26.3), depends/breaks/conflicts/provides de cada fabric.mod.json y todos los JAR anidados declarados. Las dependencias opcionales/recomendadas no se convierten automáticamente en descargas. Minecraft 26.3, Java 25 y Loader 0.19.5 satisfacen los predicados seleccionados. Sin conflictos declarados entre las entradas finales; esto no descarta conflictos visuales o de ejecución.
 
-- Mod Menu y ServerCore integran **Placeholder API 3.2.0+26.3**, con bytes idénticos a la publicación `lXytLqWj`. Loader selecciona un proveedor; no se añade otra descarga externa.
-- ServerCore integra además **DazzleConf core/ext-snakeyaml 1.3.0-M2** y **SnakeYAML 2.7**. Necesita los módulos Fabric API base, comandos y lifecycle ya proporcionados por Fabric API.
-- Krypton integra **Velocity Native 3.4.0-SNAPSHOT**. No hay una dependencia cruzada obligatoria/incompatible con C2ME en su `fabric.mod.json`.
-- Sodium Extra 0.9.4 integra **Greenlight API 0.1.0+mc26.3**; no requiere instalar Sodium Options API.
-- Loader integra **MixinExtras 0.5.5**; ModernFix contiene 0.5.4, descartado a favor del proveedor del Loader. Fast Surface exige MixinExtras ≥0.5.0 en su configuración de mixins; ya está satisfecho.
-- C2ME integra sus módulos, NightConfig **3.6.5** y otras bibliotecas. ZConfig integra NightConfig **3.8.3**, seleccionado por Loader; Fast Noise y Fast Surface usan el mismo ZConfig externo.
-- Fast Noise integra `zfastnoise-ocl` **1.0.0-beta.1+26.3**; su presencia no demuestra que se use OpenCL.
-- Jasione y Async Logger incluyen clases NightConfig bajo sus propios namespaces `shadow`. Async Logger incluye clases Disruptor. Son bibliotecas dentro del JAR, sin IDs Fabric separados; no se cuentan como principales ni requieren otro archivo. Jasione usa ASM del classpath de lanzamiento Fabric; no se añade un mod ASM.
+Bibliotecas integradas: Placeholder API, MidnightLib 1.9.3 (Cull Leaves), Greenlight API (Sodium Extra), LambDynamicLights API, SpruceUI, Pride, Yumi Commons/Foundation, módulos de Fabric API, bibliotecas Kotlin, NightConfig y módulos C2ME, DazzleConf/SnakeYAML de ServerCore y bibliotecas Iris. Las clases NightConfig sombreadas de LambDynamicLights y otras bibliotecas sin fabric.mod.json no reciben un ID de mod adicional ni otra descarga.
 
-Core: **101 apariciones** de módulos anidados, **84 IDs distintos**, **83 IDs seleccionados**. Shaders: **106 / 87 / 86**, respectivamente. Se excluyen los módulos proporcionados por Loader de este recuento; MixinExtras del Loader se registra aparte. Los duplicados anidados pertenecen a los JAR originales: no se extraen ni reempaquetan. La enumeración real de Fabric cuenta también el entorno: 120 IDs en Core y 124 en Shaders.
+Loader aporta MixinExtras 0.5.5; la copia 0.5.4 de ModernFix queda superada. NightConfig compartido de C2ME/ZConfig se selecciona por ID/versión; no se añaden copias externas. Fast Noise integra zfastnoise-ocl; su presencia no confirma ejecución OpenCL. No se añade Sodium Options API.
 
-## Dependencias y conflictos de los siete JAR recibidos
+Conteos integrados: 142 apariciones, 117 IDs distintos, 116 seleccionados estáticamente excluyendo Loader; el arranque real enumera 162 IDs incluyendo plataforma. Los duplicados originales permanecen dentro de los JAR oficiales. El resolvedor estático usa VersionPredicate del Loader y no sustituye su SAT real; el SAT real aceptó el arranque.
 
-| Mod | Requisitos adicionales efectivos | Incompatibilidades declaradas |
-| --- | --- | --- |
-| ServerCore 1.5.20+26.3 | Loader ≥0.19.5, Minecraft ≥26.3-, tres módulos Fabric API | Cardboard |
-| Krypton 0.3.2 | Loader ≥0.18.4, Minecraft ≥26.2; Velocity integrado | Ninguna en fabric.mod.json |
-| Jasione 1.0.9+26.1.2-fabric | Loader ≥0.16.0, Minecraft ≥26.1 | Redirector |
-| Async Logger 2.2.2+26.1.2-fabric | Loader ≥0.16.0, Minecraft ≥26.1 | Ninguna en fabric.mod.json |
-| Better Biome Blend 1.4.0 (archivo 26.3) | Loader ≥0.19.5, Fabric API, Minecraft ~26.3, Java ≥25 | Ninguna en fabric.mod.json |
-| Fast Surface 1.0.0+26.3 | Loader ≥0.19.5, Minecraft ~26.3, Java ≥25, ZConfig ≥1.0.0+26.x, MixinExtras ≥0.5.0 | Moonrise |
-| FastMapCodec 1.0.4 Fabric | Loader ≥0.19.3, Minecraft ≥1.21, Java ≥21 | Ninguna en fabric.mod.json |
+Zoomify 2.16.3 evita las dependencias de publicación mezcladas de 2.17.0 universal. FastQuit conserva el nombre mc26.2 y LambDynamicLights integra Yumi Foundation con nombre 26.2; sus publicaciones/predicados permiten 26.3. BetterGrassify requiere lectura permisiva de un control literal en description; el parser real Fabric aceptó el JAR sin alterar sus bytes.
 
-Fast Surface **recomienda** `zmatcomp`, pero no lo exige. El inicio real avisa de su ausencia; no se añade una quinta dependencia por esa recomendación. Su regla de mixin de superficie también declara incompatibilidad con Biolith; Biolith no está en el pack.
-
-Ninguno de los incompatibles está incluido. ScalableLux proporciona `starlight` y declara Phosphor incompatible; Fast Noise declara Moonrise y AntiXray incompatibles. Se comprobó el inventario completo, aliases, `depends`, `breaks` y `conflicts`; no apareció un conflicto cruzado declarado Krypton/C2ME. El [aviso de FastMapCodec con Sodium Extra](https://modrinth.com/mod/fastmapcodec) corresponde a NeoForge, no a estos archivos Fabric.
-
-La resolución real previa a SDL aceptó C2ME + ScalableLux + Fast Noise + Fast Surface + ZConfig y Krypton + C2ME. **No valida la generación, iluminación, conexión a servidores ni guardado durante juego.** Gnetum + ImmediatelyFast requieren inspección visual del HUD; se conserva el perfil que quita solo Gnetum.
-
-Las dependencias de publicación se contrastaron para 30 de los 34 archivos únicos. La API no permitió obtener las publicaciones de Jasione, Better Biome Blend, Fast Surface y FastMapCodec: sus dependencias de publicación permanecen pendientes, aunque las obligatorias de sus JAR y bibliotecas sí se revisaron y pasaron el resolvedor Fabric. Sus SHA-512 ya coinciden con los valores aportados por el usuario desde metadatos oficiales recuperados el **2026-10-06**, comprobados el 2026-10-07 contra las versiones/IDs, JAR locales, pins y exports. Esto cierra los hashes pendientes, pero no aporta las dependencias/listas de compatibilidad de publicación faltantes. [Evidencia SHA-512](research/modrinth-sha512-alpha.4.json). [Evidencia de descargas](research/local-jars-alpha.4.json).
-
-BetterGrassify contiene un salto literal en `description`; el inspeccionador registra una lectura permisiva y el parser real de Fabric aceptó el JAR original sin modificar sus bytes.
-
-[Versiones y recuentos](changelog-alpha.4.md), [inventario completo](validation.json), [alcance del inicio real](research/runtime-alpha.4.json). Historiales de alpha.1/2/3 preservados.
+[Versiones/IDs](changelog-alpha.5.md) · [Selección y hashes](research/selection-alpha.5.json) · [Publicaciones completas](research/publications-alpha.5.json) · [Inventario y predicados](validation.json) · [Interacciones pendientes](configuration-alpha.5.md).

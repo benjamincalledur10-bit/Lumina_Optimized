@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0-alpha.5",
+  "branch": "modpackdev",
+  "base_commit": "7b135ef68113a6e352f1660cad353b1f8cfa636b",
+  "state": "release_prepared",
+  "files_and_dependencies": "passed",
+  "static_tests": 7,
+  "runtime": "window_and_resource_reload_completed; stopped_after_45_seconds",
+  "minecraft_gameplay": "pending",
+  "performance_measurements": "none",
+  "artifact": "Lumina-Optimized-0.1.0-alpha.5.mrpack",
+  "artifact_sha256": "5b003ae8ea2e318184a63af9a08a99336f920dc6f2626ea653af9f7673bae6d0",
+  "counts": {
+    "requested_entries": 42,
+    "principal_mods": 35,
+    "external_libraries": 7,
+    "downloadable_jars": 42,
+    "integrated_module_occurrences": 142,
+    "integrated_distinct_ids": 117,
+    "integrated_selected_ids": 116
+  },
+  "previous_releases_preserved": true,
+  "tag": "v0.1.0-alpha.5",
+  "release_url": "https://github.com/benjamincalledur10-bit/Lumina_Optimized/releases/tag/v0.1.0-alpha.5",
+  "prerelease": true
+}

@@ -1,0 +1,13 @@
+name = "Lumina Optimized"
+version = "0.1.0-alpha.4"
+description = "Base de optimización para Minecraft 26.3 con Fabric. Rendimiento pendiente de medición."
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "0fa757711714d479497976fec0d8c27336527c146606d7686d062e221daf18a4"
+
+[versions]
+fabric = "0.19.5"
+minecraft = "26.3"

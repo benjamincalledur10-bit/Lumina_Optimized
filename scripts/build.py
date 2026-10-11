@@ -1,4 +1,4 @@
-"""Exporta la matriz de ensayo desde una sola base con packwiz."""
+"""Exporta la composición principal con packwiz; rechaza exports incompletos."""
 import argparse
 import hashlib
 import json
@@ -8,7 +8,7 @@ import shutil
 import subprocess
 import tomllib
 import zipfile
-from profiles import ROOT, configs, descriptors, pack_version, profiles
+from profiles import ROOT, configs, descriptors, pack_version, profiles, artifact_name
 
 def main():
     parser = argparse.ArgumentParser()
@@ -51,7 +51,7 @@ def main():
             source = re.sub(rf'^{key} = .*?$', lambda _: key + ' = ' + json.dumps(profile[key], ensure_ascii=False), source, count=1, flags=re.MULTILINE)
         manifest.write_text(source)
         subprocess.run([*command, 'refresh'], cwd=stage, check=True)
-        target = out / f'Lumina-Optimized-{pack_version()}-{name}.mrpack'
+        target = out / artifact_name(name)
         subprocess.run([*command, 'modrinth', 'export', '--output', str(target)], cwd=stage, check=True)
         if not target.is_file():
             raise RuntimeError(f'packwiz no generó {target}')
@@ -63,10 +63,6 @@ def main():
         targets.append(target)
     checksum = out / f'SHA256SUMS-{pack_version()}'
     checksum.write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}\n' for p in sorted(targets)))
-    if not args.profile:
-        with zipfile.ZipFile(out / f'Lumina-Optimized-{pack_version()}-test-packages.zip', 'w', zipfile.ZIP_DEFLATED) as bundle:
-            for path in [*targets, checksum]:
-                bundle.write(path, path.name)
 
 if __name__ == '__main__':
     main()
