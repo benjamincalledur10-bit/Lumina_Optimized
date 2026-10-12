@@ -1,0 +1,4060 @@
+{
+  "edition": "1.21.11-alpha.1-gnetum-off",
+  "evidence_date": "2026-10-12",
+  "checks": {
+    "official_publications_and_hashes": "PASS",
+    "recursive_jar_integrity": "PASS",
+    "fabric_and_modrinth_dependencies": "PASS",
+    "declared_conflicts": "PASS",
+    "configuration_keys_and_invariants": "PASS",
+    "packwiz_index": "PASS",
+    "mrpack_completeness_and_overrides": "PASS"
+  },
+  "counts": {
+    "principal": 37,
+    "library": 7,
+    "resource_support": 1,
+    "resourcepacks": 4,
+    "shaderpacks": 2,
+    "external_mod_jars": 45,
+    "resolved_nested_ids": 119,
+    "nested_candidate_instances": 151,
+    "resolved_mod_ids_excluding_platform": 164
+  },
+  "export": {
+    "path": "dist/Lumina-Optimized-1.21.11-alpha.1-gnetum-off.mrpack",
+    "size": 12663,
+    "sha256": "f9f37dba0f6e8ebeb219159bb70b95630f5219bc115fd062b56062e37d97182f",
+    "downloads": 51,
+    "overrides": 13
+  },
+  "preservation_26_3": "PASS: existing 26.3 definition and both distributed artifacts unchanged",
+  "available": {
+    "minecraft": "1.21.11",
+    "java": "21",
+    "fabricloader": "0.19.5",
+    "mixinextras": "0.5.5",
+    "com_github_llamalad7_mixinextras": "0.5.5",
+    "badoptimizations": "2.4.1",
+    "betterblockentities": "1.3.4+mc1.21.11",
+    "bettermounthud": "1.2.6",
+    "bettergrass": "1.8.7+fabric.1.21.11",
+    "c2me": "0.3.6.0.0+1.21.11",
+    "com_ibm_async_asyncutil": "0.1.0",
+    "c2me-base": "0.3.6.0.0+1.21.11",
+    "c2me-client-uncapvd": "0.3.6.0.0+1.21.11",
+    "c2me-fixes-chunkio-threading-issues": "0.3.6.0.0+1.21.11",
+    "c2me-fixes-general-threading-issues": "0.3.6.0.0+1.21.11",
+    "c2me-fixes-worldgen-threading-issues": "0.3.6.0.0+1.21.11",
+    "c2me-fixes-worldgen-vanilla-bugs": "0.3.6.0.0+1.21.11",
+    "c2me-notickvd": "0.3.6.0.0+1.21.11",
+    "c2me-opts-allocs": "0.3.6.0.0+1.21.11",
+    "c2me-opts-chunkio": "0.3.6.0.0+1.21.11",
+    "c2me-opts-dfc": "0.3.6.0.0+1.21.11",
+    "c2me-opts-math": "0.3.6.0.0+1.21.11",
+    "c2me-opts-scheduling": "0.3.6.0.0+1.21.11",
+    "c2me-opts-worldgen-general": "0.3.6.0.0+1.21.11",
+    "c2me-opts-worldgen-vanilla": "0.3.6.0.0+1.21.11",
+    "c2me-rewrites-chunk-serializer": "0.3.6.0.0+1.21.11",
+    "c2me-rewrites-chunk-system": "0.3.6.0.0+1.21.11",
+    "c2me-rewrites-chunkio": "0.3.6.0.0+1.21.11",
+    "c2me-server-utils": "0.3.6.0.0+1.21.11",
+    "c2me-threading-lighting": "0.3.6.0.0+1.21.11",
+    "com_electronwill_night-config_core": "3.8.3",
+    "net_objecthunter_exp4j": "0.4.8",
+    "org_jctools_jctools-core": "4.0.5",
+    "mixinsquared": "0.2.0",
+    "org_reactivestreams_reactive-streams": "1.0.4",
+    "io_reactivex_rxjava3_rxjava": "3.1.12",
+    "com_electronwill_night-config_toml": "3.8.3",
+    "chunky": "1.4.55",
+    "cloth-config": "21.11.153",
+    "cloth-config2": "21.11.153",
+    "cloth-basic-math": "0.6.1",
+    "clumps": "29.0.0.1",
+    "crash_assistant": "1.11.12",
+    "cullleaves": "4.1.1.1",
+    "midnightlib": "1.9.2",
+    "debugify": "1.21.11+1.2",
+    "e4mc": "6.2.3",
+    "e4mc_minecraft": "6.2.3",
+    "folk_sisby_kaleido-config": "0.3.3+1.3.2",
+    "entity_model_features": "3.3.11",
+    "entityculling": "1.11.3",
+    "transition": "1.0.26",
+    "trender": "1.0.17",
+    "entity_texture_features": "7.2.5",
+    "fabric-api": "0.141.6+1.21.11",
+    "fabric": "0.141.6+1.21.11",
+    "fabric-api-base": "1.0.5+4ebb5c083e",
+    "fabric-api-lookup-api-v1": "1.6.114+20dc27073e",
+    "fabric-biome-api-v1": "17.1.1+4fc5413f3e",
+    "fabric-block-api-v1": "1.1.10+4ebb5c083e",
+    "fabric-block-view-api-v2": "1.0.39+4ebb5c083e",
+    "fabric-command-api-v2": "2.4.7+6b42a6003e",
+    "fabric-content-registries-v0": "10.2.14+4fc5413f3e",
+    "fabric-convention-tags-v1": "2.1.55+7f945d5b3e",
+    "fabric-convention-tags-v2": "2.17.3+8ef948ba3e",
+    "fabric-crash-report-info-v1": "0.3.23+4ebb5c083e",
+    "fabric-data-attachment-api-v1": "1.8.48+eed0806f3e",
+    "fabric-data-generation-api-v1": "23.5.0+88d7da613e",
+    "fabric-dimensions-v1": "4.0.28+4fc5413f3e",
+    "fabric-entity-events-v1": "3.1.1+1d0ab4303e",
+    "fabric-events-interaction-v0": "4.1.1+3b89ecf63e",
+    "fabric-game-rule-api-v1": "2.0.3+4fc5413f3e",
+    "fabric-item-api-v1": "11.6.0+67f17bb43e",
+    "fabric-item-group-api-v1": "4.2.36+4fc5413f3e",
+    "fabric-key-binding-api-v1": "1.1.7+4fc5413f3e",
+    "fabric-lifecycle-events-v1": "2.6.15+4ebb5c083e",
+    "fabric-loot-api-v2": "3.0.73+3f89f5a53e",
+    "fabric-loot-api-v3": "2.0.20+78c8b4663e",
+    "fabric-message-api-v1": "6.1.12+4ebb5c083e",
+    "fabric-model-loading-api-v1": "6.0.15+4fc5413f3e",
+    "fabric-networking-api-v1": "5.1.6+6b6d71a53e",
+    "fabric-object-builder-api-v1": "21.1.40+4fc5413f3e",
+    "fabric-particles-v1": "4.2.12+4fc5413f3e",
+    "fabric-recipe-api-v1": "8.2.4+4ebb5c083e",
+    "fabric-registry-sync-v0": "6.2.6+1718722b3e",
+    "fabric-renderer-api-v1": "8.0.3+f4ffd2e53e",
+    "fabric-renderer-indigo": "5.0.3+f4ffd2e53e",
+    "fabric-rendering-fluids-v1": "3.1.43+4ebb5c083e",
+    "fabric-rendering-v1": "16.2.10+0290ad933e",
+    "fabric-resource-conditions-api-v1": "5.0.35+4fc5413f3e",
+    "fabric-resource-loader-v0": "3.3.4+4fc5413f3e",
+    "fabric-resource-loader-v1": "1.0.10+78c8b4663e",
+    "fabric-screen-api-v1": "3.1.7+4ebb5c083e",
+    "fabric-screen-handler-api-v1": "1.3.162+4fc5413f3e",
+    "fabric-serialization-api-v1": "1.0.5+4ebb5c083e",
+    "fabric-sound-api-v1": "1.0.51+4fc5413f3e",
+    "fabric-tag-api-v1": "1.3.0+88d7da613e",
+    "fabric-client-tags-api-v1": "1.3.0+88d7da613e",
+    "fabric-transfer-api-v1": "6.0.25+4fc5413f3e",
+    "fabric-transitive-access-wideners-v1": "7.1.0+014c8cec3e",
+    "fabric-language-kotlin": "1.14.2+kotlin.2.4.21",
+    "org_jetbrains_kotlinx_atomicfu-jvm": "0.33.0",
+    "org_jetbrains_kotlin_kotlin-reflect": "2.4.21",
+    "org_jetbrains_kotlin_kotlin-stdlib": "2.4.21",
+    "org_jetbrains_kotlin_kotlin-stdlib-jdk7": "2.4.21",
+    "org_jetbrains_kotlin_kotlin-stdlib-jdk8": "2.4.21",
+    "org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm": "1.11.0",
+    "org_jetbrains_kotlinx_kotlinx-coroutines-jdk8": "1.11.0",
+    "org_jetbrains_kotlinx_kotlinx-datetime-jvm": "0.8.0",
+    "org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm": "0.9.1",
+    "org_jetbrains_kotlinx_kotlinx-io-core-jvm": "0.9.1",
+    "org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm": "1.11.0",
+    "org_jetbrains_kotlinx_kotlinx-serialization-core-jvm": "1.11.0",
+    "org_jetbrains_kotlinx_kotlinx-serialization-json-jvm": "1.11.0",
+    "fastipping": "1.0.12",
+    "fastquit": "3.1.3+mc1.21.11",
+    "ferritecore": "8.2.0",
+    "forgeconfigapiport": "21.11.1",
+    "geckolib": "5.4.5",
+    "gnetum": "4.6.3+1.21.11-fabric",
+    "immediatelyfast": "1.14.3+1.21.11",
+    "net_lenni0451_reflect": "1.6.2",
+    "iris": "1.10.8+mc1.21.11",
+    "org_antlr_antlr4-runtime": "4.13.1",
+    "io_github_douira_glsl-transformer": "3.0.0-pre3",
+    "org_anarres_jcpp": "1.4.14",
+    "ixeris": "4.6.8+1.21.11-fabric",
+    "lambdynlights": "4.9.1+1.21.11",
+    "lambdynlights_runtime": "4.9.1+1.21.11",
+    "lambdynlights_api": "4.9.1+1.21.11",
+    "yumi_commons_collections": "1.0.0",
+    "yumi-commons-collections": "1.0.0",
+    "yumi_commons_core": "1.0.0",
+    "yumi-commons-core": "1.0.0",
+    "yumi_commons_event": "1.0.0",
+    "yumi-commons-event": "1.0.0",
+    "pride": "1.5.1+1.21.11",
+    "spruceui": "9.1.0+1.21.11",
+    "yumi_mc_core": "1.0.0-beta.1+1.21.11",
+    "lithium": "0.21.4+mc1.21.11",
+    "modernfix": "5.26.3-build.2",
+    "modmenu": "17.0.1",
+    "placeholder-api": "2.8.2+1.21.10",
+    "moreculling": "1.6.2",
+    "conditional-mixin": "0.6.3",
+    "conditional_mixin": "0.6.3",
+    "polytone": "1.21.11-6.6.0",
+    "codecui": "1.21.11-1.4.3",
+    "hollowpoint_nexp": "1.2.0",
+    "reeses-sodium-options": "2.2.4+mc1.21.11",
+    "rrls": "5.1.15+mc.1.21.11",
+    "servercore": "1.5.15+1.21.11",
+    "space_arim_dazzleconf_dazzleconf-core": "1.3.0-M2",
+    "space_arim_dazzleconf_dazzleconf-ext-snakeyaml": "1.3.0-M2",
+    "fabric-permissions-api-v0": "0.6.0",
+    "org_yaml_snakeyaml": "2.5",
+    "skyboxify": "3.4",
+    "com_moulberry_mixinconstraints": "1.1.0",
+    "sodium-extra": "0.9.4+mc1.21.11",
+    "sspb": "6.0.0",
+    "sodium": "0.8.14+mc1.21.11",
+    "indium": "0.8.14+mc1.21.11",
+    "yet_another_config_lib_v3": "3.8.2+1.21.11-fabric",
+    "com_twelvemonkeys_common_common-image": "3.12.0",
+    "com_twelvemonkeys_common_common-io": "3.12.0",
+    "com_twelvemonkeys_common_common-lang": "3.12.0",
+    "org_quiltmc_parsers_gson": "0.2.1",
+    "com_twelvemonkeys_imageio_imageio-core": "3.12.0",
+    "com_twelvemonkeys_imageio_imageio-metadata": "3.12.0",
+    "com_twelvemonkeys_imageio_imageio-webp": "3.12.0",
+    "org_quiltmc_parsers_json": "0.2.1",
+    "zconfig": "1.0.0+1.21.x",
+    "zfastnoise": "1.0.40+1.21.11",
+    "zoomify": "2.15.2+1.21.11",
+    "com_akuleshov7_ktoml-core-jvm": "0.7.1",
+    "languagereload": "1.7.7+1.21.11",
+    "scalablelux": "0.1.6+fabric.c25518a",
+    "starlight": "0.1.6+fabric.c25518a"
+  },
+  "resolved_inventory": [
+    {
+      "origin": "fabric-loader!META-INF/jars/mixinextras-fabric-0.5.5.jar",
+      "id": "mixinextras",
+      "version": "0.5.5",
+      "jar_sha512": "854e8fdc79699835253cb1d98ff10c6ef88586f11a1a279a198e8c6784ff7477dceb6d8d8562fafb458b2c43648f6dc4853e42a3d606ba495d1c3eafa02d953a",
+      "depends": {
+        "fabricloader": ">=0.14.25"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "com_github_llamalad7_mixinextras"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "BadOptimizations-2.4.1-1.21.11.jar",
+      "id": "badoptimizations",
+      "version": "2.4.1",
+      "jar_sha512": "ff91f1866f21a13a32d379080b8efb5d4e07577591228c1d307b34d052696c9bdcbaf7706208dfbac56abc2c29482a15edcbf11f69fc0a01e459c4c20a5c2c28",
+      "depends": {
+        "minecraft": ">=1.21.10",
+        "fabricloader": ">=0.15.0"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "bbe-fabric-1.3.4+mc1.21.11.jar",
+      "id": "betterblockentities",
+      "version": "1.3.4+mc1.21.11",
+      "jar_sha512": "1c8a513af8d9694cf9c41765cb8359aa3680ba9a1b8806d99c472ae325597db2c493a0389e602e3cf07b33c938b35012192504d5775c9cd3f308ab8c16376280",
+      "depends": {
+        "fabricloader": ">=0.16.7",
+        "minecraft": ">=1.21.11",
+        "sodium": ">=0.8.7"
+      },
+      "breaks": {
+        "optifabric": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "bettermounthud-1.2.6.jar",
+      "id": "bettermounthud",
+      "version": "1.2.6",
+      "jar_sha512": "559163398693ad32de171781a461251178216afa31d226bcf037ddfd26ff2e6389cc6bd3c34539cd29928cc1bd27256b802f1f6cbda13ea270d12ff20db32371",
+      "depends": {
+        "java": ">=21",
+        "fabricloader": ">=0.11.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "BetterGrassify-1.8.7+fabric.1.21.11.jar",
+      "id": "bettergrass",
+      "version": "1.8.7+fabric.1.21.11",
+      "jar_sha512": "0ad59c792499457fce7b4c992af4b9595e1a142a2b5278b4497737c3b5ac0a93a48a2b081f729320f10d96a27f2c7a998c7991fa1e5f2d99d697973f4d625816",
+      "depends": {
+        "minecraft": "1.21.11",
+        "fabricloader": "*",
+        "fabric-api": "*"
+      },
+      "breaks": {},
+      "recommends": {
+        "cloth-config": "*"
+      },
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": "Control literal en string; requiere parser permisivo de Fabric. JAR conservado sin cambios."
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "c9b11100572fb71c3080ff11b011467624e8013b9942aade09a5c77eb62b3289667bad70501ddea8f35deb0a5d26884b79f76d4ed112d32342471ca7384b788a",
+      "depends": {
+        "fabricloader": ">=0.16.14",
+        "java": ">=21",
+        "minecraft": ">=1.21.6-rc.1",
+        "c2me-base": "*"
+      },
+      "breaks": {
+        "tic_tacs": "*",
+        "optifabric": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {
+        "dynview": "*",
+        "betterchunkloading": "*"
+      },
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/asyncutil-0.1.0.jar",
+      "id": "com_ibm_async_asyncutil",
+      "version": "0.1.0",
+      "jar_sha512": "894f2ba324cce173360741da500fc669581eb24a8ba0c8d01d6a568f6ba8b860acdd43b6ccfca15541f21dd9c9bfe97d3b3488928e8f1f08825982e17b83b2e1",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-base-mc1.21.11-0.3.6.0.0-all.jar",
+      "id": "c2me-base",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "b18c176d20e82f75f23d43b74856f5ff9ba7d7c0d4a0934e6ad946089328f649256a8c82e60a3dd6efc870de27fc20a5cd8c7933de3bc0a0aa66888790bf8ab7",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-client-uncapvd-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-client-uncapvd",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "d967538b4c5db5787a4231da363e6e81dbe57c497b224c439685dad84890f1287485d96abedb1055ee5a25230cb37cd1f79d581f6104d3aba9a8766dd8facfaa",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-fixes-chunkio-threading-issues-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-fixes-chunkio-threading-issues",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "56eb9275e47af18ad9169bedbba2fa7212edbb5d9c6b1119d046c2b9938ab1f655a85990b4a15599e7a4113c1f0655a9deee3f9d08d1d80c5148b92fa7b1a83c",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-fixes-general-threading-issues-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-fixes-general-threading-issues",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "0031dcec8eb8b1203684f729665878776f7ba0448015abaa290f7b7c94f8eba983ad2ad513ad84b18fc7ea3999517a59f981a54298630e4c77a5367f4a1421d1",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-fixes-worldgen-threading-issues-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-fixes-worldgen-threading-issues",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "0054f11644f879d316d50559375f58a93e658b1784d0251b3737a891a883a310c12385d3b2c2228dce65496d4a4022ff993f7206c9deec30ea71515a06ec306f",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*",
+        "c2me-fixes-general-threading-issues": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-fixes-worldgen-vanilla-bugs-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-fixes-worldgen-vanilla-bugs",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "b6cb7ed14049e1578cfe8e1f43c8f15c42274b5c8f17bdbfee99e70aba663a7e3fe0b0d0e7de118d7f3f3d7fb7f14636713db5bb7c17aadfab225f88701b04ed",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-notickvd-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-notickvd",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "5e26628befb6fff71afa0ac66d318b87be40c36455068da583adf950f1a1267eb42dba825bcde8eb47d3dba8559570e9c4180e2f7711d0956b26a38adad2ef22",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*",
+        "c2me-rewrites-chunk-system": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-allocs-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-allocs",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "186fb9c8cd4ce42017574b4c01e745a0875e5f2b868b2410c04d7838b236083040bed2875732ad5a6e9a0e0e9ee8b56e204663ab1c3b36b1bad8affe230a490a",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-chunkio-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-chunkio",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "53c55b18cbb05d2d6c8ce1f080947b6eaf2943a65e1f58f1644e0d765b236a51771dbb4e01812c9ff3a78968ae8a51d69fd8b12eabe86ced2c14506e01456ad8",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-dfc-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-dfc",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "312d226bc8533bf2a36993897730b9b47b6bbd1a4de9279f16619b5b0d3f0c32cf9d7d4c066e23db0bc4e005fa8dbbb8a774055c2b390c0a87f850cf1752e122",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-math-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-math",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "222100e1e2c2d4d78da6ff6e56f4109e741ad86ed72a578a039c684a0a3309829c8a5f622bfc04e3916b46329cc18ed73241331d17419d40e0b3faef32244006",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-scheduling-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-scheduling",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "c4b29b22666ee1623dc05601350b56f9d9b5c28b9dd2b18502daf2193097138297b12355e8a0492e1035f530273ef1c3b299df1cd1f270bb4be3a5e08cf894ab",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-worldgen-general-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-worldgen-general",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "8092b8e5b68d002dd18eb6877bb53433c6a0320ac9e08558cb71a42fc3e5f2dc56c46fe8a332356da5d0c7f9d3dbf52466e838819bbdbefa9bdd3a569a4589d1",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-worldgen-vanilla-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-opts-worldgen-vanilla",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "322cfeb286a03df60ec343299c354f9925639e5d9afc5f8de0a6b6979cf2d8b02b0a7347c763a81478dd24b9c2cda1a8e0028b2611f251215702e5ac847545f8",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*",
+        "c2me-opts-worldgen-general": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-rewrites-chunk-serializer-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-rewrites-chunk-serializer",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "1d4feaf867be8c845f729df5f926cbe22ad956c1f4a4a51540699a6ed422544d394ce4220f5610c343ddefa89017ec15f27aabac462ce6e1c85e87ce5fb639b5",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-rewrites-chunk-system-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-rewrites-chunk-system",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "09942520e6b48afc1cd35c78ba22a1b1f366eaaffbe5bad8b58567a4d17d967cd407bf704705cd318469a706ef3db225d03c5915a4563557fe8059b97e83a5f6",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-rewrites-chunkio-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-rewrites-chunkio",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "790793f7dd03a300f21d34ad4852dac0b218d537f69f9f6030b7015b9819f8665be36e0257048674a2184c6b6ec5058844c3d612f60fbe4d97c59c394ccf9cf1",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-server-utils-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-server-utils",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "0fe0fcc46d5d578cb8a923927266024dd182e766679f006365f5f9d60752151ee4f3d69f8f4a8777edc2f430aeb1e0a7d09cc56f0526e5526709fecad455ea5c",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-threading-lighting-mc1.21.11-0.3.6.0.0.jar",
+      "id": "c2me-threading-lighting",
+      "version": "0.3.6.0.0+1.21.11",
+      "jar_sha512": "18591d1e8ec9ab1540809739f21c6163a2d628ce4ac1a7ae411ce05ed5402b89475dadfc605fd69131e26c75f15227bef401f97c62231856bab0e0e49f7b7c16",
+      "depends": {
+        "minecraft": "*",
+        "fabricloader": "*",
+        "c2me-base": "*",
+        "c2me-fixes-general-threading-issues": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar!META-INF/jars/core-3.8.3.jar",
+      "id": "com_electronwill_night-config_core",
+      "version": "3.8.3",
+      "jar_sha512": "8245161228406660ba5608d9f0298e252020b4b4925df23ea3a6243f03f3ba37b610ca40ccccc21db2f190552ac2dae653a8eefd1a80c616fc5ed21e26052cd0",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/exp4j-0.4.8.jar",
+      "id": "net_objecthunter_exp4j",
+      "version": "0.4.8",
+      "jar_sha512": "d8f34436ec0f85fc894c9ebb68aa17be805ddb725585c67beb6de150b65e95db5c1c1e21231a51674e980521cc11a147de02a0c77897c4d9b90565f728ea6d15",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/jctools-core-4.0.5.jar",
+      "id": "org_jctools_jctools-core",
+      "version": "4.0.5",
+      "jar_sha512": "8042644ad7bf920ba888d0162df4078cf72fc14f3f0ebad8c77362a77b0249edb0b83ca926af7017905c486bafa971dbfc3ac06495a7c2ac3512e656b1f9b92d",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "moreculling-fabric-1.21.11-1.6.2.jar!META-INF/jars/mixinsquared-fabric-0.2.0.jar",
+      "id": "mixinsquared",
+      "version": "0.2.0",
+      "jar_sha512": "f2d15e2f7c90110bce7bf87d185b79aa1a3a71a326c9ec93eccec07b4b1568dd6a45a9602f34bab43d933345c2b42f32fc675dfe93a953bd7a7c92f8ae50710d",
+      "depends": {
+        "fabricloader": ">=0.14.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/reactive-streams-1.0.4.jar",
+      "id": "org_reactivestreams_reactive-streams",
+      "version": "1.0.4",
+      "jar_sha512": "0ce3136eeca18b0ab5a4a2ef64e9d609f8b894f382a6caa38f39eb19aab2c0a3205129a150ac959f23895dbdc0c1416ef379b102f9ff177ef106b0d3c058f29d",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/rxjava-3.1.12.jar",
+      "id": "io_reactivex_rxjava3_rxjava",
+      "version": "3.1.12",
+      "jar_sha512": "1d3bbdd26e5b62f16ab2a2c2beefa70e295efd0932e030650b2924cb767e0c064c6cbb9df6e167fcd85653aeb4205b971e08807585544608ee9765502fa3f534",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar!META-INF/jars/toml-3.8.3.jar",
+      "id": "com_electronwill_night-config_toml",
+      "version": "3.8.3",
+      "jar_sha512": "082249c439ae6981ccca7640affd118c1eb7a50ddb6ff8791c731af46322284ce68b9b2f8628f338bea77ad71b0f78aa1795a4f637f03f139ddf1668b92261c0",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "Chunky-Fabric-1.4.55.jar",
+      "id": "chunky",
+      "version": "1.4.55",
+      "jar_sha512": "3be0e049e3dea6256b395ccb1f7dccc9c6b23cb7b1f6a717a7cd1ca55f9dbda489679df32868c72664ebb28ca05f2c366590d1e1a11f0dc5f69f947903bad833",
+      "depends": {
+        "fabricloader": ">=0.18.1",
+        "fabric": "*",
+        "minecraft": ">=1.21.11",
+        "java": ">=21"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "cloth-config-21.11.153-fabric.jar",
+      "id": "cloth-config",
+      "version": "21.11.153",
+      "jar_sha512": "8f455489d4b71069e998568cf4e1450116f4360a4eb481cd89117f629c6883164886cf63ca08ac4fc929dd13d1112152755a6216d4a1498ee6406ef102093e51",
+      "depends": {
+        "fabricloader": ">=0.14.0",
+        "minecraft": ">=1.21.9-"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "cloth-config2"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "cloth-config-21.11.153-fabric.jar!META-INF/jars/basic-math-0.6.1.jar",
+      "id": "cloth-basic-math",
+      "version": "0.6.1",
+      "jar_sha512": "4a06ad636a80bbe1315e3b756dbc49fa6a911de9a945d5faabc89f925a310300ebdc14c325faee825e7a25cc1e2da2653350d1188859619c7d0912ed6abf1e45",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "Clumps-fabric-1.21.11-29.0.0.1.jar",
+      "id": "clumps",
+      "version": "29.0.0.1",
+      "jar_sha512": "3cff3cd2d600a6d84030b38ce6244143d13774d5287627bb7312adae5edc7ae2d9151a2c9c39a00681c354d549b0a62ac48c0077ba586cc10c00d32f39e87f18",
+      "depends": {
+        "fabricloader": ">=0.18.2",
+        "java": ">=21",
+        "minecraft": "1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "CrashAssistant-fabric-1.21.5-1.21.11-1.11.12.jar",
+      "id": "crash_assistant",
+      "version": "1.11.12",
+      "jar_sha512": "07bfbf684ef9bb01272b34e394f62d29d881d190e394f8da67f76d05331f1303c3df76de00b891a9ae73e8cf119020413e8c0a5be7651f5007de246976fc4dde",
+      "depends": {
+        "fabricloader": ">=0.16.10",
+        "minecraft": ">=1.21.5 <1.22",
+        "java": ">=21"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "cullleaves-fabric-4.1.1.1+1.21.11.jar",
+      "id": "cullleaves",
+      "version": "4.1.1.1",
+      "jar_sha512": "5d9116d59be0d002bf83db26a66abc5d153f74db85806543996217f961c6238e44555bf360ff10f517a3c9e4a276d63e01cf1100fcc7bda52d1c87422fc8c86e",
+      "depends": {
+        "midnightlib": "*",
+        "minecraft": ">=1.21.11"
+      },
+      "breaks": {
+        "sodium": "<0.6.0"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "cullleaves-fabric-4.1.1.1+1.21.11.jar!META-INF/jars/midnightlib-1.9.2+1.21.11-fabric.jar",
+      "id": "midnightlib",
+      "version": "1.9.2",
+      "jar_sha512": "2a9a14bc6e41ec84f4eb017f3b41ba0b2bf9a4c98ba1b677775c051dcc755c1694cf55a0758f49e91c6792de84198142ba678d57ae0f7def54bdaad4a7e7a182",
+      "depends": {
+        "fabric-resource-loader-v0": "*",
+        "minecraft": ">=1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "debugify-1.21.11+1.2.jar",
+      "id": "debugify",
+      "version": "1.21.11+1.2",
+      "jar_sha512": "763d64b7ae392e19384fbc5d70cfd48f6444d49ef38a43174c98406e741b305eff0bbe35652364b68a4ae489dfb376f919e9c963117633261bcd18a7f214ff74",
+      "depends": {
+        "fabricloader": ">=0.18.0",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-resource-loader-v0": "*"
+      },
+      "breaks": {},
+      "recommends": {
+        "yet_another_config_lib_v3": "*",
+        "modmenu": "*"
+      },
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "e4mc-fabric-6.2.3.jar",
+      "id": "e4mc",
+      "version": "6.2.3",
+      "jar_sha512": "de52773df77c5653500b139781173386e4e779bcfae79a91c93e4c3cd31ba412c3b1110360701efa6433733a6f6cf7738c11cbdafc88fccad786ef7412eabf1a",
+      "depends": {
+        "fabric": "*",
+        "minecraft": ">=1.18"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "e4mc_minecraft"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "e4mc-fabric-6.2.3.jar!META-INF/jars/kaleido-config-0.3.3+1.3.2.jar",
+      "id": "folk_sisby_kaleido-config",
+      "version": "0.3.3+1.3.2",
+      "jar_sha512": "1503cd961fa94bfb8739811a2e233cb59f10505580a2e723b4a1371f2c6254a23071671c0aa918083b8590ce1c1a0f6efe221c20b9f79c4ea39ce56fe52a9b21",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "entity_model_features-3.3.11-1.21.11-fabric.jar",
+      "id": "entity_model_features",
+      "version": "3.3.11",
+      "jar_sha512": "5157ea489d7c58ccda702f77f371c6b9947891d0f3ae50cea26cfbaa086e308e7c59ad54a692c5d389ffe85b09663e65850f54b5b99566fb3d8e706256ec5522",
+      "depends": {
+        "fabricloader": "*",
+        "minecraft": "*",
+        "entity_texture_features": ">=7.2"
+      },
+      "breaks": {
+        "optifabric": "*",
+        "cem": "*",
+        "entity_texture_features": "<7.2",
+        "entity_sound_features": "<0.8.2"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "entityculling-fabric-1.11.3-mc1.21.11.jar",
+      "id": "entityculling",
+      "version": "1.11.3",
+      "jar_sha512": "4b5516bf8718d74db0e0368ad2fd2f5ce3e986c3abbf65426418ce3ec162651d29579b9be8aa0d34b88f47e310f6b7bab56bde7ff1223c35998bff0bcbed58c5",
+      "depends": {
+        "minecraft": "1.21.x",
+        "fabric-api": "*"
+      },
+      "breaks": {
+        "tlskincape": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "entityculling-fabric-1.11.3-mc1.21.11.jar!META-INF/jars/TRansition-1.0.26-1.21.11-fabric-SNAPSHOT.jar",
+      "id": "transition",
+      "version": "1.0.26",
+      "jar_sha512": "f00c099bd116ff74a59d854391842266307ebf7999ed05ffa69b9eb33c1446138192bb5faed4474da97835468d030ec81fbac8b18617a72128604f3aa7628eb3",
+      "depends": {
+        "minecraft": "1.21.x",
+        "fabric-api": "*"
+      },
+      "breaks": {
+        "tlskincape": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "entityculling-fabric-1.11.3-mc1.21.11.jar!META-INF/jars/TRender-1.0.17-1.21.11-fabric-SNAPSHOT.jar",
+      "id": "trender",
+      "version": "1.0.17",
+      "jar_sha512": "a930ecd3d32530604d10316fd95b90430754dd09c3ce69ef984b82ddf7705e4ecc779988adf84fb2ab5df35fd044217610ab0bca5e4681fc407ccfd912493a38",
+      "depends": {
+        "minecraft": "1.21.x",
+        "fabric-api": "*"
+      },
+      "breaks": {
+        "tlskincape": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "entity_texture_features-7.2.5-1.21.11-fabric.jar",
+      "id": "entity_texture_features",
+      "version": "7.2.5",
+      "jar_sha512": "547d55db0577776d3eaf27c6b4673c92ed5bca9cd03f970219a376c84748004f067d78dc4e2a6ed6b946403dab24d87af9f09fa610ed1e37046400cb33a4794e",
+      "depends": {
+        "fabricloader": "*",
+        "minecraft": "*"
+      },
+      "breaks": {
+        "optifabric": "*",
+        "entity_model_features": "<3.3",
+        "entity_sound_features": "<0.8.2"
+      },
+      "recommends": {},
+      "suggests": {
+        "modmenu": "*"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar",
+      "id": "fabric-api",
+      "version": "0.141.6+1.21.11",
+      "jar_sha512": "852d3682c4f353fd0ca86546af8578513e8bcf628377fa9d49c556bc59c5024c69ab56c92fc6dfba11fed19e4316a3f5636e7e07fd3d96f7043b531aef59b637",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "java": ">=21",
+        "minecraft": ">=1.21.11- <1.21.12-"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "fabric"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar",
+      "id": "fabric-api-base",
+      "version": "1.0.5+4ebb5c083e",
+      "jar_sha512": "0dc160c168a8c88bc938b1d228a20843a32188245cf04449bb51cb9c7087720dd0c5ddbd1d78e4f2fa5f65f571157cd9197bbec97502f3005a19c6773334ab04",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-api-lookup-api-v1-1.6.114+20dc27073e.jar",
+      "id": "fabric-api-lookup-api-v1",
+      "version": "1.6.114+20dc27073e",
+      "jar_sha512": "aedeb1103acdce508d3d548814a717b941b196ae251caaa95bdc0098d60bd37684e30bc07484d71e52d617c8b778e602af620319b4ee13af195ebd279a72a933",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-lifecycle-events-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-biome-api-v1-17.1.1+4fc5413f3e.jar",
+      "id": "fabric-biome-api-v1",
+      "version": "17.1.1+4fc5413f3e",
+      "jar_sha512": "3b06fae0c65756c47aa7f555b37138b22b03f188f9f7ee3708245e90aeb02437ed0e5b1fe07e68751ae28b93f57a1f4d0607a5ca158983820219ad05ce5fb5df",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.16.2"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-block-api-v1-1.1.10+4ebb5c083e.jar",
+      "id": "fabric-block-api-v1",
+      "version": "1.1.10+4ebb5c083e",
+      "jar_sha512": "affa607ea7f1aa48461b62e592eeb8c51965cd845c42532aa1140b5656bf52603924ebd9b03c8a30d5e96dfc453b37d17eef8f63e3881f9d743433f2ef371349",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-block-view-api-v2-1.0.39+4ebb5c083e.jar",
+      "id": "fabric-block-view-api-v2",
+      "version": "1.0.39+4ebb5c083e",
+      "jar_sha512": "8e1c18f0495c366228a03cdabf1c60e1c5e949c05fc72721237990877c3e3cec6762187eed3f1e4f392e8d6ad4b871c3394c691ed5208be41da760318a8645e9",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-command-api-v2-2.4.7+6b42a6003e.jar",
+      "id": "fabric-command-api-v2",
+      "version": "2.4.7+6b42a6003e",
+      "jar_sha512": "fa3a23ee31d964b2c98db4c87acd67de4eaa81180b020e59028d14f2038619e0be0dcff06e64a10c18281689472192eee25c8ffbfc5ad34ba93f0fac03e3e332",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "minecraft": ">1.19-alpha.22.11.a"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-content-registries-v0-10.2.14+4fc5413f3e.jar",
+      "id": "fabric-content-registries-v0",
+      "version": "10.2.14+4fc5413f3e",
+      "jar_sha512": "0ce971684fac18aff45a747975370f3430a01572d0251f606245afb695748037897018d629c2df554662950035c19f14e560125cb27dac490f3c80140ea5bdfa",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-lifecycle-events-v1": "*",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-convention-tags-v1-2.1.55+7f945d5b3e.jar",
+      "id": "fabric-convention-tags-v1",
+      "version": "2.1.55+7f945d5b3e",
+      "jar_sha512": "04c33768af4d236343c0735eb284982ee0c371ee2a417688aede99c22cc205659953e3051e08ce1bed864debd65cd206bb94500ab095cd21b9154f092f200274",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.18.2"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-convention-tags-v2-2.17.3+8ef948ba3e.jar",
+      "id": "fabric-convention-tags-v2",
+      "version": "2.17.3+8ef948ba3e",
+      "jar_sha512": "7aff1f456c4a597515d4efb2aa310d015171ec3a9fa31d3ca02525e7e8b92a6258cd4cbf7bcd52093115f2ab3702597a62a4cb267a40a077b4819707382a2d61",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.20.5-beta.1",
+        "fabric-lifecycle-events-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-crash-report-info-v1-0.3.23+4ebb5c083e.jar",
+      "id": "fabric-crash-report-info-v1",
+      "version": "0.3.23+4ebb5c083e",
+      "jar_sha512": "ec832917693f5a670f18a3630977c2b224bdef7d5c91bc6ab50f5bd9bfeb1518ff4d4ae5065d58f7576fe811db3219772f280ecf2ae4f79881d1acef040acb6c",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-data-attachment-api-v1-1.8.48+eed0806f3e.jar",
+      "id": "fabric-data-attachment-api-v1",
+      "version": "1.8.48+eed0806f3e",
+      "jar_sha512": "705849f7efc94ee692606ef719aa70d987cebbb63fb062d8c6151cce0537fa5f910b7c0790c8a084a774abf9891af7dd8281495c0af04ecbd0bf768eee9750e7",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-entity-events-v1": "*",
+        "fabric-object-builder-api-v1": "*",
+        "fabric-networking-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-data-generation-api-v1-23.5.0+88d7da613e.jar",
+      "id": "fabric-data-generation-api-v1",
+      "version": "23.5.0+88d7da613e",
+      "jar_sha512": "1a45e09eb3b9e2f2b82117638dded2f2ed4cb89c3f6d20d53a596ce9d7d5432d15645a0bd8b8c8aeb711b31bb3fc7059ed6576613ffce37d8941c9a3fee46188",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-convention-tags-v2": "*",
+        "fabric-recipe-api-v1": "*",
+        "fabric-registry-sync-v0": "*",
+        "fabric-resource-conditions-api-v1": "*",
+        "fabric-tag-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-dimensions-v1-4.0.28+4fc5413f3e.jar",
+      "id": "fabric-dimensions-v1",
+      "version": "4.0.28+4fc5413f3e",
+      "jar_sha512": "baa1f04ce379dc30ab76dfbf25ef810753e6162de4bd97e51ec5e272156fbe6ce5a08928e78637004b2b7f620fc28ea8f8377a192254d6410e8141e2a498336b",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.16-rc.3",
+        "fabric-api-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-entity-events-v1-3.1.1+1d0ab4303e.jar",
+      "id": "fabric-entity-events-v1",
+      "version": "3.1.1+1d0ab4303e",
+      "jar_sha512": "6ac0cf1e83e9d7bf0eaebdb6b2741f305b0d610e7a42c7ff5b4d2221001e2360d1060a1a673ed6e36dd2d89f1f11e76202a7d8a4a3f050f72047458feac164af",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-events-interaction-v0-4.1.1+3b89ecf63e.jar",
+      "id": "fabric-events-interaction-v0",
+      "version": "4.1.1+3b89ecf63e",
+      "jar_sha512": "bb1f6e0ff6579f96e71f4808dc56a683edf5c51b2b00d9f34a186ed15cb288e36cddb9597145e49edaed7fdc36a2f455872ac58dd7da949234b3d0fd688c1816",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-networking-api-v1": "*",
+        "minecraft": ">=1.15-alpha.19.37.a"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-game-rule-api-v1-2.0.3+4fc5413f3e.jar",
+      "id": "fabric-game-rule-api-v1",
+      "version": "2.0.3+4fc5413f3e",
+      "jar_sha512": "99df0057f75745fe23a31c01e4efe1648ba78a4ee186163da5a83d9f40fd92cf8ba67643a02b8f0271bf62399ef6fa3e2b706d3fdccd360d17a5778ff1b04270",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-item-api-v1-11.6.0+67f17bb43e.jar",
+      "id": "fabric-item-api-v1",
+      "version": "11.6.0+67f17bb43e",
+      "jar_sha512": "3c5a482af1b3eb2db305bd76aae811630c0ef1bf8daa3300ee55eb168713139b220fc2e408857ce43dbb970822ac507e1593265de6615a5bbdf50ee7b85ba395",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-item-group-api-v1-4.2.36+4fc5413f3e.jar",
+      "id": "fabric-item-group-api-v1",
+      "version": "4.2.36+4fc5413f3e",
+      "jar_sha512": "8fd78b67f76ac342e32efd13dc26fa072440f6ec7b2a02f6156bd79ec83b74275b3a8021330a0aa72d2a4fcf6c588760cab242e0d822a572fcf7a533e1cf0cbc",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-key-binding-api-v1-1.1.7+4fc5413f3e.jar",
+      "id": "fabric-key-binding-api-v1",
+      "version": "1.1.7+4fc5413f3e",
+      "jar_sha512": "50f25c781b3fdb90b5b250cd613ec38c9cac7a8961e68711f7cddf52c94d494899338c3c33a6d35787d450eb21729d3b3ab8440af1f1415083b4f1925c63dc50",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-lifecycle-events-v1-2.6.15+4ebb5c083e.jar",
+      "id": "fabric-lifecycle-events-v1",
+      "version": "2.6.15+4ebb5c083e",
+      "jar_sha512": "1fa42854b6e08b9d5230f57c8d8396c3fab12aff6afb367cae66f1e1fdea04b7100648544b1676958203530a799ab234b6881617286890e3e5a71ad658c2ae54",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-loot-api-v2-3.0.73+3f89f5a53e.jar",
+      "id": "fabric-loot-api-v2",
+      "version": "3.0.73+3f89f5a53e",
+      "jar_sha512": "aa07c37862fa6f9a0f30eef6319e87d62db564a1ed48c89e1a1f3583e1ef7090a096992a42f37306a34d46fa816804c01c5da50963d79c36dd003e3eb67728d0",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-loot-api-v3-2.0.20+78c8b4663e.jar",
+      "id": "fabric-loot-api-v3",
+      "version": "2.0.20+78c8b4663e",
+      "jar_sha512": "036d77cd30e99739f33af570aff0de4470a3580225c9145e1b7a5878bb024aea4a7f31e21dfa645cfad5ae82641e8afd94abb6e795a547a32bda23453045513f",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-message-api-v1-6.1.12+4ebb5c083e.jar",
+      "id": "fabric-message-api-v1",
+      "version": "6.1.12+4ebb5c083e",
+      "jar_sha512": "60598fcb7e21920f5ac56f872774a5e1842251764b535c2ab1deee6655384be6eb43a44696fee68b63badca8f27eddf9f75313fc7bbb4937bf98ab8c0ca545a5",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-model-loading-api-v1-6.0.15+4fc5413f3e.jar",
+      "id": "fabric-model-loading-api-v1",
+      "version": "6.0.15+4fc5413f3e",
+      "jar_sha512": "9555e464c36a3ad047d1c4e48030d78fdeed15f98f50b9e235a27f2ac5ff08faab4be2da64deac5aad7f2553455ca5598194bd8c34f88547345e71331537c717",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-renderer-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-networking-api-v1-5.1.6+6b6d71a53e.jar",
+      "id": "fabric-networking-api-v1",
+      "version": "5.1.6+6b6d71a53e",
+      "jar_sha512": "bb4180e5807f0116fb40cc064c44d96fc1f4e3216e1c0124c1e03cd61202c388562f000bd99ed5d656e8f2712d56798f7b9b5ac4cd507704fa8e919831732055",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-object-builder-api-v1-21.1.40+4fc5413f3e.jar",
+      "id": "fabric-object-builder-api-v1",
+      "version": "21.1.40+4fc5413f3e",
+      "jar_sha512": "1863c351dd03c8a8f8b67e13a79d1e4a066fe5c55c369488e1513eac99cd8361a8a0ef47115cdfa241929c0eb9edbcd788700ed5fd91100cb9dfe7f6e4c8de46",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-registry-sync-v0": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-particles-v1-4.2.12+4fc5413f3e.jar",
+      "id": "fabric-particles-v1",
+      "version": "4.2.12+4fc5413f3e",
+      "jar_sha512": "c284a0d7cb20f2a9bc8be6924b11a6125e6c6f5cb9c2a92de13fe4eaf69bce6675c9951ad5db4b17ef7a6fe09a48d7d8733b510414a911a30fb0e5df5897da80",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-networking-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-recipe-api-v1-8.2.4+4ebb5c083e.jar",
+      "id": "fabric-recipe-api-v1",
+      "version": "8.2.4+4ebb5c083e",
+      "jar_sha512": "2030bf9dc4df384aede46190409602f035eab4772e00dcccdbe37142d6da76f7e46c08bbaa7362cdca97826c0e667cb6743f7f29600aa09384c959f7eb2b3ff7",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-networking-api-v1": "*",
+        "fabric-lifecycle-events-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-registry-sync-v0-6.2.6+1718722b3e.jar",
+      "id": "fabric-registry-sync-v0",
+      "version": "6.2.6+1718722b3e",
+      "jar_sha512": "1e25819e0c38ad8a3191b4422a27d0dc5a974aa18558dfb838978721323f63318fdcbcfdd82991d72ba77e4a67b2061f9a8713338d368cd3a5d2289565c260cd",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-networking-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-renderer-api-v1-8.0.3+f4ffd2e53e.jar",
+      "id": "fabric-renderer-api-v1",
+      "version": "8.0.3+f4ffd2e53e",
+      "jar_sha512": "0e90dba00430a00123181afaaf2fcce1203776a328bc5ef06831c63d60821f214884f6859f73888afbbfffdf9a72a71cc4d3ae905625000a9c938b07dec504db",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.21.5-beta.1",
+        "fabric-api-base": "*",
+        "fabric-rendering-v1": "*",
+        "fabric-transitive-access-wideners-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {
+        "fabric-particles-v1": "*"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-renderer-indigo-5.0.3+f4ffd2e53e.jar",
+      "id": "fabric-renderer-indigo",
+      "version": "5.0.3+f4ffd2e53e",
+      "jar_sha512": "177a5a25c95e5a12713ce3d57b8a19a4a95e76b5a6b74fe36d1eaff2256d7ffc70d58a9a27def3968cbfd86d1791a1e2e1a17879e571e3fb55897156a4d8f665",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.21.5-beta.1",
+        "fabric-api-base": "*",
+        "fabric-renderer-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-rendering-fluids-v1-3.1.43+4ebb5c083e.jar",
+      "id": "fabric-rendering-fluids-v1",
+      "version": "3.1.43+4ebb5c083e",
+      "jar_sha512": "bc418b2c707548d67a84599cd46444a231a65d8c6092a349e0167a700de2d3b2c0c4ef4739229cc1cd56f61f8766763d8e74814de8be826bf3105292a0b84173",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-rendering-v1-16.2.10+0290ad933e.jar",
+      "id": "fabric-rendering-v1",
+      "version": "16.2.10+0290ad933e",
+      "jar_sha512": "28e6c3c09b18fd713fd2a8f601a5272719c9451b7268e4f4f057c972a7169c9cacdee82a85d3a990b54908756c8f995553ffc787e68b1882d61823f61a990eb7",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-lifecycle-events-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-resource-conditions-api-v1-5.0.35+4fc5413f3e.jar",
+      "id": "fabric-resource-conditions-api-v1",
+      "version": "5.0.35+4fc5413f3e",
+      "jar_sha512": "cd65bcb07cf1b0df6ac72ac0930e8abf606d8151e2fe06c111c9b349e22239714da5b05f6070eac4f141ee3de7e6f069c61538c16bd4bd2a56ae22e7eac25a06",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-resource-loader-v0-3.3.4+4fc5413f3e.jar",
+      "id": "fabric-resource-loader-v0",
+      "version": "3.3.4+4fc5413f3e",
+      "jar_sha512": "d823f2388637c3c82c9866faa4ee88b46e8b145ef9cad66b7a2221a29a0742b52e5653c15e2cf685c0417b2f8d7d001ff2e0f690b994808ec4b4dd37eaed6baf",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-resource-loader-v1-1.0.10+78c8b4663e.jar",
+      "id": "fabric-resource-loader-v1",
+      "version": "1.0.10+78c8b4663e",
+      "jar_sha512": "dd376b348b50dc07509af0304bdb114e2123e8814d116485cd72e2e049d369bf85ce1e2ac0f76e8ae0d7c481382f02f2284fadd2e1571af64290db03d037b786",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-screen-api-v1-3.1.7+4ebb5c083e.jar",
+      "id": "fabric-screen-api-v1",
+      "version": "3.1.7+4ebb5c083e",
+      "jar_sha512": "d51cb3d0af0d5987e880f1128832adcbb1bf4ea0809c7d5bc4c513c3dee4cbd0c77eaa3a1fefa57905af82fe830e268f53bf197df202a2528a056f7e5222dd53",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-screen-handler-api-v1-1.3.162+4fc5413f3e.jar",
+      "id": "fabric-screen-handler-api-v1",
+      "version": "1.3.162+4fc5413f3e",
+      "jar_sha512": "3ebd7fe6b0327fa7010e687d6f380ee770c20077003c2d71830e8f994c873438a3eb83e67ee0682a390afe35ee691452edf2e84af4e352d13aa1ff866a11607d",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-networking-api-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-serialization-api-v1-1.0.5+4ebb5c083e.jar",
+      "id": "fabric-serialization-api-v1",
+      "version": "1.0.5+4ebb5c083e",
+      "jar_sha512": "fa93f27864b05ebb8b0777fd19211f498197f828701ebb9c683a3c5cf54f0600c46b52f2d03b6f1e2788c3e9b6395eec40edcd01499e6b7aa16cfd59b2c39205",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-sound-api-v1-1.0.51+4fc5413f3e.jar",
+      "id": "fabric-sound-api-v1",
+      "version": "1.0.51+4fc5413f3e",
+      "jar_sha512": "94202a4f5293a92a10fa3b14bb0647d116bb62f287b4ed742666bb7988bef6843cab77b744044f42e9521a47f1bfcbdb37baaca150395675bfc1fef3ac4aad54",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": ">=1.19.2"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-tag-api-v1-1.3.0+88d7da613e.jar",
+      "id": "fabric-tag-api-v1",
+      "version": "1.3.0+88d7da613e",
+      "jar_sha512": "ae1b55574f0a6dc45f85206528d912df0dfc5bb66b583626cd29ed69535e58c26ec39f9b20bf944f87a627a7fbe9f4a8ea40028ca972ded3a613a10f7d872d51",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-base": "*",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "fabric-client-tags-api-v1"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-transfer-api-v1-6.0.25+4fc5413f3e.jar",
+      "id": "fabric-transfer-api-v1",
+      "version": "6.0.25+4fc5413f3e",
+      "jar_sha512": "f10fd611ac7a1ba237384bab1ea27e150426f8a5bd2496ed252f4928ce06b5d3c37252b4c7e823fb36b625a618368d824f2dbf06b27788250a41c675ab8d6b76",
+      "depends": {
+        "fabricloader": ">=0.17.3",
+        "fabric-api-lookup-api-v1": "*",
+        "fabric-rendering-fluids-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-transitive-access-wideners-v1-7.1.0+014c8cec3e.jar",
+      "id": "fabric-transitive-access-wideners-v1",
+      "version": "7.1.0+014c8cec3e",
+      "jar_sha512": "66c26f01beb817ae0742bf61a7afc4c3d134f9209a0561fbfb3e83f4be97326714c3c88be9c25af5f897c8e2eba5a15d47f70d467b1e7441a8a4c62d0627b1d4",
+      "depends": {
+        "fabricloader": ">=0.17.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "id": "fabric-language-kotlin",
+      "version": "1.14.2+kotlin.2.4.21",
+      "jar_sha512": "7fb475c4a7e7bdf8d0aca4b5798a58a354c51443d5b1fbde3e8cf34dfbf7191ef4238b5f07d08ec9490ec180b371624523326c3ad45d4ed2b2be541de9407e5d",
+      "depends": {
+        "fabricloader": ">=0.19.5"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/atomicfu-jvm-0.33.0.jar",
+      "id": "org_jetbrains_kotlinx_atomicfu-jvm",
+      "version": "0.33.0",
+      "jar_sha512": "23450eda3938fd6039f6cc3829db40415e59baff415790545268bf576fe2c8df33255fcec0344e6e6f01ea3eaab2d4380aa94470aa2f063b2f57794e12ccac2a",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlin-reflect-2.4.21.jar",
+      "id": "org_jetbrains_kotlin_kotlin-reflect",
+      "version": "2.4.21",
+      "jar_sha512": "1ed38f238cd0730f098428a9e67af090e8ecf5adeef11aaf1f7ec0285ddc73b4026d13a56882878c6afcc8e95f20ac2e74d6a0c7e08d622c27386f64f048e3ca",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlin-stdlib-2.4.21.jar",
+      "id": "org_jetbrains_kotlin_kotlin-stdlib",
+      "version": "2.4.21",
+      "jar_sha512": "efc925cbc6d5426ed2f5ddb6ff1657234f659506f7e68a78f82a794d7dc8e5c65a33c69c47dcac3667fb5936b60070829cda300e9cf007fb2e712706519b5743",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlin-stdlib-jdk7-2.4.21.jar",
+      "id": "org_jetbrains_kotlin_kotlin-stdlib-jdk7",
+      "version": "2.4.21",
+      "jar_sha512": "91fa2daa7e230abd6dce80bc6670a2b813f99c8cfdad6890033191204663d5243e440d364c8436d70f27417e84f3ba611c17e53df4bb0a432b4d313ec3437c96",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlin-stdlib-jdk8-2.4.21.jar",
+      "id": "org_jetbrains_kotlin_kotlin-stdlib-jdk8",
+      "version": "2.4.21",
+      "jar_sha512": "bb6ee453b3bb27acbf2ab1cd7c0eb68ec8216e7c68ae896922a34f8407811fdc40f744d96fcdf9db1f5a3e2b42042483278b02969d00d85d602c0182e9d69fac",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-coroutines-core-jvm-1.11.0.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm",
+      "version": "1.11.0",
+      "jar_sha512": "1cf2aa53686b02e6105c8dea73dc684b87302630eaabe0e2d80a0895274c8644e3ca60afcc2018f4962b9c138fa17fceebf5b3ee45decf02b37a790c33ec48fa",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-coroutines-jdk8-1.11.0.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-coroutines-jdk8",
+      "version": "1.11.0",
+      "jar_sha512": "6ef01232dedde1c9acf7c012e30e4584ada6f0afd842eef652d65adf27fd25044ea5760c72aa0645f4a13bdff04aa84c504fefa9468986dc01d0d94684e8972f",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-datetime-jvm-0.8.0.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-datetime-jvm",
+      "version": "0.8.0",
+      "jar_sha512": "c72f4e313f1003ce312dd0250a4575edc2230ebdc8892b1f347de27405c0580c7982a069b6d4f6c6a79f6c6879d2fb88a646f0ba7638750b2e65db1a1bdeb040",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-io-bytestring-jvm-0.9.1.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm",
+      "version": "0.9.1",
+      "jar_sha512": "3f666e5a5dce0aae99cce05552c567e84dd5a6eb2d830d170afa766b8e30239cd47d71812696cb91a1ce5a488c963b0d0c1f6cee925ddd5a114563c026158ed6",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-io-core-jvm-0.9.1.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-io-core-jvm",
+      "version": "0.9.1",
+      "jar_sha512": "38759dd1b43a329e6d6b79be0ddd73b07a49d7b8f0ac9420d6ff36691dc882218b4140ce18596f2e0a5e9979ff4699c85576b2fbf545322748628faa4c470360",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-serialization-cbor-jvm-1.11.0.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm",
+      "version": "1.11.0",
+      "jar_sha512": "a7846e8efb432e1552d1d3dbecf8ffda66fcbe1a86da5ac75785e79e9fbefcf10fde74a50ccb503cbc9df9ef6582f2d219af7a2f05f7ee56ca3984231424e373",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-serialization-core-jvm-1.11.0.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-serialization-core-jvm",
+      "version": "1.11.0",
+      "jar_sha512": "7a8c22fca7f0d92d76956721f6507a3f81387ab217265c48ae80434458ddfa19153c6d13d9637f61cff1f2362eb004243cd6ce2dfe1edba6b1773c5d47d24119",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar!META-INF/jars/kotlinx-serialization-json-jvm-1.11.0.jar",
+      "id": "org_jetbrains_kotlinx_kotlinx-serialization-json-jvm",
+      "version": "1.11.0",
+      "jar_sha512": "213b0240e61ae84fb387498e3852b4a622428417c6a7e2db2e5c09a7732e94be87a0d2572a214269280a26b672dd3cd998a1e34ff98208975f8795aa65cc9866",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "fast-ip-ping-v1.0.12-mc1.21.11-fabric.jar",
+      "id": "fastipping",
+      "version": "1.0.12",
+      "jar_sha512": "965b6d26c426550951e071679b58f09fed9b8ff68e6d38b3b867477c080009d1f2bbbe909ae47457a55377ae1b8f12e860650b2fd22728eb603e309a38126a0c",
+      "depends": {
+        "fabricloader": ">=0.11.4",
+        "minecraft": ">=1.21.11 <1.22"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "fastquit-3.1.3+mc1.21.11.jar",
+      "id": "fastquit",
+      "version": "3.1.3+mc1.21.11",
+      "jar_sha512": "29f080e82b58833cc2bb6af677c7b49825dbfeee8340d6952aadacbf83a3f5cdb71e2d1145b0e60f7454274577930c3600f3fe8a6f95cb5a423fa6f80d409a01",
+      "depends": {
+        "fabricloader": ">=0.16.9",
+        "minecraft": ">=1.21.11",
+        "fabric-resource-loader-v0": "*",
+        "cloth-config": "*",
+        "java": ">=21"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {
+        "modmenu": "*"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "ferritecore-8.2.0-fabric.jar",
+      "id": "ferritecore",
+      "version": "8.2.0",
+      "jar_sha512": "3210926a82eb32efd9bcebabe2f6c053daf5c4337eebc6d5bacba96d283510afbde646e7e195751de795ec70a2ea44fef77cb54bf22c8e57bb832d6217418869",
+      "depends": {
+        "fabricloader": ">=0.14.21",
+        "minecraft": ">=1.21.11 <1.22"
+      },
+      "breaks": {
+        "hydrogen": "<=0.3"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar",
+      "id": "forgeconfigapiport",
+      "version": "21.11.1",
+      "jar_sha512": "28791c992d613da14b8685505d3ef632ed53b5f1e1d517f0b41677d10f8419f192dfbde991308df6cda5d0f113c0aa8fc18ecf4a0834029403b16d2f68dc52d6",
+      "depends": {
+        "minecraft": ">=1.21.11- <1.21.12-",
+        "fabricloader": ">=0.18.0",
+        "fabric-api": ">=0.139.0"
+      },
+      "breaks": {},
+      "recommends": {
+        "modmenu": "*"
+      },
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "geckolib-fabric-1.21.11-5.4.5.jar",
+      "id": "geckolib",
+      "version": "5.4.5",
+      "jar_sha512": "e3fec3a07fd2a39af287cfa682f531913a6b82af5c23b60a231e8586ed1c5b1d2857f6714fa069315a1d7366c0d148d167178a9531b59629d488eb1cace6c97e",
+      "depends": {
+        "fabricloader": ">=0.18",
+        "fabric-api": ">=0.139.4+1.21.11",
+        "java": ">=17",
+        "minecraft": ">=1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "Gnetum-4.6.3+1.21.11-fabric.jar",
+      "id": "gnetum",
+      "version": "4.6.3+1.21.11-fabric",
+      "jar_sha512": "ce3b23015612f85d6e195a697c3615b4886cdd49ed1ed1129726f656d435f3c158c19bcbbc9a3106b1beff4abfc10fe418ae37514ad7f22892881cf15a5339d6",
+      "depends": {
+        "minecraft": "=1.21.11",
+        "fabricloader": ">=0.16.0",
+        "fabric-api": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "ImmediatelyFast-Fabric-1.14.3+1.21.11.jar",
+      "id": "immediatelyfast",
+      "version": "1.14.3+1.21.11",
+      "jar_sha512": "2564cb28259352c3aa5759aceca62667de08a7860a40910dad40a043af851a074b2d75cef50b9fa6f1971febb3a5ecebe4067cbd4b60e63ef711b85f4bc21407",
+      "depends": {
+        "java": ">=21",
+        "minecraft": "1.21.11",
+        "fabricloader": ">=0.18.0"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "ImmediatelyFast-Fabric-1.14.3+1.21.11.jar!META-INF/jars/Reflect-1.6.2.jar",
+      "id": "net_lenni0451_reflect",
+      "version": "1.6.2",
+      "jar_sha512": "65449bdffe4807956b9bdb55bcd6c058541d8a17b5fc0af12948ecf44c57e62665e9c69b31391e65287344368f61cf65c67207fdfc20620d1b59201516b2a585",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "iris-fabric-1.10.8+mc1.21.11.jar",
+      "id": "iris",
+      "version": "1.10.8+mc1.21.11",
+      "jar_sha512": "f0cad4b6af593b6fc25738c4ef5a2b346125f9693d25a0d486858e54798d2ea87b24d1497e1bb4391729d7d9e490f42771f7fb468d4e1420e372d8643f9e2055",
+      "depends": {
+        "fabricloader": ">=0.12.3",
+        "sodium": [
+          "0.8.x"
+        ]
+      },
+      "breaks": {
+        "embeddium": "*",
+        "iris-explorer": "*",
+        "originsenhanced": "<=1.3.2",
+        "colormatic": "<=3.0.0",
+        "bedrockwaters": "<=1.6.0",
+        "batchedentityrendering": "*",
+        "canvas": "*",
+        "optifabric": "*",
+        "worldeditcui": "<1.18.1",
+        "physicsmod": "<=3.0.13",
+        "distanthorizons": "<=2.1.99",
+        "immersive_portals": "<=1.4.2"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "iris-fabric-1.10.8+mc1.21.11.jar!META-INF/jars/antlr4-runtime-4.13.1.jar",
+      "id": "org_antlr_antlr4-runtime",
+      "version": "4.13.1",
+      "jar_sha512": "f7a08d97669c9e37b12a7aa212ba581bbb6334b3da31f2654466f9eabea4f285f6a05cb95189e0cf1d22a79518bf9c87edd00580f4bdfbd89062142836494188",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "iris-fabric-1.10.8+mc1.21.11.jar!META-INF/jars/glsl-transformer-3.0.0-pre3.jar",
+      "id": "io_github_douira_glsl-transformer",
+      "version": "3.0.0-pre3",
+      "jar_sha512": "5be74f62fea6294832bf8737077e81ae37f7de6cabe232e8c271e0cf32ae7805f5f5678692738199442f2b00d527ace126b7cd653686681e0544a9acf2792e7a",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "iris-fabric-1.10.8+mc1.21.11.jar!META-INF/jars/jcpp-1.4.14.jar",
+      "id": "org_anarres_jcpp",
+      "version": "1.4.14",
+      "jar_sha512": "209ac8df00ee53956e4e2583b6de2a8e8c468cf626f7e0fa730055e6d980ffcde4db8fd1b5fdbc7c1172c9a519e0dd5c491022efaeeea4ecd4ab8f9e5cfa2877",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "Ixeris-4.6.8+1.21.11-fabric.jar",
+      "id": "ixeris",
+      "version": "4.6.8+1.21.11-fabric",
+      "jar_sha512": "3fcdbf895e0ccbd5cb74ed2cc26ca274240c6502e0cc74e0c597ed7abdf1c259e6a64b3aa53c35058207de0a59a593bd126f731e08101dfba5c0907b6848ecf8",
+      "depends": {
+        "minecraft": ">=1.21.9 <=1.21.11",
+        "fabricloader": ">=0.16.0"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar",
+      "id": "lambdynlights",
+      "version": "4.9.1+1.21.11",
+      "jar_sha512": "df006fad702f713fa93feaa21ead00f446aa79e1771b5e049844842c7701d3a8a1b360a996c28f79c79a941e95ef63d27bfc563b5bec2ab8bf96eba0b2232fb8",
+      "depends": {
+        "lambdynlights_runtime": ">=4.9.1+1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar",
+      "id": "lambdynlights_runtime",
+      "version": "4.9.1+1.21.11",
+      "jar_sha512": "b580a4dd32e9edeb4f8f8315c49e3461fad80b67773fcb667de31152d2169e1b915ca6bf939873f178159054a8faeca86568caf3741a4a67149b645fdaecb2ad",
+      "depends": {
+        "fabricloader": ">=0.18.1",
+        "minecraft": "~1.21.11-",
+        "java": ">=21",
+        "lambdynlights_api": ">=4.9.1+1.21.11",
+        "spruceui": ">=9.1.0+1.21.11",
+        "yumi_mc_core": ">=1.0.0-beta.1+1.21.11",
+        "fabric-lifecycle-events-v1": ">=2.6.15+4ebb5c0853",
+        "fabric-resource-loader-v1": ">=1.0.10+78c8b46653",
+        "fabric-resource-conditions-api-v1": ">=5.0.35+4fc5413f53"
+      },
+      "breaks": {
+        "optifabric": "*",
+        "sodiumdynamiclights": "*",
+        "ryoamiclights": "*"
+      },
+      "recommends": {
+        "modmenu": ">=16.0.0-rc.1"
+      },
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar",
+      "id": "lambdynlights_api",
+      "version": "4.9.1+1.21.11",
+      "jar_sha512": "231ded90c0d5259cd06349d37e0e6e48c079cdd3917a8c1afdc1bb3a17f98d41a2f22f1ebda819d7b7340def2524a7a55dc5f3f8693a28178f5e96f5e60a6cfb",
+      "depends": {
+        "fabricloader": ">=0.18.1",
+        "minecraft": "~1.21.11-",
+        "java": ">=21",
+        "yumi-commons-core": "^1.0.0",
+        "yumi-commons-collections": "^1.0.0",
+        "yumi-commons-event": "^1.0.0"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar!META-INF/jars/yumi-commons-collections-1.0.0.jar",
+      "id": "yumi_commons_collections",
+      "version": "1.0.0",
+      "jar_sha512": "1f0711c2007e7a95cd4149ccd0f7d6ffa24e084904adada2f592c1d7e849ceb7e0c7b700847fb4fd7da8d7cd5655a33e4020d1df972bbcb817cff5913ddb064d",
+      "depends": {
+        "yumi-commons-core": "^1.0.0",
+        "java": ">=17"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "yumi-commons-collections"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar!META-INF/jars/yumi-commons-core-1.0.0.jar",
+      "id": "yumi_commons_core",
+      "version": "1.0.0",
+      "jar_sha512": "66a3f1d5e3403c2800f0df0225d6cb545f77d7ae42f9e2a8b4c5e4e0e6895276d96cd8b5487b1f15aa98312c61630c3e97e21c2af71d79aae1a1aafb7f724b44",
+      "depends": {
+        "java": ">=17"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "yumi-commons-core"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar!META-INF/jars/yumi-commons-event-1.0.0.jar",
+      "id": "yumi_commons_event",
+      "version": "1.0.0",
+      "jar_sha512": "173c414c8dd9b5901cf32a94f51bb060ea109fe846d72d733fbf97ceb431a2925679cc5d8d35ff67006eed218f82b7684de508eee50e54f3c49e3701664c1624",
+      "depends": {
+        "yumi-commons-collections": "^1.0.0",
+        "java": ">=17"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "yumi-commons-event"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/pridelib-1.5.1+1.21.11.jar",
+      "id": "pride",
+      "version": "1.5.1+1.21.11",
+      "jar_sha512": "70403f01c5bc710bee32f982fec3ff276c819826e20f78bc5351b92b1961a77279318ba18116d52da93e4c25fdf4e0ba5bd624dda0957a1695cbab6891a80120",
+      "depends": {
+        "minecraft": "~1.21.11-",
+        "fabricloader": ">=0.18.1",
+        "yumi_mc_core": ">=1.0.0-beta.1+1.21.11",
+        "fabric-resource-loader-v1": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/spruceui-9.1.0+1.21.11.jar",
+      "id": "spruceui",
+      "version": "9.1.0+1.21.11",
+      "jar_sha512": "013238752f6c51e07c77dce540b0d2c428e9ed31819fd9c887835e76b92852c61e82dc07c783fa9bc4262676f889f40863153b9c459d64e650bff10f7f0a025a",
+      "depends": {
+        "fabricloader": ">=0.18.1",
+        "minecraft": "~1.21.11-",
+        "fabric-resource-loader-v0": ">=0.4.7",
+        "java": ">=21",
+        "yumi_mc_core": "^1.0.0-beta.1+1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/yumi-mc-foundation-1.0.0-beta.1+1.21.11.jar",
+      "id": "yumi_mc_core",
+      "version": "1.0.0-beta.1+1.21.11",
+      "jar_sha512": "71a829dcd1e4805841bfffded00d28769d8bb0868779522c790eab55cd173a3ef1b5cfdbf56aecbcd73757e5d18ed4b7fc440676c5b0170a913ee43e7752d672",
+      "depends": {
+        "minecraft": "~1.21.11-",
+        "java": ">=21",
+        "yumi_commons_event": "~1.0.0"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "lithium-fabric-0.21.4+mc1.21.11.jar",
+      "id": "lithium",
+      "version": "0.21.4+mc1.21.11",
+      "jar_sha512": "f14a5c3d2fad786347ca25083f902139694f618b7c103947f2fd067a7c5ee88a63e1ef8926f7d693ea79ed7d00f57317bae77ef9c2d630bf5ed01ac97a752b94",
+      "depends": {
+        "fabricloader": ">=0.15.1",
+        "minecraft": "1.21.11"
+      },
+      "breaks": {
+        "optifabric": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "modernfix-5.26.3-build.2.jar",
+      "id": "modernfix",
+      "version": "5.26.3-build.2",
+      "jar_sha512": "81c991b1ab4e13a68cf79c25cd39cd3073348907ec002745c030d6a5d26fe5abd6eab1d35325e66acccdada2b78786c742581bd92e4e8ad9f3a424a0e98fe006",
+      "depends": {
+        "minecraft": "1.21.11",
+        "fabricloader": ">=0.16.10"
+      },
+      "breaks": {
+        "dashloader": "<5.0.0-beta.1"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "modmenu-17.0.1.jar",
+      "id": "modmenu",
+      "version": "17.0.1",
+      "jar_sha512": "cb68cc39c8da66d05a1d2054a0e7b62144881e0cdb5fd681bc4f337b1313fafac394246f4e0aa0c4b6343db9e9750250a00c1bb72689b762da685ce1ccfee51f",
+      "depends": {
+        "fabric-resource-loader-v1": "*",
+        "fabric-screen-api-v1": "*",
+        "fabric-key-binding-api-v1": "*",
+        "fabric-lifecycle-events-v1": "*",
+        "fabricloader": ">=0.17.2",
+        "minecraft": ">=1.21.11 <26"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "modmenu-17.0.1.jar!META-INF/jars/placeholder-api-2.8.2+1.21.10.jar",
+      "id": "placeholder-api",
+      "version": "2.8.2+1.21.10",
+      "jar_sha512": "507ab10b7938dcd14d33121b8462649bdbe575cef248e917dfdf7566078ab5d0195ca1add95eae4863de3f652eb56db0a8669a67d5b5344e094d086f9dab5a08",
+      "depends": {
+        "fabricloader": ">=0.16.10",
+        "minecraft": ">=1.21.5-beta.3"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "moreculling-fabric-1.21.11-1.6.2.jar",
+      "id": "moreculling",
+      "version": "1.6.2",
+      "jar_sha512": "58cec88e84835c543d8604411f89a0984abe51f0332860354355ede290d2442fc33a86ecda1766e0b1a82ba4edfab27f3c9f6855c0af3234e200218b892756f2",
+      "depends": {
+        "fabricloader": ">=0.15.0",
+        "minecraft": ">=1.21",
+        "java": ">=21",
+        "cloth-config": ">=16.0.0"
+      },
+      "breaks": {
+        "sodium": "<=0.6.6"
+      },
+      "recommends": {},
+      "suggests": {
+        "sodium": ">=0.6.7"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "moreculling-fabric-1.21.11-1.6.2.jar!META-INF/jars/conditional-mixin-fabric-0.6.3.jar",
+      "id": "conditional-mixin",
+      "version": "0.6.3",
+      "jar_sha512": "74ec8a5b46e924c2122d72c5d25afef0970b39b89037c813641118201201d044225c1029ad8ba4b178f4f67c47f7ded515ce2ce93bb8ec37781d9bcd20eea5dd",
+      "depends": {
+        "fabricloader": ">=0.10.4"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "conditional_mixin"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "polytone-1.21.11-6.6.0-fabric.jar",
+      "id": "polytone",
+      "version": "1.21.11-6.6.0",
+      "jar_sha512": "bc445de1d08ae50985d29b35910e178467fbfbd23136faa66dfe50ddca91f696cdcef6cde334314270752f323db3bfc2fcfca71fc2de21338a33db65f2bc5ab8",
+      "depends": {
+        "fabricloader": ">=0.18",
+        "fabric": ">=0.140.0+1.21.11",
+        "minecraft": "=1.21.11"
+      },
+      "breaks": {},
+      "recommends": {
+        "nautilus_studio": ">=1.21.11-1.10.0"
+      },
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "polytone-1.21.11-6.6.0-fabric.jar!META-INF/jars/codecui-fabric-1.21.11-1.4.3.jar",
+      "id": "codecui",
+      "version": "1.21.11-1.4.3",
+      "jar_sha512": "6c83be4edd57e8f591317981000cb7c1fbba1566760c914db9538ed37c9da5814041d58036693153e3b6fd144c39e5f88717f42918a970015841c0f8f0895552",
+      "depends": {
+        "fabricloader": ">=0.18",
+        "fabric-api": ">=0.141.4+1.21.11",
+        "minecraft": "1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "polytone-1.21.11-6.6.0-fabric.jar!META-INF/jars/nexp-1.2.0.jar",
+      "id": "hollowpoint_nexp",
+      "version": "1.2.0",
+      "jar_sha512": "b3e270ac24e3f859e072ed021aa10f7e8102c7c46b4bf3a3da83c9e6f1d8ac0c21a13657775f8a995b3870f1d4a0f8d4b81c13e3676d7f820f45de819771228c",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "reeses-sodium-options-fabric-2.2.4+mc1.21.11.jar",
+      "id": "reeses-sodium-options",
+      "version": "2.2.4+mc1.21.11",
+      "jar_sha512": "224e324effcaa03a38582b05c09cbd79a5922e916888b45849d966a6a7f30a7be18a8cc2ea09f44e79e6ea1a8d143a28c3cbfafdb398025b48ab1a1a7d71fd49",
+      "depends": {
+        "minecraft": "=1.21.11",
+        "sodium": "=0.8.14+mc1.21.11"
+      },
+      "breaks": {
+        "iris": "<1.1.4",
+        "sodium-extra": "<0.5.3",
+        "sodium": "<0.5.8"
+      },
+      "recommends": {
+        "sodium-extra": ">=0.4.2"
+      },
+      "suggests": {
+        "controlify": ">=3.0.0"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "rrlsFabric-5.1.15+mc.1.21.11.jar",
+      "id": "rrls",
+      "version": "5.1.15+mc.1.21.11",
+      "jar_sha512": "7f45e1ff141bd8a93bcebb1fe8ed612cdfc673253ff7952f1a0141ba01a8cae1c5d044a73b9f0b84a93b0db4b7f41a089ca8651900def7a1dcfac29cf63d135a",
+      "depends": {
+        "fabricloader": ">=0.18.4",
+        "minecraft": ">=1.21.11",
+        "forgeconfigapiport": ">=21.11.1"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {
+        "dynamicfps": "*"
+      },
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "servercore-fabric-1.5.15+1.21.11.jar",
+      "id": "servercore",
+      "version": "1.5.15+1.21.11",
+      "jar_sha512": "964392769e53f9764466e26044552f60e91137f487b49d98a85bd4dc03ab8e965f0c69bc1a43e96ef5737cd8f1a9bb75cc0a0c09dd30bab6786d8ab4bbea6e01",
+      "depends": {
+        "fabricloader": ">=0.17.0",
+        "minecraft": ">=1.21.11-",
+        "fabric-api-base": "*",
+        "fabric-command-api-v2": "*",
+        "fabric-lifecycle-events-v1": "*"
+      },
+      "breaks": {
+        "cardboard": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "servercore-fabric-1.5.15+1.21.11.jar!META-INF/jars/dazzleconf-core-1.3.0-M2.jar",
+      "id": "space_arim_dazzleconf_dazzleconf-core",
+      "version": "1.3.0-M2",
+      "jar_sha512": "069987c975ec5f87158b42eacc48399cbbde8eb877cbec2f77a0fc2f6cd23549a95f1f3392da4753b5550560d89c72292b602e3f1423ec5080c86a66adcbf241",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "servercore-fabric-1.5.15+1.21.11.jar!META-INF/jars/dazzleconf-ext-snakeyaml-1.3.0-M2.jar",
+      "id": "space_arim_dazzleconf_dazzleconf-ext-snakeyaml",
+      "version": "1.3.0-M2",
+      "jar_sha512": "84a5eaf3e27ee6ea5187757f6488ca8fbb0bc62c812f642e5f43b21e3437f396472fd9734e260da61170b199fc298dd74d11eeba6068987533e858b8812be368",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "servercore-fabric-1.5.15+1.21.11.jar!META-INF/jars/fabric-permissions-api-0.6.0.jar",
+      "id": "fabric-permissions-api-v0",
+      "version": "0.6.0",
+      "jar_sha512": "d67f16488ef63a9a375889c3745b347faf7cfed88fc8c46917576536ef6da5dbbf1a5d282fe4a08b05c9ae73bd5067fdd24cf1062c3d1fd9d3c6e7e3c7ef21de",
+      "depends": {
+        "fabricloader": ">=0.17.0",
+        "fabric-api-base": "*",
+        "minecraft": ">=1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "servercore-fabric-1.5.15+1.21.11.jar!META-INF/jars/snakeyaml-2.5.jar",
+      "id": "org_yaml_snakeyaml",
+      "version": "2.5",
+      "jar_sha512": "b6a07664948bb40feb4cf9820fa934d0156aeec6b8c87d5a80b6e93a7a7daa0401b722ea0f24a1671e52233f08caa726cb5f9698f61e73a866e80712d3cd0fbd",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "skyboxify-3.4+1.21.11-fabric.jar",
+      "id": "skyboxify",
+      "version": "3.4",
+      "jar_sha512": "fb240d8877ffe66221a798a6a6dd0bd05a4a932d91a2e87ef9fd70a7edf6cffdeed217a5c04fafc456bec034f7c285caecaff3a7ab614179ed4cc3578a560aea",
+      "depends": {
+        "fabricloader": ">=0.18.4",
+        "minecraft": "1.21.11",
+        "fabric-resource-loader-v1": "*",
+        "fabric-command-api-v2": "*",
+        "yet_another_config_lib_v3": "*"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "skyboxify-3.4+1.21.11-fabric.jar!META-INF/jars/mixinconstraints-1.1.0.jar",
+      "id": "com_moulberry_mixinconstraints",
+      "version": "1.1.0",
+      "jar_sha512": "62b2274259b84326e574d8cbcef90afb248c2210e4f7649d30c93cbfcd2f6e0d9e0f9ec0fe5daf6639af8321829e453e2cbb041d74addb83bb5ebe3f3fe143cb",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "sodium-extra-fabric-0.9.4+mc1.21.11.jar",
+      "id": "sodium-extra",
+      "version": "0.9.4+mc1.21.11",
+      "jar_sha512": "65d1c245ffc89efd8a3c9412efd4f11c2d365be2c15ec8a5edb8da4b9bca5537dea62bf0fd04462c34e2f785a9b3980b54d506a377bdb6f263a177b1d0e06edc",
+      "depends": {
+        "fabricloader": ">=0.19.2",
+        "sodium": ">=0.8.14+mc1.21.11",
+        "minecraft": "1.21.11"
+      },
+      "breaks": {
+        "iris": "<1.7.0",
+        "reeses-sodium-options": "<1.8.4"
+      },
+      "recommends": {},
+      "suggests": {
+        "greenlight": ">=0.1.0",
+        "reeses-sodium-options": ">=2.2.0"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "sodium-shadowy-path-blocks-fabric-6.0.0.jar",
+      "id": "sspb",
+      "version": "6.0.0",
+      "jar_sha512": "a8a5dea1593e15052c671e477b04c36b91ceac9dc6f590792aa70ac591b1ba37fe49f1dbec94e8836a2010d476dcbc689d929fee520c75961901e799ae8c05b8",
+      "depends": {
+        "fabricloader": ">=0.16.0",
+        "sodium": ">=0.8.0",
+        "minecraft": ">=1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "sodium-fabric-0.8.14+mc1.21.11.jar",
+      "id": "sodium",
+      "version": "0.8.14+mc1.21.11",
+      "jar_sha512": "04c43f9e8534b87a52c42ffd51b0e344d4ef92dc9cc52da33d13af6a18bf74b05380d2027f1e0db982698d0aff274c42741c1e21b313b0cd75ed3af005fc98d9",
+      "depends": {
+        "fabricloader": ">=0.16.0",
+        "fabric-block-view-api-v2": "*",
+        "fabric-rendering-fluids-v1": ">=2.0.0",
+        "fabric-resource-loader-v0": "*"
+      },
+      "breaks": {
+        "embeddium": "*",
+        "optifabric": "*",
+        "canvas": "*",
+        "vulkanmod": "*",
+        "optimalaim": "<2.0.0",
+        "sodium-blendingregistry": "*",
+        "ocrenderfix_sodium": "*",
+        "betterfpsdist": "<=1.21-4.5",
+        "bobby": "<5.2.4",
+        "chunksfadein": "<2.0.2-1.21.2",
+        "cull-less-leaves": "<=1.3.0",
+        "cullleaves": "<=3.4.0-fabric",
+        "custom_hud": "<3.4.2",
+        "farsight": "<=1.21-4.3",
+        "iceberg": "<1.2.7",
+        "iris": "<=1.10.7",
+        "movingelevators": "<=1.4.7",
+        "notenoughcrashes": "<4.4.8",
+        "noxesium": "<2.3.3",
+        "reeses-sodium-options": "<2.0.2",
+        "fabric-api": "<0.140.0",
+        "sodium-extra": "<0.8.0",
+        "audio_engine_tweaks": "<1.2.12",
+        "sspb": "<6.0.0",
+        "moreculling": "<1.6.0-beta.2",
+        "simply-no-shading": "<7.6.2",
+        "betterend": "<=21.0.11",
+        "enchanteds_sodium_options": "<1.0.1"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "indium"
+      ],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar",
+      "id": "yet_another_config_lib_v3",
+      "version": "3.8.2+1.21.11-fabric",
+      "jar_sha512": "392db7d471030cca27483ecf58c626a14cd73d71a18afe6d4173c6b030948b8a925b36e708d4cc2c897dfa3f20a7f23b999fc18aa6d36c156da29037601153ac",
+      "depends": {
+        "fabricloader": ">=0.17.0",
+        "minecraft": "~1.21.11",
+        "java": ">=17",
+        "fabric-api": ">=0.140.0+1.21.11"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/common-image-3.12.0.jar",
+      "id": "com_twelvemonkeys_common_common-image",
+      "version": "3.12.0",
+      "jar_sha512": "1b4929ae23ad0c0478dfe2a1252247e9b89257bfad3f13acff02a1cf97f2b30b6e3fdc71160d791929a422fec16d8e98be4b2c0a9fefdb700cecdc3105be76dd",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/common-io-3.12.0.jar",
+      "id": "com_twelvemonkeys_common_common-io",
+      "version": "3.12.0",
+      "jar_sha512": "035e596962bc1845e3c7d9c7ce0702820b7d6c920656f09b22120254f525ffc9e7438365504f32d54f5ac84d1077465e2c1cb013e264e46311fa3227c355b5a9",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/common-lang-3.12.0.jar",
+      "id": "com_twelvemonkeys_common_common-lang",
+      "version": "3.12.0",
+      "jar_sha512": "fa6126775117925ab781fb7203926554a13c31fd48598db2b2093aba366e56ed450aca7fdcdd537f3ca03e5f20ae77e3307ea2b7840c8be534bb333c880798a3",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/gson-0.2.1.jar",
+      "id": "org_quiltmc_parsers_gson",
+      "version": "0.2.1",
+      "jar_sha512": "82196783a41bb7b7a56b4fde6804c9109aee071f312a627b3156ef4c41c8e064c3169209d10016ae874791d48d62d02d1defe84cf1ef0c93e11889ebb53e7d72",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/imageio-core-3.12.0.jar",
+      "id": "com_twelvemonkeys_imageio_imageio-core",
+      "version": "3.12.0",
+      "jar_sha512": "17abbf69c398888ae8a6b6157795f8c8767ab36909ea09262eba2e2d76ae231276dc388f3179a24d90c46892e09ceded5149ad0682660598ad85c7fa167e1316",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/imageio-metadata-3.12.0.jar",
+      "id": "com_twelvemonkeys_imageio_imageio-metadata",
+      "version": "3.12.0",
+      "jar_sha512": "c0befb6d6ba7bc3a2244da73586eaf88abf3019be11ed0cfb0e04f1393cdbafe2b5a8164c54a184fdf58be4b85d3ad14091d8a9c555a35a3313d58bdd2951d89",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/imageio-webp-3.12.0.jar",
+      "id": "com_twelvemonkeys_imageio_imageio-webp",
+      "version": "3.12.0",
+      "jar_sha512": "76c80b4ec1a0912a42db46835525312660831f10b2af82dc8186c17dc01530cc6b519ef2191ff2e6d5df490b9ebf3aa910658fa96fb1b0ad146e7fdc46e33b6b",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "yet_another_config_lib_v3-3.8.2+1.21.11-fabric.jar!META-INF/jars/json-0.2.1.jar",
+      "id": "org_quiltmc_parsers_json",
+      "version": "0.2.1",
+      "jar_sha512": "bff62543499880ae7360e085013737ffd1143a29492bd5f5c51fcd2f6e37b0f74f531d5f76d4f59a65ef2487acf675d1cefd609e7b4615b45082d14d999b23ec",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "zconfig-1.0.0+1.21.x.jar",
+      "id": "zconfig",
+      "version": "1.0.0+1.21.x",
+      "jar_sha512": "706819e56672a79a814a6b04a96cf5be585679c093a3027f5a2652ca60678c9bd24d5596fa7e373447e582a1360ab4c8540b023ca744ebabca1be426166d0b84",
+      "depends": {
+        "fabricloader": ">=0.19.3",
+        "java": ">=21"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "zfastnoise-1.0.40+1.21.11.jar",
+      "id": "zfastnoise",
+      "version": "1.0.40+1.21.11",
+      "jar_sha512": "3e4cb7db316851f686bbc1c309467f2460c524b314fd259b18a1302cc5334f072b52a7f7cab08ee59243902bee06a8e667bb1b0b4305046b0ce3cb7bd16a1076",
+      "depends": {
+        "fabricloader": ">=0.19.3",
+        "minecraft": "~1.21.11",
+        "java": ">=21"
+      },
+      "breaks": {
+        "moonrise": "*",
+        "antixray": "*"
+      },
+      "recommends": {
+        "c2me": "*"
+      },
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "zoomify-2.15.2+1.21.11.jar",
+      "id": "zoomify",
+      "version": "2.15.2+1.21.11",
+      "jar_sha512": "de9d6097445175f6ef3e93475136fd67d29fc14fd26a6f19e63714efa6cf0961af5d270a95b65c4099a38517c3f91815fe4a1aa21b0acd84230398be2a6e3e24",
+      "depends": {
+        "fabricloader": ">=0.18.0",
+        "fabric-language-kotlin": ">=1.13.8+kotlin.2.3.0",
+        "minecraft": "~1.21.11",
+        "java": ">=17",
+        "yet_another_config_lib_v3": ">=3.6.6"
+      },
+      "breaks": {
+        "optifabric": "*",
+        "controlify": "<2"
+      },
+      "recommends": {},
+      "suggests": {
+        "modmenu": "*"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "zoomify-2.15.2+1.21.11.jar!META-INF/jars/ktoml-core-jvm-0.7.1.jar",
+      "id": "com_akuleshov7_ktoml-core-jvm",
+      "version": "0.7.1",
+      "jar_sha512": "bac9aa2b39509b06b1e32c6590365baf1d3017ffca381ef109a00edf25ffe1404439af81cbda4080c6cf67b5d3d9d7215d371568f29b1e7db99f55bf4a343748",
+      "depends": {},
+      "breaks": {},
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [],
+      "environment": "*",
+      "metadata_note": null
+    },
+    {
+      "origin": "language-reload-1.7.7+1.21.11.jar",
+      "id": "languagereload",
+      "version": "1.7.7+1.21.11",
+      "jar_sha512": "9524eac303b875382fabba4ae15e70408c668daa3ed9ffbee2a538b57c55e890a178d36899cfc369c20c8f19a7aaa6b07b8f5dd83f346ed5e78122bcb3b20198",
+      "depends": {
+        "fabric-resource-loader-v0": "*",
+        "fabric-key-binding-api-v1": "*",
+        "fabricloader": ">=0.16.14",
+        "minecraft": ">=1.21.11 <26.1"
+      },
+      "breaks": {},
+      "recommends": {},
+      "suggests": {
+        "modmenu": "*"
+      },
+      "conflicts": {},
+      "provides": [],
+      "environment": "client",
+      "metadata_note": null
+    },
+    {
+      "origin": "ScalableLux-0.1.6+fabric.c25518a-all.jar",
+      "id": "scalablelux",
+      "version": "0.1.6+fabric.c25518a",
+      "jar_sha512": "729515c1e75cf8d9cd704f12b3487ddb9664cf9928e7b85b12289c8fbbc7ed82d0211e1851375cbd5b385820b4fedbc3f617038fff5e30b302047b0937042ae7",
+      "depends": {
+        "fabricloader": ">=0.17.2",
+        "minecraft": ">1.21.1"
+      },
+      "breaks": {
+        "phosphor": "*"
+      },
+      "recommends": {},
+      "suggests": {},
+      "conflicts": {},
+      "provides": [
+        "starlight"
+      ],
+      "environment": "*",
+      "metadata_note": null
+    }
+  ],
+  "inactive_optional_candidates": {
+    "c2me-opts-natives-math": {
+      "record": {
+        "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/c2me-opts-natives-math-mc1.21.11-0.3.6.0.0.jar",
+        "id": "c2me-opts-natives-math",
+        "version": "0.3.6.0.0+1.21.11",
+        "jar_sha512": "004726ba85c9bc0dd43da6e15b292075756ca56ef1344b99af9618dd626b8debe8570c2b4eabd274e0ac5ba7a62c408d9cb806b58d337fd9db6854ccdf60a404",
+        "depends": {
+          "java": ">=22",
+          "minecraft": "*",
+          "fabricloader": "*",
+          "c2me-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      "reason": "Optional nested module requires Java >=22; Java 21 target"
+    },
+    "com_github_llamalad7_mixinextras": {
+      "record": {
+        "origin": "BadOptimizations-2.4.1-1.21.11.jar!META-INF/jars/fabric-mixinextras-fabric-0.2.2.jar",
+        "id": "com_github_llamalad7_mixinextras",
+        "version": "0.2.2",
+        "jar_sha512": "ded88f599442a20f1fed0f14eb63e629081327400b46e3e498aae642203cf73b538ba574719f803c5a05904c5148e113f089ee75cf5ad2a507b01509766532a5",
+        "depends": {
+          "fabricloader": ">=0.14.11"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      "reason": "Provided by mixinextras"
+    }
+  },
+  "multiple_nested_candidates": {
+    "mixinextras": [
+      {
+        "origin": "fabric-loader!META-INF/jars/mixinextras-fabric-0.5.5.jar",
+        "id": "mixinextras",
+        "version": "0.5.5",
+        "jar_sha512": "854e8fdc79699835253cb1d98ff10c6ef88586f11a1a279a198e8c6784ff7477dceb6d8d8562fafb458b2c43648f6dc4853e42a3d606ba495d1c3eafa02d953a",
+        "depends": {
+          "fabricloader": ">=0.14.25"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "com_github_llamalad7_mixinextras"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "modernfix-5.26.3-build.2.jar!META-INF/jars/mixinextras-fabric-0.4.1.jar",
+        "id": "mixinextras",
+        "version": "0.4.1",
+        "jar_sha512": "424a8c33f37159d5987c6bba56ffb5704c70763a157cb2de7a6962c0021d8829cc3850ce474ceae86acf26921b2ec811a48577aed2f18c96902a30205103ae3c",
+        "depends": {
+          "fabricloader": ">=0.14.25"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "com_github_llamalad7_mixinextras"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "com_electronwill_night-config_core": [
+      {
+        "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/core-3.6.5.jar",
+        "id": "com_electronwill_night-config_core",
+        "version": "3.6.5",
+        "jar_sha512": "afe122e70dcd3214f0e67fe5b3e9cbdeacf438c4cf16e6a219156bcd7e3fe4f038f8c8c082c06ce149fa6630582fe27342d29a389ed4889620dc2281d52fc727",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar!META-INF/jars/core-3.8.3.jar",
+        "id": "com_electronwill_night-config_core",
+        "version": "3.8.3",
+        "jar_sha512": "8245161228406660ba5608d9f0298e252020b4b4925df23ea3a6243f03f3ba37b610ca40ccccc21db2f190552ac2dae653a8eefd1a80c616fc5ed21e26052cd0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "zconfig-1.0.0+1.21.x.jar!META-INF/jars/core-3.8.3.jar",
+        "id": "com_electronwill_night-config_core",
+        "version": "3.8.3",
+        "jar_sha512": "8245161228406660ba5608d9f0298e252020b4b4925df23ea3a6243f03f3ba37b610ca40ccccc21db2f190552ac2dae653a8eefd1a80c616fc5ed21e26052cd0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "zfastnoise-1.0.40+1.21.11.jar!META-INF/jars/core-3.8.3.jar",
+        "id": "com_electronwill_night-config_core",
+        "version": "3.8.3",
+        "jar_sha512": "8245161228406660ba5608d9f0298e252020b4b4925df23ea3a6243f03f3ba37b610ca40ccccc21db2f190552ac2dae653a8eefd1a80c616fc5ed21e26052cd0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "net_objecthunter_exp4j": [
+      {
+        "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/exp4j-0.4.8.jar",
+        "id": "net_objecthunter_exp4j",
+        "version": "0.4.8",
+        "jar_sha512": "d8f34436ec0f85fc894c9ebb68aa17be805ddb725585c67beb6de150b65e95db5c1c1e21231a51674e980521cc11a147de02a0c77897c4d9b90565f728ea6d15",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "polytone-1.21.11-6.6.0-fabric.jar!META-INF/jars/exp4j-0.4.8.jar",
+        "id": "net_objecthunter_exp4j",
+        "version": "0.4.8",
+        "jar_sha512": "6090585953406811e7cbcbb8496c43958283effdcfbd57ccad6249d440b706f4a172bda7bb2c3575e2607482f7016efc1861fc89f64668b10cfa038cb1b4dc7b",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "mixinsquared": [
+      {
+        "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/mixinsquared-fabric-0.2.0-beta.6.jar",
+        "id": "mixinsquared",
+        "version": "0.2.0-beta.6",
+        "jar_sha512": "315456fb058bf812c4fe4882ac4514bfa433f3f45a1dc0b74e6e496bebe8722e119297db2f462d9b48db0fee78582529cd5cc4b2e121bd0976904d58014bcf0c",
+        "depends": {
+          "fabricloader": ">=0.14.11"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "moreculling-fabric-1.21.11-1.6.2.jar!META-INF/jars/mixinsquared-fabric-0.2.0.jar",
+        "id": "mixinsquared",
+        "version": "0.2.0",
+        "jar_sha512": "f2d15e2f7c90110bce7bf87d185b79aa1a3a71a326c9ec93eccec07b4b1568dd6a45a9602f34bab43d933345c2b42f32fc675dfe93a953bd7a7c92f8ae50710d",
+        "depends": {
+          "fabricloader": ">=0.14.11"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "skyboxify-3.4+1.21.11-fabric.jar!META-INF/jars/mixinsquared-fabric-0.2.0.jar",
+        "id": "mixinsquared",
+        "version": "0.2.0",
+        "jar_sha512": "f2d15e2f7c90110bce7bf87d185b79aa1a3a71a326c9ec93eccec07b4b1568dd6a45a9602f34bab43d933345c2b42f32fc675dfe93a953bd7a7c92f8ae50710d",
+        "depends": {
+          "fabricloader": ">=0.14.11"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "com_electronwill_night-config_toml": [
+      {
+        "origin": "c2me-fabric-mc1.21.11-0.3.6.0.0.jar!META-INF/jars/toml-3.6.5.jar",
+        "id": "com_electronwill_night-config_toml",
+        "version": "3.6.5",
+        "jar_sha512": "1910d97feef1303e0837e27b33da704b69bfd28b6dd8fd08e817820841e3ccb4993b82cc13c657f343c1dd012f3360371a5e309915910d48c1e751740cd3b56a",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar!META-INF/jars/toml-3.8.3.jar",
+        "id": "com_electronwill_night-config_toml",
+        "version": "3.8.3",
+        "jar_sha512": "082249c439ae6981ccca7640affd118c1eb7a50ddb6ff8791c731af46322284ce68b9b2f8628f338bea77ad71b0f78aa1795a4f637f03f139ddf1668b92261c0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "zconfig-1.0.0+1.21.x.jar!META-INF/jars/toml-3.8.3.jar",
+        "id": "com_electronwill_night-config_toml",
+        "version": "3.8.3",
+        "jar_sha512": "082249c439ae6981ccca7640affd118c1eb7a50ddb6ff8791c731af46322284ce68b9b2f8628f338bea77ad71b0f78aa1795a4f637f03f139ddf1668b92261c0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "zfastnoise-1.0.40+1.21.11.jar!META-INF/jars/toml-3.8.3.jar",
+        "id": "com_electronwill_night-config_toml",
+        "version": "3.8.3",
+        "jar_sha512": "082249c439ae6981ccca7640affd118c1eb7a50ddb6ff8791c731af46322284ce68b9b2f8628f338bea77ad71b0f78aa1795a4f637f03f139ddf1668b92261c0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-api-base": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar",
+        "id": "fabric-api-base",
+        "version": "1.0.5+4ebb5c083e",
+        "jar_sha512": "0dc160c168a8c88bc938b1d228a20843a32188245cf04449bb51cb9c7087720dd0c5ddbd1d78e4f2fa5f65f571157cd9197bbec97502f3005a19c6773334ab04",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "iris-fabric-1.10.8+mc1.21.11.jar!META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar",
+        "id": "fabric-api-base",
+        "version": "1.0.5+4ebb5c083e",
+        "jar_sha512": "62ddb667c24a2981037f80ad713880cf7a7a485ba306cd4fc08e4e6cc88980ff5ff10678db6608009ffc9f296f94c63cd08633ed7ad38ff0a0ee5165be6cf4f9",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "modmenu-17.0.1.jar!META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar",
+        "id": "fabric-api-base",
+        "version": "1.0.5+4ebb5c083e",
+        "jar_sha512": "62ddb667c24a2981037f80ad713880cf7a7a485ba306cd4fc08e4e6cc88980ff5ff10678db6608009ffc9f296f94c63cd08633ed7ad38ff0a0ee5165be6cf4f9",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-api-base-1.0.5+4ebb5c083e.jar",
+        "id": "fabric-api-base",
+        "version": "1.0.5+4ebb5c083e",
+        "jar_sha512": "62ddb667c24a2981037f80ad713880cf7a7a485ba306cd4fc08e4e6cc88980ff5ff10678db6608009ffc9f296f94c63cd08633ed7ad38ff0a0ee5165be6cf4f9",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-block-view-api-v2": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-block-view-api-v2-1.0.39+4ebb5c083e.jar",
+        "id": "fabric-block-view-api-v2",
+        "version": "1.0.39+4ebb5c083e",
+        "jar_sha512": "8e1c18f0495c366228a03cdabf1c60e1c5e949c05fc72721237990877c3e3cec6762187eed3f1e4f392e8d6ad4b871c3394c691ed5208be41da760318a8645e9",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-block-view-api-v2-1.0.39+4ebb5c083e.jar",
+        "id": "fabric-block-view-api-v2",
+        "version": "1.0.39+4ebb5c083e",
+        "jar_sha512": "33519387fb0980221c13f8aea848a3f7210d7a0bd641542d62b4461f5ff359771476b76897c41e633ca88b8096830f0252bb527a452feb900678dab3a9e596a1",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-key-binding-api-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-key-binding-api-v1-1.1.7+4fc5413f3e.jar",
+        "id": "fabric-key-binding-api-v1",
+        "version": "1.1.7+4fc5413f3e",
+        "jar_sha512": "50f25c781b3fdb90b5b250cd613ec38c9cac7a8961e68711f7cddf52c94d494899338c3c33a6d35787d450eb21729d3b3ab8440af1f1415083b4f1925c63dc50",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      },
+      {
+        "origin": "iris-fabric-1.10.8+mc1.21.11.jar!META-INF/jars/fabric-key-binding-api-v1-1.1.7+4fc5413f3e.jar",
+        "id": "fabric-key-binding-api-v1",
+        "version": "1.1.7+4fc5413f3e",
+        "jar_sha512": "815ba20d1967521a0876013d7e88453cecc3633eed75dce582932fbd0d9ede0781ff450f61960f07547d229acde49ec72620fb6c7a880dfec94331b418059675",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      },
+      {
+        "origin": "modmenu-17.0.1.jar!META-INF/jars/fabric-key-binding-api-v1-1.1.7+4fc5413f3e.jar",
+        "id": "fabric-key-binding-api-v1",
+        "version": "1.1.7+4fc5413f3e",
+        "jar_sha512": "815ba20d1967521a0876013d7e88453cecc3633eed75dce582932fbd0d9ede0781ff450f61960f07547d229acde49ec72620fb6c7a880dfec94331b418059675",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      }
+    ],
+    "fabric-lifecycle-events-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-lifecycle-events-v1-2.6.15+4ebb5c083e.jar",
+        "id": "fabric-lifecycle-events-v1",
+        "version": "2.6.15+4ebb5c083e",
+        "jar_sha512": "1fa42854b6e08b9d5230f57c8d8396c3fab12aff6afb367cae66f1e1fdea04b7100648544b1676958203530a799ab234b6881617286890e3e5a71ad658c2ae54",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "modmenu-17.0.1.jar!META-INF/jars/fabric-lifecycle-events-v1-2.6.15+4ebb5c083e.jar",
+        "id": "fabric-lifecycle-events-v1",
+        "version": "2.6.15+4ebb5c083e",
+        "jar_sha512": "7dae06d382c775e14908776f0c4ae5fa8d97563aec0d7ddba8e0979d938d12f7029b720e2303cfcae8c9d35a1883e1636a28b1be470259be109f625498b5c4c9",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-lifecycle-events-v1-2.6.15+4ebb5c083e.jar",
+        "id": "fabric-lifecycle-events-v1",
+        "version": "2.6.15+4ebb5c083e",
+        "jar_sha512": "7dae06d382c775e14908776f0c4ae5fa8d97563aec0d7ddba8e0979d938d12f7029b720e2303cfcae8c9d35a1883e1636a28b1be470259be109f625498b5c4c9",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-renderer-api-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-renderer-api-v1-8.0.3+f4ffd2e53e.jar",
+        "id": "fabric-renderer-api-v1",
+        "version": "8.0.3+f4ffd2e53e",
+        "jar_sha512": "0e90dba00430a00123181afaaf2fcce1203776a328bc5ef06831c63d60821f214884f6859f73888afbbfffdf9a72a71cc4d3ae905625000a9c938b07dec504db",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "minecraft": ">=1.21.5-beta.1",
+          "fabric-api-base": "*",
+          "fabric-rendering-v1": "*",
+          "fabric-transitive-access-wideners-v1": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {
+          "fabric-particles-v1": "*"
+        },
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-renderer-api-v1-8.0.0+f4ffd2e53e.jar",
+        "id": "fabric-renderer-api-v1",
+        "version": "8.0.0+f4ffd2e53e",
+        "jar_sha512": "e4e503cc0955338307a1eeda43994e9c685b7430238cfc5fbe8c31c77bd7db736d1c5082ef56793d3c67ddb4b57e9765c30d53f27b8addf36d8ecdee7cbef99d",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "minecraft": ">=1.21.5-beta.1",
+          "fabric-api-base": "*",
+          "fabric-rendering-v1": "*",
+          "fabric-transitive-access-wideners-v1": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {
+          "fabric-particles-v1": "*"
+        },
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      }
+    ],
+    "fabric-rendering-fluids-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-rendering-fluids-v1-3.1.43+4ebb5c083e.jar",
+        "id": "fabric-rendering-fluids-v1",
+        "version": "3.1.43+4ebb5c083e",
+        "jar_sha512": "bc418b2c707548d67a84599cd46444a231a65d8c6092a349e0167a700de2d3b2c0c4ef4739229cc1cd56f61f8766763d8e74814de8be826bf3105292a0b84173",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-rendering-fluids-v1-3.1.43+4ebb5c083e.jar",
+        "id": "fabric-rendering-fluids-v1",
+        "version": "3.1.43+4ebb5c083e",
+        "jar_sha512": "45c8dbe8b7755a3c3fb06b3b62c46ab7bb847175929e08537f236c35fb25f405e51da3c99d50db7ce660b0a7ef8d54c5c2b4f1c8bd0eeb3e729d49333892fbdf",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-rendering-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-rendering-v1-16.2.10+0290ad933e.jar",
+        "id": "fabric-rendering-v1",
+        "version": "16.2.10+0290ad933e",
+        "jar_sha512": "28e6c3c09b18fd713fd2a8f601a5272719c9451b7268e4f4f057c972a7169c9cacdee82a85d3a990b54908756c8f995553ffc787e68b1882d61823f61a990eb7",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*",
+          "fabric-lifecycle-events-v1": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-rendering-v1-16.2.7+f4ffd2e53e.jar",
+        "id": "fabric-rendering-v1",
+        "version": "16.2.7+f4ffd2e53e",
+        "jar_sha512": "4cec2dadca2758a8035ead3f3ebc637e4e7cf1bc6558994e1ef71e0dbffe323ec0fada1c1ad368b29670a3e1ba9e45a613014bc07ae0068f47bfd04263da34fc",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*",
+          "fabric-lifecycle-events-v1": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      }
+    ],
+    "fabric-resource-loader-v0": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-resource-loader-v0-3.3.4+4fc5413f3e.jar",
+        "id": "fabric-resource-loader-v0",
+        "version": "3.3.4+4fc5413f3e",
+        "jar_sha512": "d823f2388637c3c82c9866faa4ee88b46e8b145ef9cad66b7a2221a29a0742b52e5653c15e2cf685c0417b2f8d7d001ff2e0f690b994808ec4b4dd37eaed6baf",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-resource-loader-v1": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-resource-loader-v0-3.3.4+4fc5413f3e.jar",
+        "id": "fabric-resource-loader-v0",
+        "version": "3.3.4+4fc5413f3e",
+        "jar_sha512": "5a8c600fca8b8843e6135db18495fcf222bf8dfccc109158ba3250497f8ba7b4d3594c81855c7e2541933858c778d53d954816d988ef3aeec4515fe7135f1671",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-resource-loader-v1": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-resource-loader-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-resource-loader-v1-1.0.10+78c8b4663e.jar",
+        "id": "fabric-resource-loader-v1",
+        "version": "1.0.10+78c8b4663e",
+        "jar_sha512": "dd376b348b50dc07509af0304bdb114e2123e8814d116485cd72e2e049d369bf85ce1e2ac0f76e8ae0d7c481382f02f2284fadd2e1571af64290db03d037b786",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "modmenu-17.0.1.jar!META-INF/jars/fabric-resource-loader-v1-1.0.10+78c8b4663e.jar",
+        "id": "fabric-resource-loader-v1",
+        "version": "1.0.10+78c8b4663e",
+        "jar_sha512": "21a820958afc266563afadee3e8a5505d034eb86092b5f8e2f35806aa3381bdf5c03cc7a57a30a11587fa844a6561569306a587400a797838f9ed22b6116da77",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-resource-loader-v1-1.0.10+78c8b4663e.jar",
+        "id": "fabric-resource-loader-v1",
+        "version": "1.0.10+78c8b4663e",
+        "jar_sha512": "21a820958afc266563afadee3e8a5505d034eb86092b5f8e2f35806aa3381bdf5c03cc7a57a30a11587fa844a6561569306a587400a797838f9ed22b6116da77",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "fabric-screen-api-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-screen-api-v1-3.1.7+4ebb5c083e.jar",
+        "id": "fabric-screen-api-v1",
+        "version": "3.1.7+4ebb5c083e",
+        "jar_sha512": "d51cb3d0af0d5987e880f1128832adcbb1bf4ea0809c7d5bc4c513c3dee4cbd0c77eaa3a1fefa57905af82fe830e268f53bf197df202a2528a056f7e5222dd53",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      },
+      {
+        "origin": "modmenu-17.0.1.jar!META-INF/jars/fabric-screen-api-v1-3.1.7+4ebb5c083e.jar",
+        "id": "fabric-screen-api-v1",
+        "version": "3.1.7+4ebb5c083e",
+        "jar_sha512": "4b7a5377cffe2b91c9d5304d976af9591ad959713c7c3944d72af02a8f058d4676acd926564e0bbdcbf14fa3b230fc08e5aac5e7c5037ce2c9bf9af03e776f88",
+        "depends": {
+          "fabricloader": ">=0.17.3",
+          "fabric-api-base": "*"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      }
+    ],
+    "fabric-transitive-access-wideners-v1": [
+      {
+        "origin": "fabric-api-0.141.6+1.21.11.jar!META-INF/jars/fabric-transitive-access-wideners-v1-7.1.0+014c8cec3e.jar",
+        "id": "fabric-transitive-access-wideners-v1",
+        "version": "7.1.0+014c8cec3e",
+        "jar_sha512": "66c26f01beb817ae0742bf61a7afc4c3d134f9209a0561fbfb3e83f4be97326714c3c88be9c25af5f897c8e2eba5a15d47f70d467b1e7441a8a4c62d0627b1d4",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "sodium-fabric-0.8.14+mc1.21.11.jar!META-INF/jars/fabric-transitive-access-wideners-v1-7.0.8+0107c3da3e.jar",
+        "id": "fabric-transitive-access-wideners-v1",
+        "version": "7.0.8+0107c3da3e",
+        "jar_sha512": "e4808443d07e155982fa3af11ff41ea0fd18a561edac8d67c5b56ea8d82ef4f98d6402f8b8dd747df6b3bde76dea568b5669f8ae7587f3ffc209a3367c627b94",
+        "depends": {
+          "fabricloader": ">=0.17.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "yumi_commons_collections": [
+      {
+        "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar!META-INF/jars/yumi-commons-collections-1.0.0.jar",
+        "id": "yumi_commons_collections",
+        "version": "1.0.0",
+        "jar_sha512": "1f0711c2007e7a95cd4149ccd0f7d6ffa24e084904adada2f592c1d7e849ceb7e0c7b700847fb4fd7da8d7cd5655a33e4020d1df972bbcb817cff5913ddb064d",
+        "depends": {
+          "yumi-commons-core": "^1.0.0",
+          "java": ">=17"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "yumi-commons-collections"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/yumi-mc-foundation-1.0.0-beta.1+1.21.11.jar!META-INF/jars/yumi-commons-collections-1.0.0.jar",
+        "id": "yumi_commons_collections",
+        "version": "1.0.0",
+        "jar_sha512": "1f0711c2007e7a95cd4149ccd0f7d6ffa24e084904adada2f592c1d7e849ceb7e0c7b700847fb4fd7da8d7cd5655a33e4020d1df972bbcb817cff5913ddb064d",
+        "depends": {
+          "yumi-commons-core": "^1.0.0",
+          "java": ">=17"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "yumi-commons-collections"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "yumi_commons_core": [
+      {
+        "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar!META-INF/jars/yumi-commons-core-1.0.0.jar",
+        "id": "yumi_commons_core",
+        "version": "1.0.0",
+        "jar_sha512": "66a3f1d5e3403c2800f0df0225d6cb545f77d7ae42f9e2a8b4c5e4e0e6895276d96cd8b5487b1f15aa98312c61630c3e97e21c2af71d79aae1a1aafb7f724b44",
+        "depends": {
+          "java": ">=17"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "yumi-commons-core"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/yumi-mc-foundation-1.0.0-beta.1+1.21.11.jar!META-INF/jars/yumi-commons-core-1.0.0.jar",
+        "id": "yumi_commons_core",
+        "version": "1.0.0",
+        "jar_sha512": "66a3f1d5e3403c2800f0df0225d6cb545f77d7ae42f9e2a8b4c5e4e0e6895276d96cd8b5487b1f15aa98312c61630c3e97e21c2af71d79aae1a1aafb7f724b44",
+        "depends": {
+          "java": ">=17"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "yumi-commons-core"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "yumi_commons_event": [
+      {
+        "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/lambdynamiclights-api-4.9.1+1.21.11.jar!META-INF/jars/yumi-commons-event-1.0.0.jar",
+        "id": "yumi_commons_event",
+        "version": "1.0.0",
+        "jar_sha512": "173c414c8dd9b5901cf32a94f51bb060ea109fe846d72d733fbf97ceb431a2925679cc5d8d35ff67006eed218f82b7684de508eee50e54f3c49e3701664c1624",
+        "depends": {
+          "yumi-commons-collections": "^1.0.0",
+          "java": ">=17"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "yumi-commons-event"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "lambdynamiclights-4.9.1+1.21.11.jar!META-INF/jars/lambdynamiclights-4.9.1+1.21.11-fabric.jar!META-INF/jars/yumi-mc-foundation-1.0.0-beta.1+1.21.11.jar!META-INF/jars/yumi-commons-event-1.0.0.jar",
+        "id": "yumi_commons_event",
+        "version": "1.0.0",
+        "jar_sha512": "173c414c8dd9b5901cf32a94f51bb060ea109fe846d72d733fbf97ceb431a2925679cc5d8d35ff67006eed218f82b7684de508eee50e54f3c49e3701664c1624",
+        "depends": {
+          "yumi-commons-collections": "^1.0.0",
+          "java": ">=17"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [
+          "yumi-commons-event"
+        ],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "placeholder-api": [
+      {
+        "origin": "modmenu-17.0.1.jar!META-INF/jars/placeholder-api-2.8.2+1.21.10.jar",
+        "id": "placeholder-api",
+        "version": "2.8.2+1.21.10",
+        "jar_sha512": "507ab10b7938dcd14d33121b8462649bdbe575cef248e917dfdf7566078ab5d0195ca1add95eae4863de3f652eb56db0a8669a67d5b5344e094d086f9dab5a08",
+        "depends": {
+          "fabricloader": ">=0.16.10",
+          "minecraft": ">=1.21.5-beta.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "servercore-fabric-1.5.15+1.21.11.jar!META-INF/jars/placeholder-api-2.8.1+1.21.10.jar",
+        "id": "placeholder-api",
+        "version": "2.8.1+1.21.10",
+        "jar_sha512": "92606640457931698f272e4e8866b5357767360e78a3eed8b3bd490e8a17bfeaefdc0bd444ac8ba4f51b7f9f1eb7f22337e034b409939db3601269d4b53ad22c",
+        "depends": {
+          "fabricloader": ">=0.16.10",
+          "minecraft": ">=1.21.5-beta.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ]
+  },
+  "pending": [
+    "Real launcher import",
+    "World creation and entry",
+    "Exploration",
+    "FastQuit/C2ME saving and reopening",
+    "Mounted HUD with Gnetum/ImmediatelyFast",
+    "BBE/EMF models and Sodium 0.8.14 rendering",
+    "Both Lumina shaders enabled separately",
+    "Sustained stability and performance",
+    "Windows/Linux startup and play"
+  ]
+}

@@ -1,0 +1,6 @@
+# C2ME 0.3.6.0.0: límites de interfaz, sin cambiar renderDistance efectivo.
+version = 3
+
+[clientSideConfig.modifyMaxVDConfig]
+maxViewDistance = 32
+enableExtRenderDistanceProtocol = false

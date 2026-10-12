@@ -1,0 +1,3 @@
+version:4671
+resourcePacks:["vanilla","file/SodiumTranslations.zip","file/FreshAnimations_v1.10.4.zip","file/Fullbright-UB-1.21 fub-6.0.zip","file/MandalasGUI+Dakmode_1.21.6_v2.1.zip"]
+incompatibleResourcePacks:["file/MandalasGUI+Dakmode_1.21.6_v2.1.zip"]

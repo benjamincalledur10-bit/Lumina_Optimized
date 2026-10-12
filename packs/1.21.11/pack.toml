@@ -1,0 +1,13 @@
+name = "Lumina Optimized"
+version = "1.21.11-beta.1"
+description = "Minecraft 1.21.11, Fabric y Java 21. Edición beta con Iris y recursos visuales."
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "2d7100b441f2f80bc86ba83427a80f1fc3739dcc5864ffd6b5846162080bb0ca"
+
+[versions]
+fabric = "0.19.5"
+minecraft = "1.21.11"

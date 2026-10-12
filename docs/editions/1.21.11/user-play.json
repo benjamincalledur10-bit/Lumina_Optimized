@@ -1,0 +1,35 @@
+{
+  "evidence_date": "2026-10-12",
+  "reported_by": "user",
+  "status": "PASS_REPORTED_BY_USER",
+  "original_statement": "ya hize la prueba todo perfecto creo que ya podemos hacer push y tag de la v1.21.11-beta.1",
+  "scope": "User reports completion of the recommended brief Minecraft test on their Mac without issues. This is not an independently executed test by the agent.",
+  "duration_minutes": null,
+  "feature_by_feature_results": null,
+  "logs_provided": false,
+  "tested_alpha_artifact_sha256": "7f7643855a08fbe357343e291eaa0f4346407224c76517acb920dd2ca6f76ea5",
+  "promotion_changes": "Version identity and documentation only; component URLs, hashes and configurations unchanged.",
+  "latest_screenshot": {
+    "filename": "Captura de pantalla 2026-10-12 a la(s) 12.37.45 p.m..png",
+    "minecraft": "1.21.11",
+    "java": "21.0.12.1",
+    "gpu": "Apple M4",
+    "resolution": [
+      1470,
+      923
+    ],
+    "render_distance": 16,
+    "simulation_distance": 5,
+    "shaders_enabled": false,
+    "fps_instantaneous": 381,
+    "fps_p50": 402,
+    "fps_p98": 181,
+    "fps_p99_5": 160
+  },
+  "limitations": [
+    "Not a controlled comparison at equal resolution",
+    "No sustained FPS gain claimed",
+    "No detailed per-feature or shader test results supplied",
+    "Windows and Linux remain untested"
+  ]
+}

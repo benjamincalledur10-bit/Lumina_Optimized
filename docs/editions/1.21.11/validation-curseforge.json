@@ -1,0 +1,41 @@
+{
+  "version": "1.21.11-beta.1",
+  "evidence_date": "2026-10-12",
+  "archive": "Lumina-Optimized-1.21.11-beta.1-curseforge.zip",
+  "sha256": "57d5ce05e3e408f08b634faa827fb8d2319e66b60df22ca7af64bcdbf3a77bcd",
+  "size": 5957,
+  "checks": {
+    "official_ids_hashes_and_compatibility": "PASS",
+    "catalog_dependencies_and_conflicts": "PASS",
+    "nested_providers": "PASS",
+    "zip_crc_and_safe_paths": "PASS",
+    "complete_manifest": "PASS",
+    "configs_and_resources": "PASS",
+    "modrinth_unchanged": "PASS"
+  },
+  "counts": {
+    "manifest_references": 50,
+    "external_binaries_in_overrides": 0,
+    "overrides": 12
+  },
+  "approved_replacements": [
+    {
+      "slug": "mandalas-gui-dark-mode",
+      "from": "2.1",
+      "to": "2.6",
+      "project_id": 664719,
+      "file_id": 7564677,
+      "scope": "CurseForge only; reuses prior user-approved CF-specific replacement, disclosed before integration"
+    }
+  ],
+  "pending": [
+    "Resolve Mandala 2.6 metadata rejection before claiming all four CurseForge resources work",
+    "Import and export through CurseForge App per submission policy",
+    "Play and visually inspect Mandala 2.6; user tested Modrinth resource selection"
+  ],
+  "minecraft_tests": "45-second isolated macOS ARM64 startup and resource reload completed; Mandala 2.6 metadata rejected. No world, CurseForge App import or re-export tested.",
+  "runtime_evidence": "runtime-curseforge.json",
+  "known_blockers": [
+    "Mandala 2.6 pack.mcmeta lacks mandatory min_format/max_format for format 75; appearance/application unverified. Original file preserved without edits or silent substitution."
+  ]
+}

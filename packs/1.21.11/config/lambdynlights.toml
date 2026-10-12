@@ -1,0 +1,3 @@
+# Opción verificada en el runtime Fabric integrado de LambDynamicLights 4.9.1.
+# El resto usa los valores predeterminados de esta versión.
+mode = "off"

@@ -1,5 +1,14 @@
 # Lumina Optimized
 
+## Ediciones
+
+- **Minecraft 1.21.11 · v1.21.11-beta.1 · Java 21:** [instalación y prueba](docs/editions/1.21.11/README.md), [changelog](docs/editions/1.21.11/changelog.md), [definición packwiz](packs/1.21.11/pack.toml).
+- **Minecraft 26.3 · v26.3-beta.1 · Java 25:** la edición y sus releases se mantienen; documentación a continuación.
+
+Ramas: `modpackdev` como base común, `1.21.11dev` y `26.3dev` para continuar cada edición.
+
+## Minecraft 26.3
+
 **v26.3-beta.1** · Minecraft **26.3** · Java **25, 64 bits** · Fabric Loader **0.19.5**.
 
 [Descargar el .mrpack](https://github.com/benjamincalledur10-bit/Lumina_Optimized/releases/download/v26.3-beta.1/Lumina-Optimized-26.3-beta.1.mrpack) e importarlo en una instancia nueva de Modrinth App o Prism Launcher. Apple Silicon: Java 25 ARM64. El launcher descarga los archivos desde sus URLs oficiales.
