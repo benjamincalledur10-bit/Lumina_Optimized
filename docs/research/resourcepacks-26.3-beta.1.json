@@ -1,0 +1,123 @@
+{
+  "verified_on": "2026-10-11",
+  "resource_pack_format": 97,
+  "selection": [
+    {
+      "slug": "translations-for-sodium",
+      "name": "Translations for Sodium",
+      "project_id": "yfDziwn1",
+      "version_id": "JeuAsdpW",
+      "version": "v8.19.0",
+      "filename": "SodiumTranslations.zip",
+      "url": "https://cdn.modrinth.com/data/yfDziwn1/versions/JeuAsdpW/SodiumTranslations.zip",
+      "sha512": "99e23756d67ff06716f67c9caab29a914a1d33420503fd195f7b4a59ebb12e81747d81ba1d384baa7c6fda1577d6fc7171394af7a896b93d1bf5faf5afd75b4c",
+      "descriptor": "translations-for-sodium.pw.toml",
+      "published_for_26_3": true,
+      "optional": false,
+      "pack_mcmeta": {
+        "pack": {
+          "description": {
+            "translate": "sodium.resource_pack.unofficial",
+            "fallback": "Unofficial translations for Sodium"
+          },
+          "pack_format": 15,
+          "min_format": 15,
+          "max_format": 97,
+          "supported_formats": [
+            15,
+            64
+          ]
+        }
+      },
+      "required_mods": [
+        "sodium"
+      ],
+      "initial_activation": "enabled by options.txt at user request"
+    },
+    {
+      "slug": "fresh-animations",
+      "name": "Fresh Animations",
+      "project_id": "50dA9Sha",
+      "version_id": "RGIzA5em",
+      "version": "1.10.5",
+      "filename": "FreshAnimations_v1.10.5.zip",
+      "url": "https://cdn.modrinth.com/data/50dA9Sha/versions/RGIzA5em/FreshAnimations_v1.10.5.zip",
+      "sha512": "f4f2a1d294c2e0afe245b6987fea4a84ff120f131a7f2cfb16779e9cc5d0a00b3d49bf1585ac827d6690c36421e8dda203b0c6e642bb0c6aa067c5921dd8dc30",
+      "descriptor": "fresh-animations.pw.toml",
+      "published_for_26_3": true,
+      "optional": false,
+      "pack_mcmeta": {
+        "pack": {
+          "description": "§4■ 1.10.5 BETA§8\n■ By FreshLX",
+          "min_format": 84,
+          "max_format": 999
+        }
+      },
+      "required_mods": [
+        "entity_model_features",
+        "entity_texture_features"
+      ],
+      "initial_activation": "enabled by options.txt at user request"
+    },
+    {
+      "slug": "fullbright-ub",
+      "name": "Fullbright UB",
+      "project_id": "ItHr72Fy",
+      "version_id": "SmHiPjfF",
+      "version": "7.0",
+      "filename": "Fullbright-UB-26.3 fub-7.0.zip",
+      "url": "https://cdn.modrinth.com/data/ItHr72Fy/versions/SmHiPjfF/Fullbright-UB-26.3%20fub-7.0.zip",
+      "sha512": "6143e2ec1f8649c68d02fd3f11bb896f5a11f370219b78b57316f7990ed04ef3a549809540affb4b39e18e66f53808a315bad401655e2d50b31ec69b590f2530",
+      "descriptor": "fullbright-ub.pw.toml",
+      "published_for_26_3": true,
+      "optional": false,
+      "pack_mcmeta": {
+        "pack": {
+          "description": "Fullbright Ubiquitous (FUB 7.0) by WRP",
+          "pack_format": 97,
+          "min_format": [
+            15,
+            0
+          ],
+          "max_format": [
+            1000,
+            0
+          ],
+          "supported_formats": [
+            15,
+            1000
+          ]
+        }
+      },
+      "required_mods": [
+        "polytone"
+      ],
+      "initial_activation": "enabled by options.txt at user request"
+    },
+    {
+      "slug": "mandalas-gui-dark-mode",
+      "name": "Mandala's GUI - Dark mode",
+      "project_id": "h6zxsNVF",
+      "version_id": "Z2ajDlEE",
+      "version": "2.1",
+      "filename": "MandalasGUI+Dakmode_1.21.6_v2.1.zip",
+      "url": "https://cdn.modrinth.com/data/h6zxsNVF/versions/Z2ajDlEE/MandalasGUI%2BDakmode_1.21.6_v2.1.zip",
+      "sha512": "cdfa5ab9fbda8986385b5e94338df86f80ba50b14d5a84c2b0a44477a012d846c784bc6edbe9ec04eff8acc659da8eb8f5dc51f72cbdfd653ba9d0cee24852f7",
+      "descriptor": "mandalas-gui-dark-mode.pw.toml",
+      "published_for_26_3": false,
+      "optional": false,
+      "pack_mcmeta": {
+        "pack": {
+          "pack_format": 64,
+          "description": "§7By: §6§nCesarZorak\n§r§71.20.5 to 1.21.5"
+        }
+      },
+      "required_mods": [],
+      "initial_activation": "enabled by options.txt at user request"
+    }
+  ],
+  "pending": [
+    "Mandala no publicado para 26.3; formato 64; activado por solicitud del usuario, compatibilidad visual pendiente",
+    "Aspecto en un mundo y con Prefer Vulkan sin comprobar"
+  ]
+}

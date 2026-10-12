@@ -2,7 +2,7 @@
 import hashlib, io, json, os, shutil, subprocess, tomllib, zipfile
 from pathlib import Path, PurePosixPath
 import urllib.request
-from profiles import ROOT, configs, descriptors, pack_version, profiles, artifact_name
+from profiles import ROOT, configs, descriptors, resource_descriptors, pack_version, profiles, artifact_name
 CACHE = ROOT / '.build/downloads'
 LOADER_URL = 'https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar'
 
@@ -15,7 +15,7 @@ def fetch(url):
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / hashlib.sha256(url.encode()).hexdigest()
     if not path.exists():
-        request = urllib.request.Request(url, headers={'User-Agent': 'Lumina-Optimized/0.1.0-alpha.5'})
+        request = urllib.request.Request(url, headers={'User-Agent': 'Lumina-Optimized/'+pack_version()})
         with urllib.request.urlopen(request, timeout=60) as response:
             path.write_bytes(response.read())
     return path.read_bytes()
@@ -213,9 +213,11 @@ def validate_configs():
 def main():
     require(all(shutil.which(tool) for tool in ('java','javac','javap')), 'Validar requiere JDK 17+; jugar requiere Java 25')
     check_index(ROOT/'pack')
-    selection = json.loads((ROOT/'docs/research/selection-alpha.5.json').read_text())
+    selection = json.loads((ROOT/'docs/research/selection-26.3-beta.1.json').read_text())
     rows = selection['selection']
     require(selection['target_entries']==42 and sum(row['requested'] for row in rows)==42, 'Lista objetivo incompleta')
+    base=json.loads((ROOT/'docs/research/selection-alpha.5.json').read_text())['selection']
+    require([row for row in rows if row['slug']!='polytone']==base, 'La selección heredada de alpha.5 cambió')
     pins = descriptors({})
     require({p.name for p in pins}=={row['descriptor'] for row in rows if row['distribution']=='external'}, 'Mods no seleccionados en la base limpia')
     loader = fetch(LOADER_URL)
@@ -252,14 +254,47 @@ def main():
     for project,publication in nested_publications.items():
         hashes={file['hashes']['sha512'] for file in publication['files']}
         require(any('!' in record['origin'] and record['jar_sha512'] in hashes for record in inventory), 'Biblioteca integrada no coincide con publicación: '+project)
+    resources=json.loads((ROOT/'docs/research/resourcepacks-26.3-beta.1.json').read_text())['selection']
+    require({p.name for p in resource_descriptors({})}=={r['descriptor'] for r in resources}, 'Lista de recursos distinta')
+    resource_report=[]
+    for row in resources:
+        version=json.loads(fetch('https://api.modrinth.com/v2/version/'+row['version_id']))
+        require(version['id']==row['version_id'] and version['project_id']==row['project_id'] and version['version_number']==row['version'], 'Identidad resource pack distinta')
+        require('minecraft' in version['loaders'], 'No es resource pack')
+        published='26.3' in version['game_versions']
+        require(published==row['published_for_26_3'], 'Compatibilidad publicada distinta')
+        require(published or row['slug']=='mandalas-gui-dark-mode', 'Recurso no compatible sin excepción documentada')
+        file=next(f for f in version['files'] if f['filename']==row['filename'])
+        require(file['url']==row['url'] and file['hashes']['sha512']==row['sha512'], 'URL/hash del recurso distintos')
+        pin=tomllib.loads((ROOT/'pack/resourcepacks'/row['descriptor']).read_text())
+        require(pin.get('pin') is True and pin['side']=='client' and pin['filename']==file['filename'], 'Recurso no fijado/client')
+        require(pin['update']['modrinth']=={'mod-id':version['project_id'],'version':version['id']}, 'IDs de recurso incorrectos')
+        require(pin['download']=={'url':file['url'],'hash-format':'sha512','hash':file['hashes']['sha512']}, 'Hash/URL packwiz del recurso diferentes')
+        data=fetch(file['url']);require(len(data)==file['size'], 'Tamaño del recurso distinto')
+        for algorithm,value in file['hashes'].items():require(hashlib.new(algorithm,data).hexdigest()==value, 'Hash del recurso distinto')
+        with zipfile.ZipFile(io.BytesIO(data)) as archive:
+            require(archive.testzip() is None, 'Resource pack corrupto')
+            require(json.loads(archive.read('pack.mcmeta'))==row['pack_mcmeta'], 'Metadatos internos del recurso distintos')
+            require(all(not PurePosixPath(n).is_absolute() and '..' not in PurePosixPath(n).parts for n in archive.namelist()), 'Ruta insegura en recurso')
+        publications[version['project_id']]=version
+        sources['resourcepacks/'+file['filename']]=(pin,file,data,[])
+        resource_report.append({'slug':row['slug'],'version':row['version'],'published_for_26_3':published,'pack_mcmeta':row['pack_mcmeta'],'sha512':file['hashes']['sha512']})
     validate_modrinth_dependencies(publications,nested_publications)
     engine=FabricVersions(loader)
     try:
         available,chosen,alternatives=resolve(inventory,engine)
         validate_configs()
+        for row in resources:
+            require(all(mod in available for mod in row['required_mods']), 'Soporte del recurso ausente: '+row['slug'])
     finally:engine.close()
     expected_configs=configs({});check_index(ROOT/'.build/main')
-    require(not (ROOT/'pack/options.txt').exists() and not (ROOT/'pack/resourcepacks').exists() and not (ROOT/'pack/shaderpacks').exists(), 'No distribuir ajustes gráficos ni packs adicionales')
+    previous=json.loads((ROOT/'docs/history/alpha.5/validation.json').read_text())
+    require({p:hashlib.sha256(data).hexdigest() for p,data in expected_configs.items() if p.startswith('config/')}==previous['config_sha256'], 'Las configuraciones de alpha.5 cambiaron')
+    require(not (ROOT/'pack/shaderpacks').exists(), 'No distribuir shader packs adicionales')
+    options=dict(line.split(':',1) for line in (ROOT/'pack/options.txt').read_text().splitlines())
+    require(set(options)=={'version','resourcePacks','incompatibleResourcePacks'} and options['version']=='5023', 'options.txt contiene ajustes gráficos o versión distinta')
+    require(json.loads(options['resourcePacks'])==['vanilla']+['file/'+r['filename'] for r in resources], 'Recursos no activados u orden distinto')
+    require(json.loads(options['incompatibleResourcePacks'])==['file/'+r['filename'] for r in resources if not r['published_for_26_3']], 'Excepción de formato distinta')
     artifact=ROOT/'dist'/artifact_name()
     with zipfile.ZipFile(artifact) as archive:
         require(archive.testzip() is None, 'Export corrupto')
@@ -281,7 +316,7 @@ def main():
     digest=hashlib.sha256(artifact.read_bytes()).hexdigest()
     require((ROOT/'dist'/('SHA256SUMS-'+pack_version())).read_text()==digest+'  '+artifact.name+'\n', 'Checksum del paquete incorrecto')
     history={}
-    for release in ('alpha.1','alpha.2','alpha.3','alpha.4'):
+    for release in ('alpha.1','alpha.2','alpha.3','alpha.4','alpha.5'):
         history[release]={}
         for line in (ROOT/'docs/history'/release/'SHA256SUMS').read_text().splitlines():
             expected,filename=line.split('  ',1);path=ROOT/'dist'/filename
@@ -292,12 +327,13 @@ def main():
     nested=[record for record in inventory if '!' in record['origin'] and not record['origin'].startswith('fabric-loader!')]
     selected_nested=[record for record in chosen.values() if '!' in record['origin'] and not record['origin'].startswith('fabric-loader!')]
     report={'version':pack_version(),'verified_on':'2026-10-11','scope':'Publicaciones y bytes completos; predicados reales Fabric. Selección estática del módulo más reciente: no sustituye SAT/mixins ni juego.',
-            'counts':{'requested_entries':42,'principal_mods':sum(row['role']=='principal' for row in rows),'external_libraries':sum(row['role']=='library' and row['distribution']=='external' for row in rows),'downloadable_jars':len(sources),'integrated_module_occurrences':len(nested),'integrated_distinct_ids':len({record['id'] for record in nested}),'integrated_selected_ids':len(selected_nested)},
+            'counts':{'requested_entries':42,'principal_mods':sum(row['role']=='principal' for row in rows),'external_libraries':sum(row['role']=='library' and row['distribution']=='external' for row in rows),'resource_support_mods':sum(row['role']=='resource_support' for row in rows),'resource_packs':len(resources),'downloadable_jars':sum(path.startswith('mods/') for path in sources),'downloadable_files':len(sources),'integrated_module_occurrences':len(nested),'integrated_distinct_ids':len({record['id'] for record in nested}),'integrated_selected_ids':len(selected_nested)},
+            'resource_packs':resource_report,
             'publication_metadata_pending':[],'publication_hashes_pending':[], 'loader_provided_modules':loader_inventory,
             'embedded_published_libraries':{project:version['id'] for project,version in nested_publications.items()},
             'resolved':available,'selected_jar_origins':{key:record['origin'] for key,record in chosen.items()},'nested_alternatives':alternatives,
             'jar_metadata':{path:records for path,(_,_,_,records) in sources.items()},'historical_assets':history,'config_sha256':{path:hashlib.sha256(data).hexdigest() for path,data in expected_configs.items()},'artifact':artifact.name,'mrpack_sha256':digest,
-            'minecraft_tests':{'import':'pending','startup':'see research/runtime-alpha.5.json','world_entry':'pending','save_reopen':'pending','stability':'pending','performance':'pending'}}
+            'minecraft_tests':{'import':'pending for beta.1','startup':'see research/runtime-26.3-beta.1.json','world_entry':'pending for beta.1','save_reopen':'pending','stability':'pending for beta.1; user reports favorable alpha.5 play','performance':'alpha.5 screenshot readings only; beta.1 resources not measured'}}
     (ROOT/'docs/validation.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
     print('OK: publicaciones, SHA-1/SHA-512, dependencias obligatorias e integradas, conflictos declarados, configs, índices y .mrpack; historial intacto.')
     print(json.dumps(report['counts']))

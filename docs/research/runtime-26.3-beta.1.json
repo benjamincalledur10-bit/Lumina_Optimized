@@ -1,0 +1,48 @@
+{
+  "checked_on": "2026-10-11",
+  "version": "26.3-beta.1",
+  "scope": "Arranque aislado con Java 25 ARM64 y token ficticio; recursos activados. No importación de launcher, entrada a mundo ni prueba de juego.",
+  "java": "Zulu 25.0.4.1 ARM64",
+  "minecraft": "26.3",
+  "fabric_loader": "0.19.5",
+  "runtime_id_count": 165,
+  "window_created": true,
+  "resource_overlay_removed": true,
+  "active_resources": [
+    "file/SodiumTranslations.zip",
+    "file/FreshAnimations_v1.10.5.zip",
+    "file/Fullbright-UB-26.3 fub-7.0.zip",
+    "file/MandalasGUI+Dakmode_1.21.6_v2.1.zip"
+  ],
+  "sdl_display_failure": false,
+  "termination": "Harness detuvo el proceso a los 45 segundos con SIGTERM, exit 143; no cierre normal ni crash espontáneo.",
+  "artifact_sha256": "8fb4ebffbbf72ff92da4758f383e658936e00a4a6eefeebda94fad69aba3d69c",
+  "local_log": ".build/runtime-beta1/main-active/console.log",
+  "local_log_sha256": "e30e1a4fe45c09fafd7ff8e9e72a5d0acf5dcfe401e2d70160419c165cd6960d",
+  "warnings": {
+    "mandala": "Hasta 1.21.11, pack_format 64; la recarga completó pero apariencia completa en 26.3 sin verificar",
+    "polytone": "Publicación alpha; recomienda nautilus_studio, no obligatorio. No se añadió. BadOptimizations desactiva automáticamente enable_lightmap_caching y enable_sky_color_caching al detectarlo",
+    "emf_bbe": "Avisos de creación repetida de modelos, ya observados en alpha.5. Geometría/animaciones de shulkers con Fresh Animations requieren revisión en mundo",
+    "c2me": "Biblioteca matemática nativa macOS ARM64 ausente; módulo desactivado automáticamente",
+    "authentication": "Errores 401/Realms esperados con token ficticio",
+    "shaders": "Warnings al enlazar shaders de salidas no leídas; recarga finalizada. No shader pack externo"
+  },
+  "pending": [
+    "Importación en launcher",
+    "Mundo y exploración",
+    "Animaciones Fresh Animations/BBE, iluminación Fullbright y GUI Mandala",
+    "Prefer Vulkan del usuario con esta selección",
+    "HUD Gnetum/ImmediatelyFast/Better Mount HUD",
+    "Guardar/reabrir FastQuit/C2ME",
+    "Cierre normal, estabilidad 10–15 minutos",
+    "FPS y Windows/Linux"
+  ],
+  "excerpts": [
+    "[19:07:07] [main/INFO]: Loading 165 mods:",
+    "[19:07:10] [main/INFO]: Disabling enable_lightmap_caching because mod \"polytone\" is incompatible with it (built-in)",
+    "[19:07:10] [main/INFO]: Disabling enable_sky_color_caching because mod \"polytone\" is incompatible with it (built-in)",
+    "[19:07:20] [Render thread/INFO]: Created window using SDL video driver: cocoa",
+    "[19:07:28] [Render thread/INFO]: Loaded 9 Polytone config entries",
+    "[19:07:33] [Render thread/INFO]: Overlay is removed!"
+  ]
+}

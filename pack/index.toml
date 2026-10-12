@@ -204,6 +204,11 @@ hash = "c7c943cedc4ac38b1a1f6c54bf5836a8f00402d426999cc22a18e0cb627af2ce"
 metafile = true
 
 [[files]]
+file = "mods/polytone.pw.toml"
+hash = "61639785c0d59220e6115978fe63b39a91a50d1ccea6302b7a82123cb4e9104b"
+metafile = true
+
+[[files]]
 file = "mods/reeses-sodium-options.pw.toml"
 hash = "e6d0fd9b31b79b6129faaf3f862e8f7a73a08cd39fd96f81552b34483f4ee0ec"
 metafile = true
@@ -256,4 +261,28 @@ metafile = true
 [[files]]
 file = "mods/zoomify.pw.toml"
 hash = "f1f607a4dd2a733e1822cee832518c21a42c5d18e50f5e4fa1d34722e208b14d"
+metafile = true
+
+[[files]]
+file = "options.txt"
+hash = "bbb14ca175375a47e7e18782c6b32a4b93da6b6e922399a9437d6f6262a8b379"
+
+[[files]]
+file = "resourcepacks/fresh-animations.pw.toml"
+hash = "decce083506ff9ce84145b24e1976ea847d778ac9831eb6f88d81bf844f1a16c"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fullbright-ub.pw.toml"
+hash = "a5f4c4b99900bda7b6625bbd4777e9d79946e75896090200375d25afc75d89e5"
+metafile = true
+
+[[files]]
+file = "resourcepacks/mandalas-gui-dark-mode.pw.toml"
+hash = "d7a07fc30a89d4d36d92ff8a4cdd193d2f97695364881d582bd67f780976edae"
+metafile = true
+
+[[files]]
+file = "resourcepacks/translations-for-sodium.pw.toml"
+hash = "a1db4d61d7df60649947cab2b44bd938224ba9cfcd4e9a0b20c7a716da7e27f5"
 metafile = true

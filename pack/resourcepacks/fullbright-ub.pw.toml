@@ -1,0 +1,14 @@
+name = "Fullbright UB"
+filename = "Fullbright-UB-26.3 fub-7.0.zip"
+side = "client"
+pin = true
+
+[download]
+url = "https://cdn.modrinth.com/data/ItHr72Fy/versions/SmHiPjfF/Fullbright-UB-26.3%20fub-7.0.zip"
+hash-format = "sha512"
+hash = "6143e2ec1f8649c68d02fd3f11bb896f5a11f370219b78b57316f7990ed04ef3a549809540affb4b39e18e66f53808a315bad401655e2d50b31ec69b590f2530"
+
+[update]
+[update.modrinth]
+mod-id = "ItHr72Fy"
+version = "SmHiPjfF"

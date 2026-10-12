@@ -1,12 +1,12 @@
 name = "Lumina Optimized"
-version = "0.1.0-alpha.5"
-description = "Base de optimización para Minecraft 26.3 con Fabric. Rendimiento pendiente de medición."
+version = "26.3-beta.1"
+description = "Minecraft 26.3 con Fabric, Iris y recursos visuales opcionales. Versión beta."
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "d7dfe27c74f32ec9ccce820b72b43c19e40d5c7d18fb32c093ba66e6a19fd430"
+hash = "01067542a2e9689894e5f022cd415ff3ab78f23686cae5b1c6c6d2a2f76595d2"
 
 [versions]
 fabric = "0.19.5"

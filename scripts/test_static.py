@@ -1,20 +1,27 @@
 """Regresiones de composición y del resolvedor; no mide FPS ni ejecuta Minecraft."""
 import copy,json,sys,tomllib,unittest
-from profiles import ROOT,configs,descriptors,profiles
+from profiles import ROOT,configs,descriptors,profiles,resource_descriptors
 from verify import FabricVersions,fetch,LOADER_URL,resolve,validate_modrinth_dependencies
 
 class CompositionTests(unittest.TestCase):
     def test_clean_selection_and_library_counts(self):
-        data=json.loads((ROOT/'docs/research/selection-alpha.5.json').read_text());rows=data['selection']
+        data=json.loads((ROOT/'docs/research/selection-26.3-beta.1.json').read_text());rows=data['selection']
         self.assertEqual(sum(row['requested'] for row in rows),42)
         self.assertEqual(sum(row['role']=='principal' for row in rows),35)
         self.assertEqual({p.name for p in descriptors({})},{r['descriptor'] for r in rows if r['distribution']=='external'})
         self.assertNotIn('scalablelux',{r['slug'] for r in rows})
-        self.assertEqual([r['slug'] for r in rows if not r['requested']],['zconfig'])
+        self.assertEqual([r['slug'] for r in rows if not r['requested']],['zconfig','polytone'])
         self.assertEqual([r['slug'] for r in rows if r['distribution']=='embedded'],['placeholder-api'])
     def test_single_profile_preserves_visual_reference(self):
         self.assertEqual(set(profiles()),{'main'});files=configs({})
-        self.assertFalse(any(p=='options.txt' or p.startswith(('shaderpacks/','resourcepacks/')) for p in files))
+        self.assertFalse(any(p.startswith(('shaderpacks/','resourcepacks/')) for p in files))
+        options=dict(line.split(':',1) for line in files['options.txt'].decode().splitlines())
+        self.assertEqual(set(options),{'version','resourcePacks','incompatibleResourcePacks'})
+        resources=json.loads((ROOT/'docs/research/resourcepacks-26.3-beta.1.json').read_text())['selection']
+        self.assertEqual(len(resources),4)
+        self.assertEqual({p.name for p in resource_descriptors({})},{r['descriptor'] for r in resources})
+        self.assertEqual(json.loads(options['resourcePacks']),['vanilla']+['file/'+r['filename'] for r in resources])
+        self.assertEqual(json.loads(options['incompatibleResourcePacks']),['file/'+r['filename'] for r in resources if not r['published_for_26_3']])
         bbe=json.loads(files['config/BBEConfig.json']);options={x['option']:x['value'] for x in bbe['bbe.config.storage.main']}
         self.assertTrue(options['optimize.master']);self.assertTrue(all(options[k] for k in ('animation.chest','animation.shulker','animation.bell','animation.decoratedpot')))
         self.assertEqual(files['config/iris.properties'].strip(),b'enableShaders=false')

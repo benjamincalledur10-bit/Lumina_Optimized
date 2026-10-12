@@ -13,3 +13,7 @@ Conteos integrados: 142 apariciones, 117 IDs distintos, 116 seleccionados estát
 Zoomify 2.16.3 evita las dependencias de publicación mezcladas de 2.17.0 universal. FastQuit conserva el nombre mc26.2 y LambDynamicLights integra Yumi Foundation con nombre 26.2; sus publicaciones/predicados permiten 26.3. BetterGrassify requiere lectura permisiva de un control literal en description; el parser real Fabric aceptó el JAR sin alterar sus bytes.
 
 [Versiones/IDs](changelog-alpha.5.md) · [Selección y hashes](research/selection-alpha.5.json) · [Publicaciones completas](research/publications-alpha.5.json) · [Inventario y predicados](validation.json) · [Interacciones pendientes](configuration-alpha.5.md).
+
+## Beta 26.3-beta.1
+
+La selección anterior se conserva. Se añade PolyTone 26.3-6.8.6-alpha para Fullbright: Fabric API >=0.162.0+26.3 y Loader >=0.19.3 satisfechos. Sus tres bibliotecas integradas se resuelven con Loader 0.19.5 sin JAR duplicados. Translations requiere Sodium; Fresh Animations requiere EMF/ETF según su descripción, ya instalados. Mandala no tiene publicación 26.3. Véanse [changelog](changelog-26.3-beta.1.md), [selección](research/selection-26.3-beta.1.json) y [recursos](research/resourcepacks-26.3-beta.1.json).

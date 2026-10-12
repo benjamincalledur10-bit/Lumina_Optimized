@@ -1,16 +1,91 @@
 {
-  "version": "0.1.0-alpha.5",
+  "version": "26.3-beta.1",
   "verified_on": "2026-10-11",
   "scope": "Publicaciones y bytes completos; predicados reales Fabric. Selección estática del módulo más reciente: no sustituye SAT/mixins ni juego.",
   "counts": {
     "requested_entries": 42,
     "principal_mods": 35,
     "external_libraries": 7,
-    "downloadable_jars": 42,
-    "integrated_module_occurrences": 142,
-    "integrated_distinct_ids": 117,
-    "integrated_selected_ids": 116
+    "resource_support_mods": 1,
+    "resource_packs": 4,
+    "downloadable_jars": 43,
+    "downloadable_files": 47,
+    "integrated_module_occurrences": 145,
+    "integrated_distinct_ids": 119,
+    "integrated_selected_ids": 118
   },
+  "resource_packs": [
+    {
+      "slug": "translations-for-sodium",
+      "version": "v8.19.0",
+      "published_for_26_3": true,
+      "pack_mcmeta": {
+        "pack": {
+          "description": {
+            "translate": "sodium.resource_pack.unofficial",
+            "fallback": "Unofficial translations for Sodium"
+          },
+          "pack_format": 15,
+          "min_format": 15,
+          "max_format": 97,
+          "supported_formats": [
+            15,
+            64
+          ]
+        }
+      },
+      "sha512": "99e23756d67ff06716f67c9caab29a914a1d33420503fd195f7b4a59ebb12e81747d81ba1d384baa7c6fda1577d6fc7171394af7a896b93d1bf5faf5afd75b4c"
+    },
+    {
+      "slug": "fresh-animations",
+      "version": "1.10.5",
+      "published_for_26_3": true,
+      "pack_mcmeta": {
+        "pack": {
+          "description": "§4■ 1.10.5 BETA§8\n■ By FreshLX",
+          "min_format": 84,
+          "max_format": 999
+        }
+      },
+      "sha512": "f4f2a1d294c2e0afe245b6987fea4a84ff120f131a7f2cfb16779e9cc5d0a00b3d49bf1585ac827d6690c36421e8dda203b0c6e642bb0c6aa067c5921dd8dc30"
+    },
+    {
+      "slug": "fullbright-ub",
+      "version": "7.0",
+      "published_for_26_3": true,
+      "pack_mcmeta": {
+        "pack": {
+          "description": "Fullbright Ubiquitous (FUB 7.0) by WRP",
+          "pack_format": 97,
+          "min_format": [
+            15,
+            0
+          ],
+          "max_format": [
+            1000,
+            0
+          ],
+          "supported_formats": [
+            15,
+            1000
+          ]
+        }
+      },
+      "sha512": "6143e2ec1f8649c68d02fd3f11bb896f5a11f370219b78b57316f7990ed04ef3a549809540affb4b39e18e66f53808a315bad401655e2d50b31ec69b590f2530"
+    },
+    {
+      "slug": "mandalas-gui-dark-mode",
+      "version": "2.1",
+      "published_for_26_3": false,
+      "pack_mcmeta": {
+        "pack": {
+          "pack_format": 64,
+          "description": "§7By: §6§nCesarZorak\n§r§71.20.5 to 1.21.5"
+        }
+      },
+      "sha512": "cdfa5ab9fbda8986385b5e94338df86f80ba50b14d5a84c2b0a44477a012d846c784bc6edbe9ec04eff8acc659da8eb8f5dc51f72cbdfd653ba9d0cee24852f7"
+    }
+  ],
   "publication_metadata_pending": [],
   "publication_hashes_pending": [],
   "loader_provided_modules": [
@@ -207,7 +282,10 @@
     "zconfig": "1.0.0+26.x",
     "zfastnoise": "1.1.1+26.3",
     "zfastnoise-ocl": "1.0.0-beta.1+26.3",
-    "zoomify": "2.16.3+26.3"
+    "zoomify": "2.16.3+26.3",
+    "polytone": "26.3-6.8.6",
+    "codecui": "26.3-1.4.7",
+    "hollowpoint_nexp": "1.2.1"
   },
   "selected_jar_origins": {
     "mixinextras": "fabric-loader!META-INF/jars/mixinextras-fabric-0.5.5.jar",
@@ -368,7 +446,10 @@
     "zconfig": "zconfig-1.0.0+26.x.jar",
     "zfastnoise": "zfastnoise-1.1.1+26.3.jar",
     "zfastnoise-ocl": "zfastnoise-1.1.1+26.3.jar!META-INF/jars/zfastnoise-ocl-1.0.0-beta.1+26.3.jar",
-    "zoomify": "zoomify-2.16.3+26.3.jar"
+    "zoomify": "zoomify-2.16.3+26.3.jar",
+    "polytone": "polytone-26.3-6.8.6-fabric.jar",
+    "codecui": "polytone-26.3-6.8.6-fabric.jar!META-INF/jars/codecui-fabric-26.3-1.4.7.jar",
+    "hollowpoint_nexp": "polytone-26.3-6.8.6-fabric.jar!META-INF/jars/nexp-1.2.1.jar"
   },
   "nested_alternatives": {
     "mixinextras": [
@@ -443,6 +524,36 @@
         "id": "com_electronwill_night-config_core",
         "version": "3.8.3",
         "jar_sha512": "8245161228406660ba5608d9f0298e252020b4b4925df23ea3a6243f03f3ba37b610ca40ccccc21db2f190552ac2dae653a8eefd1a80c616fc5ed21e26052cd0",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "net_objecthunter_exp4j": [
+      {
+        "origin": "c2me-fabric-mc26.3-0.4.2-alpha.0.90.jar!META-INF/jars/exp4j-0.4.8.jar",
+        "id": "net_objecthunter_exp4j",
+        "version": "0.4.8",
+        "jar_sha512": "b10a34bc57d1bd1b2de650a01be87f60491d35ce0dd53463b406b159c391a55ac3cd4fbb5c8a47a5dbd23b98876fa22fb568a0830d3a21af95a46367956fb8f6",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "polytone-26.3-6.8.6-fabric.jar!META-INF/jars/exp4j-0.4.8.jar",
+        "id": "net_objecthunter_exp4j",
+        "version": "0.4.8",
+        "jar_sha512": "6090585953406811e7cbcbb8496c43958283effdcfbd57ccad6249d440b706f4a172bda7bb2c3575e2607482f7016efc1861fc89f64668b10cfa038cb1b4dc7b",
         "depends": {},
         "breaks": {},
         "recommends": {},
@@ -4498,7 +4609,82 @@
         "environment": "client",
         "metadata_note": null
       }
-    ]
+    ],
+    "mods/polytone-26.3-6.8.6-fabric.jar": [
+      {
+        "origin": "polytone-26.3-6.8.6-fabric.jar",
+        "id": "polytone",
+        "version": "26.3-6.8.6",
+        "jar_sha512": "f50370557e24f5404f17b6c055d35a3e4540f6d0dc9b9b406afc4d0f1f8a14a33b7993b747bb9e7d92f7c83d818493b1082858cf2f85b06d476107577af9a087",
+        "depends": {
+          "fabricloader": ">=0.19.3",
+          "fabric-api": ">=0.162.0+26.3",
+          "minecraft": ">=26.3 <26.3.1"
+        },
+        "breaks": {
+          "sodium": "<0.9",
+          "nautilus_studio": "<26.2-1.11.0"
+        },
+        "recommends": {
+          "nautilus_studio": ">=26.2-1.11.0"
+        },
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "client",
+        "metadata_note": null
+      },
+      {
+        "origin": "polytone-26.3-6.8.6-fabric.jar!META-INF/jars/codecui-fabric-26.3-1.4.7.jar",
+        "id": "codecui",
+        "version": "26.3-1.4.7",
+        "jar_sha512": "e9ded7ff64727f48fe4dfcf7fbf5e8483a6d15c42f67cb463ecc6664b043ea031e7634f9dc80cedde4f85f29991aa8007583fd609efa05f6ce55c04118dc5ef3",
+        "depends": {
+          "fabricloader": ">=0.19.5",
+          "fabric-api": ">=0.162.0+26.3",
+          "minecraft": ">=26.3"
+        },
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "polytone-26.3-6.8.6-fabric.jar!META-INF/jars/exp4j-0.4.8.jar",
+        "id": "net_objecthunter_exp4j",
+        "version": "0.4.8",
+        "jar_sha512": "6090585953406811e7cbcbb8496c43958283effdcfbd57ccad6249d440b706f4a172bda7bb2c3575e2607482f7016efc1861fc89f64668b10cfa038cb1b4dc7b",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      },
+      {
+        "origin": "polytone-26.3-6.8.6-fabric.jar!META-INF/jars/nexp-1.2.1.jar",
+        "id": "hollowpoint_nexp",
+        "version": "1.2.1",
+        "jar_sha512": "2f31bee811b912c3fee2a7ae5ee3484e209b52f01a6cc3d4d34f69f2c2d73c2dd320bb51e567cf02e092cdf2b5b682b5bb957ce245304a568d3db39fc69b267e",
+        "depends": {},
+        "breaks": {},
+        "recommends": {},
+        "suggests": {},
+        "conflicts": {},
+        "provides": [],
+        "environment": "*",
+        "metadata_note": null
+      }
+    ],
+    "resourcepacks/SodiumTranslations.zip": [],
+    "resourcepacks/FreshAnimations_v1.10.5.zip": [],
+    "resourcepacks/Fullbright-UB-26.3 fub-7.0.zip": [],
+    "resourcepacks/MandalasGUI+Dakmode_1.21.6_v2.1.zip": []
   },
   "historical_assets": {
     "alpha.1": {
@@ -4550,6 +4736,9 @@
       "Lumina-Optimized-0.1.0-alpha.4-optimizations.mrpack": "hash verificado; intacto",
       "Lumina-Optimized-0.1.0-alpha.4-shaders-conservative.mrpack": "hash verificado; intacto",
       "Lumina-Optimized-0.1.0-alpha.4-shaders.mrpack": "hash verificado; intacto"
+    },
+    "alpha.5": {
+      "Lumina-Optimized-0.1.0-alpha.5.mrpack": "hash verificado; intacto"
     }
   },
   "config_sha256": {
@@ -4564,16 +4753,17 @@
     "config/moreculling.toml": "62c2ed733c0cb52094449e73812ad8f20a6c1b1a378e22a9ab3eec862d582a0b",
     "config/servercore/config.yml": "30c57ec37ac1419016490f6b8e4e3f99ff979ebe2d16c6af7a732e3433958dad",
     "config/servercore/optimizations.yml": "33f3dff4d82acb89a48777f2665aedd17520b68e6636f8fdd63597f04d381608",
-    "config/sodium-extra-options.json": "682a2cbed83501eb45b11fe9b4b8b56a26c10a777842f8649822547245162ca6"
+    "config/sodium-extra-options.json": "682a2cbed83501eb45b11fe9b4b8b56a26c10a777842f8649822547245162ca6",
+    "options.txt": "bbb14ca175375a47e7e18782c6b32a4b93da6b6e922399a9437d6f6262a8b379"
   },
-  "artifact": "Lumina-Optimized-0.1.0-alpha.5.mrpack",
-  "mrpack_sha256": "5b003ae8ea2e318184a63af9a08a99336f920dc6f2626ea653af9f7673bae6d0",
+  "artifact": "Lumina-Optimized-26.3-beta.1.mrpack",
+  "mrpack_sha256": "8fb4ebffbbf72ff92da4758f383e658936e00a4a6eefeebda94fad69aba3d69c",
   "minecraft_tests": {
-    "import": "pending",
-    "startup": "see research/runtime-alpha.5.json",
-    "world_entry": "pending",
+    "import": "pending for beta.1",
+    "startup": "see research/runtime-26.3-beta.1.json",
+    "world_entry": "pending for beta.1",
     "save_reopen": "pending",
-    "stability": "pending",
-    "performance": "pending"
+    "stability": "pending for beta.1; user reports favorable alpha.5 play",
+    "performance": "alpha.5 screenshot readings only; beta.1 resources not measured"
   }
 }

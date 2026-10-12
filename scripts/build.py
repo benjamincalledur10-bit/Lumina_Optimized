@@ -8,7 +8,7 @@ import shutil
 import subprocess
 import tomllib
 import zipfile
-from profiles import ROOT, configs, descriptors, pack_version, profiles, artifact_name
+from profiles import ROOT, configs, downloads, download_path, pack_version, profiles, artifact_name
 
 def main():
     parser = argparse.ArgumentParser()
@@ -39,8 +39,10 @@ def main():
         (stage / 'mods').mkdir(parents=True)
         for filename in ('pack.toml', 'index.toml', '.packwizignore'):
             shutil.copy2(ROOT / 'pack' / filename, stage / filename)
-        for descriptor in descriptors(profile):
-            shutil.copy2(descriptor, stage / 'mods' / descriptor.name)
+        for descriptor in downloads(profile):
+            target_descriptor = stage / descriptor.relative_to(ROOT / 'pack')
+            target_descriptor.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(descriptor, target_descriptor)
         for path, data in configs(profile).items():
             target = stage / path
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -57,7 +59,7 @@ def main():
             raise RuntimeError(f'packwiz no generó {target}')
         with zipfile.ZipFile(target) as archive:
             exported = json.loads(archive.read('modrinth.index.json'))
-            expected_files = {'mods/' + tomllib.loads(p.read_text())['filename'] for p in descriptors(profile)}
+            expected_files = {download_path(p) for p in downloads(profile)}
             if {item['path'] for item in exported['files']} != expected_files:
                 raise RuntimeError('Exportación incompleta: ' + str(target))
         targets.append(target)

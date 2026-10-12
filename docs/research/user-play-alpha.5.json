@@ -1,0 +1,37 @@
+{
+  "reported_on": "2026-10-11",
+  "modpack_version": "0.1.0-alpha.5",
+  "source": "Capturas y mensajes del usuario en este chat; no medición automatizada del repositorio",
+  "hardware": "Apple M4",
+  "os": "macOS 27.0",
+  "resolution": [
+    2940,
+    1846
+  ],
+  "game_mode": "Off",
+  "renderer_reported": "Prefer Vulkan en ambos",
+  "worlds": "Misma semilla, mundos distintos; cámara/escena no idénticas",
+  "screenshots": [
+    {
+      "pack": "Fabulously Optimized; versión del pack no registrada",
+      "fps": 149.22,
+      "gpu_ms": 7.24,
+      "frame_interval_ms": 6.7,
+      "app_gb": 4.63
+    },
+    {
+      "pack": "Lumina Optimized alpha.5",
+      "fps": 197.49,
+      "gpu_ms": 5.35,
+      "frame_interval_ms": 5.06,
+      "app_gb": 4.0
+    }
+  ],
+  "interpretation": "Lecturas puntuales; ~32.3% de diferencia entre capturas. No son promedios ni un ensayo controlado. No se extrapolan a beta.1 con recursos activos.",
+  "other_user_report": "350 FPS Lumina y 150 FO en otras lecturas sin captura equivalente; no usados como comparación verificada. El usuario informa que mantiene buena fluidez sin problemas visibles; duración no registrada.",
+  "pending": [
+    "Calidad/distancias/VSync equivalentes no documentados en las capturas",
+    "Guardado y reapertura explícitos",
+    "Beta.1 con los cuatro recursos activos"
+  ]
+}
