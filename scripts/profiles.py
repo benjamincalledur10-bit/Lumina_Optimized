@@ -14,8 +14,11 @@ def descriptors(profile):
 def resource_descriptors(profile):
     return sorted((ROOT / 'pack/resourcepacks').glob('*.pw.toml'))
 
+def shader_descriptors(profile):
+    return sorted((ROOT / 'pack/shaderpacks').glob('*.pw.toml'))
+
 def downloads(profile):
-    return descriptors(profile) + resource_descriptors(profile)
+    return descriptors(profile) + resource_descriptors(profile) + shader_descriptors(profile)
 
 def download_path(descriptor):
     pin = tomllib.loads(descriptor.read_text())

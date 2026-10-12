@@ -286,3 +286,13 @@ metafile = true
 file = "resourcepacks/translations-for-sodium.pw.toml"
 hash = "a1db4d61d7df60649947cab2b44bd938224ba9cfcd4e9a0b20c7a716da7e27f5"
 metafile = true
+
+[[files]]
+file = "shaderpacks/lumina-shader-event-horizon.pw.toml"
+hash = "40f0d14c889f820bf8dd480fe08ecfaf64647953bfe8dceb8eec47f7f218f112"
+metafile = true
+
+[[files]]
+file = "shaderpacks/lumina-shader-lite.pw.toml"
+hash = "fecbf97022daa74f4fc44f5bd7e294c97f83fb1b5ec8855d6a583e617c02e828"
+metafile = true

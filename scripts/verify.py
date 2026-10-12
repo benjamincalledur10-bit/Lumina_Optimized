@@ -2,7 +2,7 @@
 import hashlib, io, json, os, shutil, subprocess, tomllib, zipfile
 from pathlib import Path, PurePosixPath
 import urllib.request
-from profiles import ROOT, configs, descriptors, resource_descriptors, pack_version, profiles, artifact_name
+from profiles import ROOT, configs, descriptors, resource_descriptors, shader_descriptors, pack_version, profiles, artifact_name
 CACHE = ROOT / '.build/downloads'
 LOADER_URL = 'https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar'
 
@@ -279,6 +279,29 @@ def main():
         publications[version['project_id']]=version
         sources['resourcepacks/'+file['filename']]=(pin,file,data,[])
         resource_report.append({'slug':row['slug'],'version':row['version'],'published_for_26_3':published,'pack_mcmeta':row['pack_mcmeta'],'sha512':file['hashes']['sha512']})
+    shaders=json.loads((ROOT/'docs/research/shaders-26.3-beta.1.json').read_text())['selection']
+    require({p.name for p in shader_descriptors({})}=={r['descriptor'] for r in shaders}, 'Lista de shaders distinta')
+    shader_report=[]
+    for row in shaders:
+        version=json.loads(fetch('https://api.modrinth.com/v2/version/'+row['version_id']))
+        require(version['id']==row['version_id'] and version['project_id']==row['project_id'] and version['version_number']==row['version'], 'Identidad de shader distinta')
+        require('26.3' in version['game_versions'] and 'iris' in version['loaders'], 'Shader no publicado para Iris/26.3')
+        file=next(f for f in version['files'] if f['filename']==row['filename'])
+        require(file['url']==row['url'] and file['hashes']['sha512']==row['sha512'], 'URL/hash del shader distintos')
+        pin=tomllib.loads((ROOT/'pack/shaderpacks'/row['descriptor']).read_text())
+        require(pin.get('pin') is True and pin['side']=='client' and pin['filename']==file['filename'], 'Shader no fijado/client')
+        require(pin['update']['modrinth']=={'mod-id':version['project_id'],'version':version['id']}, 'IDs de shader incorrectos')
+        require(pin['download']=={'url':file['url'],'hash-format':'sha512','hash':file['hashes']['sha512']}, 'Hash/URL packwiz del shader diferentes')
+        data=fetch(file['url']);require(len(data)==file['size'], 'Tamaño de shader distinto')
+        for algorithm,value in file['hashes'].items():require(hashlib.new(algorithm,data).hexdigest()==value, 'Hash del shader distinto')
+        with zipfile.ZipFile(io.BytesIO(data)) as archive:
+            require(archive.testzip() is None, 'Shader ZIP corrupto')
+            require('shaders/shaders.properties' in archive.namelist(), 'Raíz de shader no válida para Iris')
+            require(all(not PurePosixPath(n).is_absolute() and '..' not in PurePosixPath(n).parts for n in archive.namelist()), 'Ruta insegura en shader')
+            require(any('license' in n.lower() for n in archive.namelist()), 'Licencia del shader ausente')
+        publications[version['project_id']]=version
+        sources['shaderpacks/'+file['filename']]=(pin,file,data,[])
+        shader_report.append({'slug':row['slug'],'version':row['version'],'version_id':row['version_id'],'sha512':file['hashes']['sha512'],'initial_activation':'disabled'})
     validate_modrinth_dependencies(publications,nested_publications)
     engine=FabricVersions(loader)
     try:
@@ -290,7 +313,7 @@ def main():
     expected_configs=configs({});check_index(ROOT/'.build/main')
     previous=json.loads((ROOT/'docs/history/alpha.5/validation.json').read_text())
     require({p:hashlib.sha256(data).hexdigest() for p,data in expected_configs.items() if p.startswith('config/')}==previous['config_sha256'], 'Las configuraciones de alpha.5 cambiaron')
-    require(not (ROOT/'pack/shaderpacks').exists(), 'No distribuir shader packs adicionales')
+    require('iris' in available, 'Los shaders requieren Iris')
     options=dict(line.split(':',1) for line in (ROOT/'pack/options.txt').read_text().splitlines())
     require(set(options)=={'version','resourcePacks','incompatibleResourcePacks'} and options['version']=='5023', 'options.txt contiene ajustes gráficos o versión distinta')
     require(json.loads(options['resourcePacks'])==['vanilla']+['file/'+r['filename'] for r in resources], 'Recursos no activados u orden distinto')
@@ -327,13 +350,14 @@ def main():
     nested=[record for record in inventory if '!' in record['origin'] and not record['origin'].startswith('fabric-loader!')]
     selected_nested=[record for record in chosen.values() if '!' in record['origin'] and not record['origin'].startswith('fabric-loader!')]
     report={'version':pack_version(),'verified_on':'2026-10-11','scope':'Publicaciones y bytes completos; predicados reales Fabric. Selección estática del módulo más reciente: no sustituye SAT/mixins ni juego.',
-            'counts':{'requested_entries':42,'principal_mods':sum(row['role']=='principal' for row in rows),'external_libraries':sum(row['role']=='library' and row['distribution']=='external' for row in rows),'resource_support_mods':sum(row['role']=='resource_support' for row in rows),'resource_packs':len(resources),'downloadable_jars':sum(path.startswith('mods/') for path in sources),'downloadable_files':len(sources),'integrated_module_occurrences':len(nested),'integrated_distinct_ids':len({record['id'] for record in nested}),'integrated_selected_ids':len(selected_nested)},
+            'counts':{'requested_entries':42,'principal_mods':sum(row['role']=='principal' for row in rows),'external_libraries':sum(row['role']=='library' and row['distribution']=='external' for row in rows),'resource_support_mods':sum(row['role']=='resource_support' for row in rows),'resource_packs':len(resources),'shader_packs':len(shaders),'downloadable_jars':sum(path.startswith('mods/') for path in sources),'downloadable_files':len(sources),'integrated_module_occurrences':len(nested),'integrated_distinct_ids':len({record['id'] for record in nested}),'integrated_selected_ids':len(selected_nested)},
             'resource_packs':resource_report,
+            'shader_packs':shader_report,
             'publication_metadata_pending':[],'publication_hashes_pending':[], 'loader_provided_modules':loader_inventory,
             'embedded_published_libraries':{project:version['id'] for project,version in nested_publications.items()},
             'resolved':available,'selected_jar_origins':{key:record['origin'] for key,record in chosen.items()},'nested_alternatives':alternatives,
             'jar_metadata':{path:records for path,(_,_,_,records) in sources.items()},'historical_assets':history,'config_sha256':{path:hashlib.sha256(data).hexdigest() for path,data in expected_configs.items()},'artifact':artifact.name,'mrpack_sha256':digest,
-            'minecraft_tests':{'import':'pending for beta.1','startup':'see research/runtime-26.3-beta.1.json','world_entry':'pending for beta.1','save_reopen':'pending','stability':'pending for beta.1; user reports favorable alpha.5 play','performance':'alpha.5 screenshot readings only; beta.1 resources not measured'}}
+            'minecraft_tests':{'import':'pending for revised beta.1 with shaders','startup':'previous beta.1 without bundled shaders: research/runtime-26.3-beta.1.json; revised package not launched','shader_compilation':'pending for both shaders in Minecraft/Iris','world_entry':'pending for beta.1','save_reopen':'pending','stability':'pending for beta.1; user reports favorable alpha.5 play','performance':'alpha.5 screenshot readings only; beta.1 resources and shaders not measured'}}
     (ROOT/'docs/validation.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
     print('OK: publicaciones, SHA-1/SHA-512, dependencias obligatorias e integradas, conflictos declarados, configs, índices y .mrpack; historial intacto.')
     print(json.dumps(report['counts']))

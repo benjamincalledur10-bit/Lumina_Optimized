@@ -1,6 +1,6 @@
 """Regresiones de composición y del resolvedor; no mide FPS ni ejecuta Minecraft."""
 import copy,json,sys,tomllib,unittest
-from profiles import ROOT,configs,descriptors,profiles,resource_descriptors
+from profiles import ROOT,configs,descriptors,profiles,resource_descriptors,shader_descriptors,downloads,download_path
 from verify import FabricVersions,fetch,LOADER_URL,resolve,validate_modrinth_dependencies
 
 class CompositionTests(unittest.TestCase):
@@ -32,6 +32,13 @@ class CompositionTests(unittest.TestCase):
         validate_modrinth_dependencies(selected)
         wrong=copy.deepcopy(selected);wrong['sodium']['id']='alpha'
         with self.assertRaises(ValueError):validate_modrinth_dependencies(wrong)
+    def test_only_requested_shaders_with_unchanged_base(self):
+        shaders=json.loads((ROOT/'docs/research/shaders-26.3-beta.1.json').read_text())['selection']
+        self.assertEqual({r['slug']:r['version'] for r in shaders},{'lumina-shader-event-horizon':'1.3.9','lumina-shader-lite':'1.2.9'})
+        self.assertEqual({p.name for p in shader_descriptors({})},{r['descriptor'] for r in shaders})
+        self.assertEqual(len(downloads({})),49)
+        self.assertEqual({download_path(p) for p in shader_descriptors({})},{'shaderpacks/'+r['filename'] for r in shaders})
+        self.assertEqual(configs({})['config/iris.properties'].strip(),b'enableShaders=false')
 
 class ResolverTests(unittest.TestCase):
     @classmethod

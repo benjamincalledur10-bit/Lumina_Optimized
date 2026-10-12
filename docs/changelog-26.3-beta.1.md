@@ -17,11 +17,24 @@ Créditos: Translations for Sodium y sus traductores; **FreshLX** por Fresh Anim
 
 **PolyTone 26.3-6.8.6-alpha**, ID `qM0zPlR5`, Fabric 26.3: soporte de Fullbright con Sodium según la descripción del autor. JAR interno `26.3-6.8.6`; necesita Loader >=0.19.3 y Fabric API >=0.162.0+26.3, ya satisfechos; declara incompatible Sodium <0.9, y usamos 0.9.2. Integra CodecUI 26.3-1.4.7 (Loader >=0.19.5), exp4j 0.4.8 y nexp 1.2.1; no se duplican externamente. Publicación alpha, validación de juego pendiente.
 
-Fullbright altera la iluminación visual; Fresh Animations cambia modelos/animaciones y Mandala la interfaz. No se atribuyen mejoras de FPS a estos recursos. No se añadieron extensiones de Fresh Animations ni shader packs externos. BBE continúa activo; su compatibilidad con modelos EMF/ETF, especialmente shulkers, requiere comprobación visual.
+Fullbright altera la iluminación visual; Fresh Animations cambia modelos/animaciones y Mandala la interfaz. No se atribuyen mejoras de FPS a estos recursos. No se añadieron extensiones de Fresh Animations. BBE continúa activo; su compatibilidad con modelos EMF/ETF, especialmente shulkers, requiere comprobación visual.
+
+## Revisión de shaders sobre la misma beta.1
+
+Por solicitud del usuario se mantiene `v26.3-beta.1` y se reemplaza el `.mrpack` publicado. Se añaden mediante packwiz, con versiones fijas y SHA-1/SHA-512 oficiales:
+
+| Shader | Versión | ID de versión | Estado inicial |
+| --- | --- | --- | --- |
+| [Lumina Event Horizon](https://modrinth.com/shader/lumina-shader-event-horizon/version/pZJyyZZ4) | 1.3.9 | `pZJyyZZ4` | Instalado; apagado |
+| [Lumina Lite](https://modrinth.com/shader/lumina-shader-lite/version/AC7c1gBI) | 1.2.9 | `AC7c1gBI` | Instalado; apagado |
+
+Ambos están publicados para Minecraft 26.3 e Iris. No se cambia ningún mod, recurso ni configuración de la beta anterior. En Iris se elige un shader a la vez; no se activa ninguno automáticamente. Créditos: **Benjiaa**, shaders basados en [Complementary Reimagined](https://www.complementary.dev/). Los ZIP originales se descargan desde Modrinth, conservando Complementary License Agreement 1.6; no se redistribuyen como binarios en overrides. El autor de Lumina Optimized asume la responsabilidad de la integración conforme a su sección 1.2.
+
+Se verifican publicaciones, versiones, hashes, integridad ZIP, raíz `shaders/`, licencias y exportación. La compilación y el uso en Minecraft quedan pendientes. El arranque de 45 segundos previo no valida esta revisión ni shaders activados. No se afirma mejora de FPS. El ZIP CurseForge adjunto corresponde a la composición anterior, sin estos dos shaders, y mantiene sus bloqueos de publicación.
 
 ## Inventario fijo completo
 
-35 principales + 7 bibliotecas externas + 1 mod de soporte de recursos = **43 JAR**. Cuatro resource packs separados = **47 archivos descargables**. El conteo de módulos integrados consta en la validación; no se suman como principales ni se añaden JAR duplicados.
+35 principales + 7 bibliotecas externas + 1 mod de soporte de recursos = **43 JAR**. Cuatro resource packs y dos shader packs separados = **49 archivos descargables**. El conteo de módulos integrados consta en la validación; no se suman como principales ni se añaden JAR duplicados.
 
 | Nombre | Versión | Clase |
 | --- | --- | --- |

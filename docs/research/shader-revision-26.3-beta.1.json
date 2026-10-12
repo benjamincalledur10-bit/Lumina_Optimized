@@ -1,0 +1,15 @@
+{
+  "version": "26.3-beta.1",
+  "original_sha256": "8fb4ebffbbf72ff92da4758f383e658936e00a4a6eefeebda94fad69aba3d69c",
+  "revised_sha256": "f2af6114bf8fb0ec649bc44e539b8a4c1c72b2618ce2edd560fd0dfce079b0a4",
+  "revised_size": 12829,
+  "original_downloads": 47,
+  "revised_downloads": 49,
+  "added": [
+    "shaderpacks/Lumina_Event_Horizon_v1.3.9.zip",
+    "shaderpacks/Lumina_Shader_Lite_v1.2.9.zip"
+  ],
+  "existing_entries_unchanged": true,
+  "overrides_unchanged": true,
+  "minecraft_run": "Not executed for shader revision"
+}
