@@ -1,0 +1,10 @@
+version:4903
+resourcePacks:["vanilla","file/FreshAnimations_v1.10.5.zip","file/Fullbright-UB-26.3 fub-7.0.zip","file/SodiumTranslations.zip","file/MandalasGUI+Dakmode_1.21.6_v2.1.zip"]
+incompatibleResourcePacks:["file/MandalasGUI+Dakmode_1.21.6_v2.1.zip"]
+renderDistance:16
+simulationDistance:5
+preferredGraphicsBackend:"vulkan"
+renderClouds:"false"
+cloudRange:26
+particles:1
+graphicsPreset:"custom"

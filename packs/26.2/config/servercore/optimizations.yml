@@ -1,0 +1,6 @@
+# reduce-sync-loads cambia el radio efectivo de actualización de mapas: desactivado.
+reduce-sync-loads: false
+cache-ticking-chunks: true
+optimize-command-blocks: false
+fast-biome-lookups: false
+cancel-duplicate-fluid-ticks: false

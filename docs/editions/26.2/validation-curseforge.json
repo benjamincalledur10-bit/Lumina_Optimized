@@ -1,0 +1,39 @@
+{
+  "version": "26.2-beta.1",
+  "evidence_date": "2026-10-12",
+  "archive": "Lumina-Optimized-26.2-beta.1-curseforge.zip",
+  "sha256": "453b17c1c5daaa8715b784ba2f31c859c7780d228c7a50ddafb311047d24f125",
+  "size": 6715,
+  "checks": {
+    "official_ids_hashes_and_compatibility": "PASS",
+    "catalog_dependencies_and_conflicts": "PASS",
+    "nested_providers": "PASS",
+    "zip_crc_and_safe_paths": "PASS",
+    "complete_manifest": "PASS",
+    "configs_and_resources": "PASS",
+    "modrinth_unchanged": "PASS"
+  },
+  "counts": {
+    "manifest_references": 48,
+    "root_jars": 43,
+    "resourcepacks": 3,
+    "shaderpacks": 2,
+    "external_binaries_in_overrides": 0,
+    "overrides": 13
+  },
+  "approved_replacements": [],
+  "omissions": [
+    {
+      "project_id": 664719,
+      "source_path": "resourcepacks/MandalasGUI+Dakmode_1.21.6_v2.1.zip",
+      "reason": "Explicit user request: Mandala included only in Modrinth, omitted from CurseForge and both options lists"
+    }
+  ],
+  "pending": [
+    "CurseForge App import, install, gameplay and re-export by user",
+    "Save/reopen, long sessions, both shaders and Windows/Linux"
+  ],
+  "minecraft_tests": "Isolated45-second macOSARM64/Java25 startup using verified official bytes corresponding to CFmanifest IDs and ZIPoverrides. Window and resources loaded; deliberate SIGTERM143. No Appimport/download/re-export, world/save/performance/shader tests claimed.",
+  "runtime_evidence": "runtime-curseforge.json",
+  "resource_startup": "PASS"
+}

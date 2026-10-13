@@ -1,0 +1,21 @@
+{
+  "evidence_date": "2026-10-12",
+  "filename": "Lumina-Optimized-26.2-alpha.1.mrpack",
+  "downloads_path": "/Users/benji10/Downloads/Lumina-Optimized-26.2-alpha.1.mrpack",
+  "downloads_copy_sha256": "a4358219ef895e74145a788f7e8cd921ec316cba57faf2bc08ba5641b4720883",
+  "downloads_matches_dist": true,
+  "references": 49,
+  "jar_files": 43,
+  "resource_packs": 4,
+  "shaders": 2,
+  "mandala_version": "2.1",
+  "mandala_official_version_id": "Z2ajDlEE",
+  "mandala_enabled_by_default": true,
+  "mandala_distribution": "Modrinth only; omit for CurseForge",
+  "preserved_existing_files": 393,
+  "preservation": "PASS",
+  "configs_identical_to_26_3": true,
+  "change_from_initial_26_2": "Only original Mandala2.1 download and its options.txt selection/legacy-format acceptance; other48references and12configs unchanged",
+  "branch": "26.2dev",
+  "commit_push_release": false
+}

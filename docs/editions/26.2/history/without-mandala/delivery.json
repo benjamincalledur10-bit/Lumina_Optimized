@@ -1,0 +1,11 @@
+{
+  "evidence_date": "2026-10-12",
+  "filename": "Lumina-Optimized-26.2-alpha.1.mrpack",
+  "downloads_copy_sha256": "19ffbe892ba556194e04456e0842afc69a2fd7110745090aa47e93a6a902e43e",
+  "downloads_matches_dist": true,
+  "preserved_existing_files": 393,
+  "preservation": "PASS",
+  "configs_identical_to_26_3": true,
+  "branch": "26.2dev",
+  "commit_push_release": false
+}

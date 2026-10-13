@@ -1,0 +1,13 @@
+name = "Lumina Optimized"
+version = "26.2-beta.1"
+description = "Minecraft 26.2, Java 25 y Fabric. Primera beta; tick culling con modo seguro. Beneficio del ajuste pendiente de medición."
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "fe1639c994a39e748d100961b65b90a6c0c3c6e2ea2a709faec77e590c1a15cd"
+
+[versions]
+fabric = "0.19.5"
+minecraft = "26.2"

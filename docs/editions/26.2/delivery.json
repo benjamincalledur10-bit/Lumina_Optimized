@@ -1,0 +1,59 @@
+{
+  "evidence_date": "2026-10-12",
+  "edition": "26.2-beta.1",
+  "filename": "Lumina-Optimized-26.2-beta.1.mrpack",
+  "downloads_path": "/Users/benji10/Downloads/Lumina-Optimized-26.2-beta.1.mrpack",
+  "downloads_copy_sha256": "1c4159f97594014d70ef90ca818a7061a0a56e9fd370f7290d25409ee762995e",
+  "downloads_matches_dist": true,
+  "references": 49,
+  "jar_files": 43,
+  "resource_packs": 4,
+  "shaders": 2,
+  "requested_defaults": {
+    "date": "2026-10-12",
+    "requested_by_user": true,
+    "pack_version_unchanged": "26.2-beta.1",
+    "options.txt": {
+      "renderDistance": 16,
+      "simulationDistance": 5,
+      "preferredGraphicsBackend": "vulkan",
+      "renderClouds": "false",
+      "cloudRange": 26,
+      "particles": 1,
+      "graphicsPreset": "custom"
+    },
+    "BBEConfig.json": {
+      "optimize.master": true,
+      "misc.shademode": 0,
+      "misc.update_scheduler": 1
+    },
+    "interpretation": {
+      "Shade Mode": "Sodium",
+      "Update Scheduler": "Smart",
+      "particles": "Decreased"
+    },
+    "other_configs_and_components": "unchanged; tickCulling=true and safeMode=true retained",
+    "graphicsPreset_reason": "Use Custom so Minecraft does not overwrite manually requested options with Fancy preset during first startup; does not prescribe any other graphics setting."
+  },
+  "tick_culling_enabled": true,
+  "safe_mode_enabled": true,
+  "mandala_version": "2.1",
+  "mandala_enabled_by_default": true,
+  "mandala_distribution": "Modrinthonly;omitforCurseForge",
+  "runtime": "PASS:45seconds,Vulkan,166IDs,4resources,requestedsettingspersisted;no gameplay/FPS test",
+  "emf_model_warnings": 12,
+  "preserved_existing_files": 393,
+  "preservation": "PASS",
+  "change_from_previous_beta1": "Only options.txt requestedprefs/Custom and BBEshading/scheduler; all49references,sameversion,11otheroverrides unchanged",
+  "branch": "26.2dev",
+  "commit_push_release": true,
+  "release_url": "https://github.com/benjamincalledur10-bit/Lumina_Optimized/releases/tag/v26.2-beta.1",
+  "curseforge": {
+    "filename": "Lumina-Optimized-26.2-beta.1-curseforge.zip",
+    "sha256": "453b17c1c5daaa8715b784ba2f31c859c7780d228c7a50ddafb311047d24f125",
+    "references": 48,
+    "Mandala_included": false,
+    "App_import_and_reexport": "pending user"
+  },
+  "status": "Prepared for authorized commit/push/pre-release; remote verification follows"
+}
